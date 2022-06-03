@@ -1,0 +1,21 @@
+.services {
+  width: 75px;
+  height: 520px;
+  background-color: rgba(255, 255, 255, .2);
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 20px;
+  position: absolute;
+  top: 12%;
+  left: 10px;
+}
+.services ul li {
+  list-style: none;
+  color: white;
+}
+.services p {
+  font-size: 11px;
+  color: white;
+  margin-bottom: 10px;
+  font-family: 'Inter';
+}

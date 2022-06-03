@@ -1,0 +1,18 @@
+.homeTurism {
+  font-family: 'Inter';
+  text-align: center;
+  margin-top: 32px;
+}
+.homeTurism h1 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.Grid_homeTurism {
+  justify-content: center;
+}
+.homeTurism_title {
+  display: block !important;
+}
+.div_homeTurism {
+  margin: 20px;
+}

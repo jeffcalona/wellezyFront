@@ -1,0 +1,36 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 26px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.navlinks {
+  text-decoration: none;
+  color: white;
+  margin-right: 50px;
+  font-family: 'Inter', sans-serif;
+}
+.nav_logo {
+  width: 20%;
+}
+.logo {
+  max-width: 220px;
+}
+.links {
+  width: 65%;
+  margin: 0 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+.icons-links {
+ width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

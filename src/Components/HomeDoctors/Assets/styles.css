@@ -1,0 +1,29 @@
+.HomeDoctors {
+    background-color: #004274;
+    width: 90%;
+    height: 414px;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    font-family: 'Inter';
+    position: relative;
+}
+.HomeDoctors h1 {
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 45%;
+}
+.div_PrincipalImg {
+    width: 265px;
+    height: 345px;
+}
+.HomeDoctors_PrincipalImg {
+    width: 100%;
+    height: 100%;
+    margin-left: 37px;
+    margin-top: 42px;
+    border-radius: 20px;
+}

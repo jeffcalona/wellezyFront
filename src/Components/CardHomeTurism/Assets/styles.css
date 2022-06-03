@@ -1,0 +1,35 @@
+.cardHomeTurism {
+    width: 214px;
+    font-family: 'Inter';
+    text-align: center;
+    border-radius: 20px !important;
+    box-shadow: none !important;
+}
+.cardHomeTurismImg {
+    height: 214px;
+    border-radius: 20px !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.cardHomeTurism_media {
+    position: relative;
+}
+.cardHomeTurism_heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.cardHomeTurism_title {
+    font-size: 18px;
+    font-weight: 400
+}
+.cardHomeTurism_CardAction {
+    justify-content: center;
+}
+.cardHomeTurism_description {
+    font-size: 18;
+    font-weight: 200 !important;
+}
+.cardHomeTurism_IconButton {
+    padding: 0 4px !important;
+    margin: 0 !important;
+}
