@@ -33,7 +33,7 @@ const CardHomeTurism = ({ cardImage, cardTitle, cardDescription }) => {
                 <Star1 className='star_CardTour' size="26" color='#FFB82E'/>
               </IconButton>
               <IconButton className='cardHomeTurism_IconButton'>
-                <Star1 className='star_CardTour' size="26" color='#FFB82E'/>
+                <Star1 className='star_CardTour' size="26" color='white'/>
               </IconButton>
             </CardActions>
         </CardActionArea>
