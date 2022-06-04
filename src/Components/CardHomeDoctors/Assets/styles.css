@@ -3,12 +3,20 @@
     height: 207px;
     display: flex;
     align-items: center !important;
-    border-radius: 20px;
+    border-radius: 20px !important;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.cardHomeDotors:hover {
+    cursor: pointer;
 }
 .cardHomeDotors_ActionArea {
     margin-top: 50px !important;
 }
 .cardHomeDotors_Action {
     justify-content: center;
+}
+.cardHomeDotors_Heart {
+    position: absolute;
+    top: -35px;
+    right: -90px;
 }

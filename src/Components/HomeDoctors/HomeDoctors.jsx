@@ -1,4 +1,4 @@
-import { CardMedia, Grid } from '@mui/material'
+import { CardActions, CardMedia, Grid, IconButton } from '@mui/material'
 import React from 'react'
 import CardHomeDoctors from '../CardHomeDoctors/CardHomeDoctors'
 
@@ -9,6 +9,7 @@ import DrDanielCorreaImg from './Assets/Img/DrDanielCorrea.png'
 import PrincipalImg from './Assets/Img/Principal.png'
 
 import './Assets/styles.css'
+import { Star1 } from 'iconsax-react'
 
 const elementsDoctors = [
   {img: DrJuanMarioImg, name: 'Dr. Juan Mario Escobar', description: 'Cirujano Plástico', city: 'Medellín'},
@@ -26,6 +27,13 @@ const HomeDoctors = () => {
           <Grid xs={3}>
             <div className='div_PrincipalImg'>
               <CardMedia component='img' image={PrincipalImg} className='HomeDoctors_PrincipalImg'/>
+              <div className='principal_Action'>
+                <CardActions>
+                  <IconButton className=''>
+                    <Star1 className='star_Principal' size="26" color='#FFB82E'/>
+                  </IconButton>
+                </CardActions>
+              </div>
             </div>
           </Grid>
           <Grid container direction='row' alignItems='center' justifyContent='center' xs={9} spacing={4}>

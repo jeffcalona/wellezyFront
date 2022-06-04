@@ -17,12 +17,13 @@
     color: white;
     margin-top: 20px;
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 45%;
 }
 .div_PrincipalImg {
     width: 265px;
     height: 345px;
+    position: relative;
 }
 .HomeDoctors_PrincipalImg {
     width: 100%;
@@ -31,8 +32,14 @@
     margin-top: 42px;
     border-radius: 20px;
 }
+.principal_Action {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
 .grid_CardHomeDoctors {
     text-align: center;
+    margin-top: 80px !important;
 }
 .div_cardHomeDotors-img {
     width: 92px;
