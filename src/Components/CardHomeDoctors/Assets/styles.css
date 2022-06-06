@@ -20,3 +20,9 @@
     top: -35px;
     right: -90px;
 }
+@media screen and (max-width: 500px) {
+    .cardHomeDotors {
+        width: 250px;
+
+    }
+}

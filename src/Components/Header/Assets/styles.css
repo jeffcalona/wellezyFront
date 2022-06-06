@@ -30,3 +30,24 @@
 .input_questions::placeholder {
   color: rgba(0, 0, 0, .3);
 }
+
+@media screen and (max-width: 730px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+  .header_questions {
+    width: 95%;
+    text-align: center;
+    padding-top: 140px;
+  }
+  .questions_h1 {
+    font-size: 60px;
+  }
+  .input_questions {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 27px 0;
+  }
+}

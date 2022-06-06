@@ -15,6 +15,7 @@ const elementsDoctors = [
   {img: DrJuanMarioImg, name: 'Dr. Juan Mario Escobar', description: 'Cirujano Plástico', city: 'Medellín'},
   {img: DraNicoleImg, name: 'Dra. Nicole Echeverry Salja', description: 'Cirujana Plástica estética y reconstructiva', city: 'Medellín'},
   {img: DrDanielCorreaImg, name: 'Dr. Daniel Correa', description: 'Cirujano Plástico y Estético', city: 'Medellín'},
+  {img: DrJuanMarioImg, name: 'Dr. Juan Mario Escobar', description: 'Cirujano Plástico', city: 'Medellín'}
 
 ]
 
@@ -22,9 +23,9 @@ const HomeDoctors = () => {
   return (
     <Grid container justifyContent='center'>
       <div className='div_HomeDoctors'>
-        <Grid container className='HomeDoctors'>
+        <Grid /*contner*/ className='HomeDoctors'>
           <h1>Doctores</h1>
-          <Grid xs={3}>
+          <Grid className='grid_HomeDoctors' /*xs={3}*/>
             <div className='div_PrincipalImg'>
               <CardMedia component='img' image={PrincipalImg} className='HomeDoctors_PrincipalImg'/>
               <div className='principal_Action'>
@@ -36,7 +37,7 @@ const HomeDoctors = () => {
               </div>
             </div>
           </Grid>
-          <Grid container direction='row' alignItems='center' justifyContent='center' xs={9} spacing={4}>
+          <Grid className='grid_cardsDoctors' container direction='row' alignItems='center' justifyContent='center' /*xs={9}*/ spacing={4}>
             {
               elementsDoctors.map((doctor, index) => {
                 return (

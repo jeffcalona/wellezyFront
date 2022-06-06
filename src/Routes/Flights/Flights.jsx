@@ -1,8 +1,9 @@
 import React from 'react'
+import ProcedureSearch from '../../Components/ProcedureSearch/ProcedureSearch'
 
 const  Flights = () => {
   return (
-    <div>Flights</div>
+    <ProcedureSearch />
   )
 }
 

@@ -34,26 +34,75 @@ const servicesElements = [
   }
 ]
 
+const servicesElementsPhone = [
+  {
+    icon: <Car size="36" color="white"/>,
+    description: 'Transporte'
+  },
+  {
+    icon: <Simcard size="36" color="white"/>,
+    description: 'Sim Card'
+  },
+  {
+    icon: <Verify size="36" color="white"/>,
+    description: 'Nutrición Saludable'
+  },
+  {
+    icon: <Ship size="36" color="white"/>,
+    description: 'Turismo'
+  },
+  {
+    icon: <ProfileTick size="36" color="white"/>,
+    description: 'Enfermeras'
+  },
+  {
+    icon: <Profile2User size="36" color="white"/>,
+    description: 'Doctores'
+  },
+  {
+    icon: <Hospital size="36" color="white"/>,
+    description: 'Lugar de Recuperación'
+  }
+]
+
 const Services = () => {
   return (
-    <div className='services'>
-      <ul>
-        <li><ArrowUp2 size="33" color="white"/></li>
-        {
-          servicesElements.map((service, index) => {
-            return (
-              <ul key={index}>
-                <li>
-                  {service.icon}
-                  <p>{service.description}</p>
-                </li>
-              </ul>
-            )
-          })
-        }
-        <li><ArrowDown2 size="33" color="white"/></li>
-      </ul>
-    </div>
+    <>
+      <div className='services'>
+        <ul>
+          <li><ArrowUp2 size="33" color="white"/></li>
+          {
+            servicesElements.map((service, index) => {
+              return (
+                <ul key={index}>
+                  <li>
+                    {service.icon}
+                    <p>{service.description}</p>
+                  </li>
+                </ul>
+              )
+            })
+          }
+          <li><ArrowDown2 size="33" color="white"/></li>
+        </ul>
+      </div>
+      <div className='servicesPhone'>
+        <ul>
+          {
+            servicesElementsPhone.map((service, index) => {
+              return (
+                <ul key={index}>
+                  <li>
+                    {service.icon}
+                    <p>{service.description}</p>
+                  </li>
+                </ul>
+              )
+            })
+          }
+        </ul>
+      </div>
+    </>
   )
 }
 

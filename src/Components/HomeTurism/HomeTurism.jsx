@@ -14,7 +14,8 @@ const cardInfo = [
   { img: CartagenaImg, title: 'Cartagena', description: 'Ciudad Amurallada' },
   { img: LaGuajiraImg, title: 'La Guajira', description: 'Desiertos' },
   { img: LaMacarenaImg, title: 'La Macarena - Meta', description: 'Caño Cristales' },
-  { img: GuatapeImg, title: 'Guatapé', description: 'Piedra del Peñol' }
+  { img: GuatapeImg, title: 'Guatapé', description: 'Piedra del Peñol' },
+  { img: CartagenaImg, title: 'Cartagena', description: 'Ciudad Amurallada' }
 ]
 
 const HomeTurism = () => {
@@ -26,7 +27,7 @@ const HomeTurism = () => {
           cardInfo.map((info, index) => {
             return (
               <div className='div_homeTurism'>
-                <Grid item key={index} xs={12} sm={6} md={3} lg={2} className='grid_cardHomeTurism'>
+                <Grid item key={index} xs={6} sm={6} md={3} lg={2} className='grid_cardHomeTurism'>
                   <CardHomeTurism cardImage={info.img} cardTitle={info.title} cardDescription={info.description}/>
                 </Grid>
               </div>
