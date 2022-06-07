@@ -122,6 +122,15 @@
   .navbar_div {
     justify-content: space-between;
   }
+  .bgcolor {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 80px
+  }
+  .bgcolor img {
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 500px){
   .logo {
@@ -137,5 +146,8 @@
     justify-content: space-between !important;
     align-items: center !important;
     height: 80px
+  }
+  .bgcolor img {
+    top: 3px;
   }
 }
