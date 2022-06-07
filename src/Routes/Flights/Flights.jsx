@@ -3,7 +3,9 @@ import ProcedureSearch from '../../Components/ProcedureSearch/ProcedureSearch'
 
 const  Flights = () => {
   return (
-    <ProcedureSearch />
+    <div style={{backgroundColor: '#B8DEDF', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <ProcedureSearch />
+    </div>
   )
 }
 

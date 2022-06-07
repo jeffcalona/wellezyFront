@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from "react-router-dom";
 
 import $ from 'jquery'
@@ -16,13 +16,20 @@ const Navbar = () => {
   const activeDropMenu = () => setDropdMenu(!dropdMenu)
 
   const [ scrolls, setScrolls ] = useState(false)
- 
-  $(window).resize(function(){
-    if($(window).width() > 1101){
-      console.log($(window).width());
-      setDropdMenu(false)
-    }
-  })
+
+  const aaa = () => {
+    $(window).resize(function(){
+      if($(window).width() > 1101){
+        console.log($(window).width());
+        setDropdMenu(false)
+      }
+    })
+  }
+  useEffect(() => {
+    aaa(false)
+  }, [])
+
+
 
   /* Scroll function */
     var previousScroll = 0;
@@ -53,7 +60,7 @@ const Navbar = () => {
         </div>
         <div className={dropdMenu ? 'active_dropdMenu' : 'links'}>
           <ul>
-            <li><NavLink to="/flights" className='navlinks'>Vuelos</NavLink></li>
+            <li><a href="/flights" className='navlinks'>Vuelos</a></li>
             <li><NavLink to="/procedures" className='navlinks'>Procedimientos</NavLink></li>
             <li><NavLink to="/doctors" className='navlinks'>Doctores</NavLink></li>
             <li><NavLink to="/turismo" className='navlinks'>Turismo</NavLink></li>
