@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fake-api": "json-server --watch src/Api/procedures.json --port 5000"
+    "fake-api": "json-server --watch src/Api/procedures.json --port 5000",
+    "fake-api-questions": "json-server --watch src/Api/questions.json --port 7000" 
   },
   "eslintConfig": {
     "extends": [

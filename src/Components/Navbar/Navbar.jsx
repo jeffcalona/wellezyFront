@@ -40,7 +40,6 @@ const Navbar = () => {
     } else {
       setScrolls(false)
     }
-    console.log('hola', scroll)
   });
 
  

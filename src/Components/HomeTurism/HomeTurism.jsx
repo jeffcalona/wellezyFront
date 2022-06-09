@@ -26,8 +26,8 @@ const HomeTurism = () => {
         {
           cardInfo.map((info, index) => {
             return (
-              <div className='div_homeTurism'>
-                <Grid item key={index} xs={6} sm={6} md={3} lg={2} className='grid_cardHomeTurism'>
+              <div key={index} className='div_homeTurism'>
+                <Grid item xs={6} sm={6} md={3} lg={2} className='grid_cardHomeTurism'>
                   <CardHomeTurism cardImage={info.img} cardTitle={info.title} cardDescription={info.description}/>
                 </Grid>
               </div>
