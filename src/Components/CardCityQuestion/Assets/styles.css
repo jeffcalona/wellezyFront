@@ -1,0 +1,11 @@
+.CardCityQuestion {
+    background-color: #004274;
+    margin: 10px;
+    border-radius: 20px;
+}
+.logo {
+    width: 100px;
+}
+.logo img {
+    width: 100%;
+}

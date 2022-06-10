@@ -11,18 +11,13 @@ const URL = process.env.REACT_APP_URL_API_PROCEDURES
 const ProcedureSearch = () => {
 
     const [filter, setFilter] = useState([])
-    const [textSearch, setTextSearch] = useState('')
+    const [categoryProcedure, setCategoryProcedure] = useState('')
     const [questionSelected, setCuestionSelected] = useState('')
 
-    const [Cuestion, setCuestion] = useState(false)
-
-    const [categoryProcedure, setCategoryProcedure] = useState('')
-
-    const [entryQuestions, setEntryQuestions] = useState(false)
+    const [question, setQuestion] = useState(false)
 
     const handleFilter = async (e) => {
         const searcher = e.target.value
-        setTextSearch(searcher)
         const response = await fetch(URL)
         const data = await response.json()
         const newFilter = data.filter((proces) => {
@@ -42,11 +37,8 @@ const ProcedureSearch = () => {
     
     useEffect(() => {
         if(categoryProcedure === newQuestions[0].idProcedure) {
-          console.log('ingresó')
-          console.log(newQuestions[0].questions, "newQuestions[0].questions")
-          setCuestion(newQuestions[0].questions)
-          setEntryQuestions(true)
-        } else {console.log('no ingresó')}
+          setQuestion(newQuestions[0].questions)
+        } 
       }, [categoryProcedure])
 
 
@@ -78,8 +70,8 @@ const ProcedureSearch = () => {
             )}
         </div>
         <>
-            {Cuestion &&
-                <Questions cuestion = {Cuestion} clickQuestion={questionSelected} categoryProcedure={categoryProcedure}/>
+            {question &&
+                <Questions question={question} clickQuestion={questionSelected} />
             }
         </>
     </>

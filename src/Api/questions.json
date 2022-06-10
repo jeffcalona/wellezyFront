@@ -1,8 +1,9 @@
 {
-    "allQuestions": [
+    "allQuestions": {
+        "idProcedure": "1",
+        "procedure":
         {
-            "procedure": "Cirugia de senos - mamaria, Mastopexia",
-            "idProcedure": 1,
+            "name": "Cirugia de senos - mamaria, Mastopexia",
             "questions": [
                 {
                     "title": "¿Qué edad tienes?",
@@ -536,5 +537,23 @@
                 }
             ]
         }
-    ]
+    },
+    {
+        "idProcedure": "1",
+        "procedure":
+        {
+            "name": "Cirugia de senos - mamaria, Mastopexia",
+            "questions": [
+                {
+                    "title": "¿Qué edad tienes?",
+                    "useInput": true,
+                    "placeholder": "Ingrese edad",
+                    "response": {
+                        "button1": "Atrás",
+                        "button2": "Siguiente"
+                    }
+                }
+            ]
+        }
+    }
 }

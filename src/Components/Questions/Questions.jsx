@@ -1,32 +1,43 @@
 import { FormControl, IconButton, TextField } from '@mui/material'
 import { ArrowLeft2, ArrowRight2 } from 'iconsax-react'
-import React, { useEffect, useState } from 'react'
-//import apiQuestions from '../../Api/questions'
+import React, { useState } from 'react'
 
-//import newQuestions from '../../Api/questionsNew'
-
+import CityQuestion from '../CityQuestion/CityQuestion'
 
 import './Assets/styles.css'
 import LogoImg from './Assets/Img/LogoWhite.png'
-import { getFormControlUnstyledUtilityClasses } from '@mui/base'
 
-
-const Questions = ({ cuestion, clickQuestion, /*categoryProcedure*/ }) => {
+const Questions = ({ question, clickQuestion }) => {
 
   const [cardQuestions, setCardQuestions] = useState(false)
   const [bakground, setBakground] = useState(false)
+  const [presentQuestion, setPresentQuestion] = useState(0)
+  const [isFinished, setIsFinished] = useState(false)
+  const [useComponent, setUseComponent] = useState('')
+  const [useCityComponent, setUseCityComponent] = useState(false)
 
-
-  useEffect(() => {
-    console.log(cuestion, "cuestion")
-  }, [])
-
-  //const [question, setCuestion] = useState([])
-  //console.log('question', question)
 
   const closeQuestions = () => {
     setCardQuestions(!cardQuestions)
     setBakground(!bakground)
+  }
+
+  const handleQuestion = () => {
+    if (presentQuestion === question.length - 1) {
+      setIsFinished(true)
+    } else {
+      setPresentQuestion(presentQuestion + 1)
+    }
+  }
+  
+  const handlePreviusQuestion = () => {
+    setPresentQuestion(presentQuestion - 1)
+  }
+
+  const openComponent = () => {
+    if(question[presentQuestion].component) {
+      setUseCityComponent(!useCityComponent)
+    }
   }
 
 
@@ -59,20 +70,34 @@ const Questions = ({ cuestion, clickQuestion, /*categoryProcedure*/ }) => {
               </div>
               <div className='line' />
               <div className='question'>
-                <h2>{cuestion[0].title}</h2>
-                <FormControl className='searchQuestion' variant="filled" color="error">
-                  <TextField
-                    className='searchTextField'
-                    // label={data[presentQuestion].placeholder}
-                    type="search"
-                    variant="filled"
-                  />
-                </FormControl>
+                <h2>{question[presentQuestion].title}</h2>
+                {question[presentQuestion].useInput &&
+                  <FormControl className='searchQuestion' variant="filled" color="error">
+                    <TextField
+                      className='searchTextField'
+                      label={question[presentQuestion].placeholder}
+                      type="search"
+                      variant="filled"
+                    />
+                  </FormControl>
+                }
+                {question[presentQuestion].useComponent &&
+                  <div className='div_buttonUseComponent'>
+                    <button onClick={openComponent} className='buttonUseComponent'>{question[presentQuestion].placeholder}</button>
+                  </div>
+                }
+                {useCityComponent && 
+                  <CityQuestion />
+                }
               </div>
-              <div className='questionsButtons'>
-                {/* <button>{data[presentQuestion][0].response.button1}</button> */}
-                {/* <button className='button-27'>{data[presentQuestion][0].response.button2}</button> */}
-              </div>
+              {question[presentQuestion].useButton &&
+                <div className='questionsButtons'>
+                  {presentQuestion !== 0 &&
+                        <button onClick={handlePreviusQuestion} className='previusButton' >{question[presentQuestion].response.button1}</button>
+                  }
+                  <button onClick={handleQuestion} className='nextButton' >{question[presentQuestion].response.button2}</button>
+                </div>
+              }
             </div>
             <div>
               <p>¡Estás a punto de dar el primer paso para lucir como siempre has deseado!</p>
