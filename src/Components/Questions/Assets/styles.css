@@ -9,12 +9,12 @@
     transition: transform 1s;
 }
 .container {
-    width: 80%;
+    width: 1000px;
     height: 550px;
     position: fixed;
     z-index: 2;
     right: 0;
-    top: 200px;
+    top: 160px;
     background-color: #004274;
     border-radius: 20px 0 0 20px;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -23,8 +23,8 @@
 .questionsLogo {
     width: 150px;
     position: absolute;
-    left: 30px;
-    top: 20px;
+    right: 40px;
+    top: 15px;
 }
 .questionsLogo img {
     width: 100%;
@@ -47,12 +47,15 @@
     align-items: center;
 }
 .elements {
-    width: 55%;
+    width: 70%;
     margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .procedure {
     text-align: start;
-    margin-left: 20px;
 }
 .titleProcedure {
     font-size: 18px;
@@ -63,13 +66,13 @@
     opacity: .8;
 }
 .line {
-    width: 100%;
+    width: 90%;
     height: 2px;
     background-color: rgba(255, 255, 255, 0.2);
     margin-top: 8px;
 }
 .question {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 .question h2 {
     margin-bottom: 15px;
@@ -111,7 +114,7 @@
 }
 .questionsButtons button:disabled {
     pointer-events: none;
-  }
+}
   
 .questionsButtons button:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
@@ -147,20 +150,69 @@
     box-shadow: none;
     transform: translateY(0);
 }
+.interactive1_div {
+    width: 180px;
+    height: 180px;
+}
+.interactive2_div {
+    width: 180px;
+    height: 180px;
+}
+.interactive1, .interactive2 {
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 30px;
+    position: relative;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+}
+.interactive1 img, .interactive2 img {
+    border-radius: 20px;
+    width: 100%;
+}
+.interactive1 h1, .interactive2 h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 12px;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-size: 22px;
+    line-height: 20px;
+}
+.div_interactive button:disabled {
+    pointer-events: none;
+}  
+.div_interactive button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+.div_interactive button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+.div_interactive {
+    margin-bottom: -50px;
+}
+
 
 /* minimizeQuestions*/
 .minimizeQuestions {
-    width: 80%;
+    width: 1000px;
     height: 550px;
     position: fixed;
     z-index: 2;
     right: 0;
-    top: 200px;
+    top: 160px;
     background-color: #004274;
     border-radius: 20px 0 0 20px;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
     transition: transform 1s;
-    transform: translateX(75vw);
+    transform: translateX(930px);
 }
 .minimizeQuestions > .ArrowHide {
     display: none;
@@ -180,4 +232,50 @@
 
 .minimizeQuestions > .arrowShow {
     display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 700px;
+        top: 110px;
+    }
+    .elements {
+        width: 90%;
+        margin-bottom: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .question h2 {
+        font-size: 30px;
+    }
+    .minimizeQuestions {
+        width: 700px;
+        top: 120px;
+        transform: translateX(640px);
+    }
+}
+@media screen and (max-width: 700px) {
+    .container {
+        width: 500px;
+        top: 110px;
+    }
+    .elements {
+        width: 85%;
+    }
+    .question h2 {
+        font-size: 28px;
+    }
+    .titleProcedure {
+        font-size: 14px;
+    }
+    .youProcedure {
+        font-size: 20px;
+    }
+    .minimizeQuestions {
+        width: 500px;
+        top: 110px;
+        transform: translateX(445px);
+    }
 }

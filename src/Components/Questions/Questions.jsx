@@ -6,6 +6,8 @@ import CityQuestion from '../CityQuestion/CityQuestion'
 
 import './Assets/styles.css'
 import LogoImg from './Assets/Img/LogoWhite.png'
+import DoctorsQuestion from '../DoctorsQuestion/DoctorsQuestion'
+import CardRecoveryHouse from '../CardRecoveryHouse/CardRecoveryHouse'
 
 const Questions = ({ question, clickQuestion }) => {
 
@@ -13,8 +15,11 @@ const Questions = ({ question, clickQuestion }) => {
   const [bakground, setBakground] = useState(false)
   const [presentQuestion, setPresentQuestion] = useState(0)
   const [isFinished, setIsFinished] = useState(false)
-  const [useComponent, setUseComponent] = useState('')
+  const [useInteractive1, setUseInteractive1] = useState(false)
+  const [useInteractive2, setUseInteractive2] = useState(false)
+
   const [useCityComponent, setUseCityComponent] = useState(false)
+  const [useDoctorComponent, setUseDoctorComponent] = useState(false)
 
 
   const closeQuestions = () => {
@@ -35,11 +40,31 @@ const Questions = ({ question, clickQuestion }) => {
   }
 
   const openComponent = () => {
-    if(question[presentQuestion].component) {
+    if(question[presentQuestion].component === 'CityQuestion') {
       setUseCityComponent(!useCityComponent)
+    } else if (question[presentQuestion].component === 'DoctorsQuestion') {
+      setUseDoctorComponent(!useDoctorComponent)
     }
   }
 
+  const pressNot = () => {
+    console.log('Seleccionó No')
+    setPresentQuestion(presentQuestion + 2)
+  }
+  const pressYes = () => {
+    console.log('Seleccionó Yes')
+    setPresentQuestion(presentQuestion + 1)
+  }
+
+  const interactive1Func = () => {
+    console.log('Seleccionó Casa de Recuperación')
+    setUseInteractive1(!useInteractive1)
+  }
+
+  const interactive2Func = () => {
+    console.log('Seleccionó Hotel')
+    setUseInteractive2(!useInteractive2)
+  }
 
   return (
     <>
@@ -82,20 +107,52 @@ const Questions = ({ question, clickQuestion }) => {
                   </FormControl>
                 }
                 {question[presentQuestion].useComponent &&
-                  <div className='div_buttonUseComponent'>
-                    <button onClick={openComponent} className='buttonUseComponent'>{question[presentQuestion].placeholder}</button>
-                  </div>
+                  <>
+                    <div className='div_buttonUseComponent'>
+                      <button onClick={openComponent} className='buttonUseComponent'>{question[presentQuestion].placeholder}</button>
+                    </div>
+                    <button onClick={handlePreviusQuestion} className='previusButton' >{question[presentQuestion].response.button1}</button>
+                    <button className='previusButton' onClick={handleQuestion}>{question[presentQuestion].response.button2}</button>
+                  </>
                 }
                 {useCityComponent && 
-                  <CityQuestion />
+                  <CityQuestion question={question} presentQuestion={presentQuestion} setUseCityComponent={setUseCityComponent} useCityComponent={useCityComponent} />
+                }
+                {useDoctorComponent &&
+                  <DoctorsQuestion question={question} presentQuestion={presentQuestion} setUseDoctorComponent={setUseDoctorComponent} useDoctorComponent={useDoctorComponent} />
+                }
+                {useInteractive1 &&
+                  <CardRecoveryHouse />
                 }
               </div>
               {question[presentQuestion].useButton &&
                 <div className='questionsButtons'>
                   {presentQuestion !== 0 &&
-                        <button onClick={handlePreviusQuestion} className='previusButton' >{question[presentQuestion].response.button1}</button>
+                      <button onClick={handlePreviusQuestion} className='previusButton' >{question[presentQuestion].response.button1}</button>
                   }
                   <button onClick={handleQuestion} className='nextButton' >{question[presentQuestion].response.button2}</button>
+                </div>
+              }
+              {question[presentQuestion].useYesOrNotButton &&
+                <div className='questionsButtons'>
+                  <button onClick={pressNot} className='previusButton'>{question[presentQuestion].response.buttonNo}</button>
+                  <button onClick={pressYes} className='nextButton'>{question[presentQuestion].response.buttonYes}</button>
+                </div>
+              }
+              {question[presentQuestion].useInteractiveButon && 
+                <div className='div_interactive'>
+                  <button className='interactive1' onClick={interactive1Func}>
+                    <div className='interactive1_div'>
+                      <img src={question[presentQuestion].response.interactive1.img} alt={question[presentQuestion].response.interactive1.description} />
+                    </div>
+                    <h1>{question[presentQuestion].response.interactive1.description}</h1>
+                  </button>
+                  <button className='interactive2' onClick={interactive2Func}>
+                    <div className='interactive2_div'>
+                      <img src={question[presentQuestion].response.interactive2.img} alt={question[presentQuestion].response.interactive2.description} />
+                      <h1>{question[presentQuestion].response.interactive2.description}</h1>
+                    </div>
+                  </button>
                 </div>
               }
             </div>

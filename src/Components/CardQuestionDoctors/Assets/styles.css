@@ -1,0 +1,53 @@
+.cardQuestionDotors {
+    width: 230px;
+    height: 180px;
+    display: flex;
+    align-items: center !important;
+    border-radius: 20px !important;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.div_cardQuestionDotors-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -35px;
+}
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+    padding: 0 !important;
+}
+.cardQuestionDotors_Heart {
+    position: absolute;
+    top: 0px;
+    right: -90px;
+}
+.cardQuestionDotors_ActionArea {
+    margin-top: 20px !important;
+}
+.css-1y4mape-MuiTypography-root {
+    margin: 0 !important;
+}
+.css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root {
+    height: 100% !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+.buttonDorctorsQuestion {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .cardQuestionDotors {
+        width: 220px;
+        margin: -5px;
+    }
+}
+@media screen and (max-width: 700px) {
+    
+}

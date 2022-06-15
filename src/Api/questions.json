@@ -60,7 +60,9 @@
                                 "name": "Bogotá",
                                 "numberDoctors": 14
                             }
-                        ]
+                        ],
+                        "button1": "Atás",
+                        "button2": "Siguiente"
                     }
                 },
                 {

@@ -4,7 +4,7 @@ import Questions from '../Questions/Questions'
 
 import './Assets/styles.css'
 
-import newQuestions from '../../Api/questionsNew'
+import newQuestions from '../../Api/newQuestions'
 
 const URL = process.env.REACT_APP_URL_API_PROCEDURES
 

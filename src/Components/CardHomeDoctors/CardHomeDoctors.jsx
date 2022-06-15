@@ -4,9 +4,10 @@ import React from 'react'
 
 import './Assets/styles.css'
 
+
 const CardHomeDoctors = ({ imgDoctor, nameDoctor, descriptionDoctor, cityDoctor }) => {
   return (
-    <div>
+    <>
       <div className='div_cardHomeDotors-img'>
         <CardMedia component='img' height='92' image={imgDoctor} alt={nameDoctor} className='cardHomeDotors_img' />
       </div>
@@ -25,7 +26,7 @@ const CardHomeDoctors = ({ imgDoctor, nameDoctor, descriptionDoctor, cityDoctor 
           </CardActions>
         </CardActionArea>
       </Card>
-    </div>
+    </>
   )
 }
 
