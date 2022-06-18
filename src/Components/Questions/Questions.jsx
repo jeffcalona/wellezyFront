@@ -1,13 +1,16 @@
 import { FormControl, IconButton, TextField } from '@mui/material'
 import { ArrowLeft2, ArrowRight2 } from 'iconsax-react'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import CityQuestion from '../CityQuestion/CityQuestion'
 
 import './Assets/styles.css'
 import LogoImg from './Assets/Img/LogoWhite.png'
 import DoctorsQuestion from '../DoctorsQuestion/DoctorsQuestion'
-import CardRecoveryHouse from '../CardRecoveryHouse/CardRecoveryHouse'
+import RecoveryHouseQuestion from '../RecoveryHouseQuestion/RecoveryHouseQuestion'
+import RecoveryHotelQuestion from '../RecoveryHotelQuestion/RecoveryHotelQuestion'
+import NurseQuestion from '../NurseQuestion/NurseQuestion'
+import ChoferQuestion from '../ChoferQuestion/ChoferQuestion'
 
 const Questions = ({ question, clickQuestion }) => {
 
@@ -15,12 +18,18 @@ const Questions = ({ question, clickQuestion }) => {
   const [bakground, setBakground] = useState(false)
   const [presentQuestion, setPresentQuestion] = useState(0)
   const [isFinished, setIsFinished] = useState(false)
-  const [useInteractive1, setUseInteractive1] = useState(false)
-  const [useInteractive2, setUseInteractive2] = useState(false)
-
+  
   const [useCityComponent, setUseCityComponent] = useState(false)
   const [useDoctorComponent, setUseDoctorComponent] = useState(false)
+  const [useNurseComponent, setUseNurseComponent] = useState(false)
+  const [useChoferComponent, setUseChoferComponent] = useState(false)
+  
+  const [useInteractive1, setUseInteractive1] = useState(false)
+  const [useInteractive2, setUseInteractive2] = useState(false)
+  
+  const [citySelected, setCitySelected] = useState(false)
 
+  const [nextButtonComponent, setNextButtonComponent] = useState(true)
 
   const closeQuestions = () => {
     setCardQuestions(!cardQuestions)
@@ -44,13 +53,29 @@ const Questions = ({ question, clickQuestion }) => {
       setUseCityComponent(!useCityComponent)
     } else if (question[presentQuestion].component === 'DoctorsQuestion') {
       setUseDoctorComponent(!useDoctorComponent)
+    } else if (question[presentQuestion].component === 'NurseQuestion') {
+      setUseNurseComponent(!useNurseComponent)
+    } else if (question[presentQuestion].component === 'ChoferQuestion') {
+      setUseChoferComponent(!useChoferComponent)
     }
   }
 
+  const selectedCity = (e) => {
+    setUseCityComponent(!useCityComponent)
+    setCitySelected(e.target.attributes.category.value)
+    console.log('Seleccionó', e.target.attributes.category.value)
+    setPresentQuestion(presentQuestion + 1)
+  }
+
   const pressNot = () => {
-    console.log('Seleccionó No')
+    console.log('Selecionó No')
     setPresentQuestion(presentQuestion + 2)
   }
+  const usePressNotFunc = () => {
+    console.log('Selecionó No y suma 1 en las preguntas')
+    setPresentQuestion(presentQuestion + 1)
+  }
+  
   const pressYes = () => {
     console.log('Seleccionó Yes')
     setPresentQuestion(presentQuestion + 1)
@@ -58,13 +83,28 @@ const Questions = ({ question, clickQuestion }) => {
 
   const interactive1Func = () => {
     console.log('Seleccionó Casa de Recuperación')
+    if (useInteractive2 === true) {
+      setUseInteractive2(false)
+      setUseInteractive1(!useInteractive1)
+    }
     setUseInteractive1(!useInteractive1)
   }
 
   const interactive2Func = () => {
     console.log('Seleccionó Hotel')
+    if (useInteractive1 === true) {
+      setUseInteractive1(false)
+      setUseInteractive2(!useInteractive2)
+    }
     setUseInteractive2(!useInteractive2)
   }
+
+  useEffect(() => {
+    if(question[presentQuestion].component) {
+      setNextButtonComponent(false)
+    }
+  }, [question, presentQuestion])
+  
 
   return (
     <>
@@ -112,17 +152,28 @@ const Questions = ({ question, clickQuestion }) => {
                       <button onClick={openComponent} className='buttonUseComponent'>{question[presentQuestion].placeholder}</button>
                     </div>
                     <button onClick={handlePreviusQuestion} className='previusButton' >{question[presentQuestion].response.button1}</button>
-                    <button className='previusButton' onClick={handleQuestion}>{question[presentQuestion].response.button2}</button>
+                    {nextButtonComponent &&
+                      <button className='previusButton' onClick={handleQuestion}>{question[presentQuestion].response.button2}</button>
+                    }
                   </>
                 }
                 {useCityComponent && 
-                  <CityQuestion question={question} presentQuestion={presentQuestion} setUseCityComponent={setUseCityComponent} useCityComponent={useCityComponent} />
+                  <CityQuestion question={question} presentQuestion={presentQuestion} setUseCityComponent={setUseCityComponent} useCityComponent={useCityComponent} setCitySelected={setCitySelected} selectedCity={selectedCity} />
                 }
                 {useDoctorComponent &&
-                  <DoctorsQuestion question={question} presentQuestion={presentQuestion} setUseDoctorComponent={setUseDoctorComponent} useDoctorComponent={useDoctorComponent} />
+                  <DoctorsQuestion question={question} presentQuestion={presentQuestion} setPresentQuestion={setPresentQuestion} setUseDoctorComponent={setUseDoctorComponent} useDoctorComponent={useDoctorComponent}/>
+                }
+                {useNurseComponent &&
+                  <NurseQuestion question={question} setPresentQuestion={setPresentQuestion} presentQuestion={presentQuestion} useNurseComponent={useNurseComponent} setUseNurseComponent={setUseNurseComponent}/>
+                }
+                {useChoferComponent &&
+                  <ChoferQuestion question={question} setPresentQuestion={setPresentQuestion} presentQuestion={presentQuestion} setUseChoferComponent={setUseChoferComponent} useChoferComponent={useChoferComponent}/>
                 }
                 {useInteractive1 &&
-                  <CardRecoveryHouse />
+                  <RecoveryHouseQuestion question={question} setPresentQuestion={setPresentQuestion} presentQuestion={presentQuestion} citySelected={citySelected} setUseInteractive1={setUseInteractive1} useInteractive1={useInteractive1} />
+                }
+                {useInteractive2 && 
+                  <RecoveryHotelQuestion />
                 }
               </div>
               {question[presentQuestion].useButton &&
@@ -130,12 +181,17 @@ const Questions = ({ question, clickQuestion }) => {
                   {presentQuestion !== 0 &&
                       <button onClick={handlePreviusQuestion} className='previusButton' >{question[presentQuestion].response.button1}</button>
                   }
-                  <button onClick={handleQuestion} className='nextButton' >{question[presentQuestion].response.button2}</button>
+                    <button onClick={handleQuestion} className='nextButton' >{question[presentQuestion].response.button2}</button>
                 </div>
               }
               {question[presentQuestion].useYesOrNotButton &&
                 <div className='questionsButtons'>
-                  <button onClick={pressNot} className='previusButton'>{question[presentQuestion].response.buttonNo}</button>
+                  {question[presentQuestion].info === 'usePressNot' &&
+                    <button onClick={usePressNotFunc} className='previusButton'>{question[presentQuestion].response.buttonNo}</button>
+                  }
+                  {question[presentQuestion].info === '' &&
+                    <button onClick={pressNot} className='previusButton'>{question[presentQuestion].response.buttonNo}</button>
+                  }
                   <button onClick={pressYes} className='nextButton'>{question[presentQuestion].response.buttonYes}</button>
                 </div>
               }

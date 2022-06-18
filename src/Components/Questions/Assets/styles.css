@@ -150,13 +150,9 @@
     box-shadow: none;
     transform: translateY(0);
 }
-.interactive1_div {
+.interactive1_div, .interactive2_div {
     width: 180px;
-    height: 180px;
-}
-.interactive2_div {
-    width: 180px;
-    height: 180px;
+    height: 150px;
 }
 .interactive1, .interactive2 {
     border: none;
@@ -172,6 +168,8 @@
 .interactive1 img, .interactive2 img {
     border-radius: 20px;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .interactive1 h1, .interactive2 h1 {
     position: absolute;
@@ -277,5 +275,15 @@
         width: 500px;
         top: 110px;
         transform: translateX(445px);
+    }
+    .interactive1_div, .interactive2_div {
+        width: 160px;
+        height: 130px;
+    }
+    .interactive1, .interactive2 {
+        margin: 0 10px;
+    }
+    .interactive1 h1, .interactive2 h1 {
+        left: 8px;
     }
 }

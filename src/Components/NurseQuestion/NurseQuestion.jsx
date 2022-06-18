@@ -5,21 +5,21 @@ import CardQuestionDoctors from '../CardQuestionDoctors/CardQuestionDoctors'
 
 import './Assets/styles.css'
 
-const DoctorsQuestion = ({ question, presentQuestion, setPresentQuestion, setUseDoctorComponent, useDoctorComponent }) => {
-    
+const NurseQuestion = ({ question, setPresentQuestion, presentQuestion, useNurseComponent, setUseNurseComponent }) => {
+
     const doctorSelected = (e) => {
-        setUseDoctorComponent(!useDoctorComponent)
+        setUseNurseComponent(!useNurseComponent)
         console.log('Seleccionó', e.target.attributes.category.value)
         setPresentQuestion(presentQuestion + 1)
     }
 
   return (
-    <Grid className='grid_doctorsQuestion' container direction='row' alignItems='center' justifyContent='center' spacing={2}>
+    <Grid className='grid_nurseQuestion' container direction='row' alignItems='center' justifyContent='center' spacing={2}>
         {
-            question[presentQuestion].response.doctors.map((quest, index) => {
+            question[presentQuestion].response.nurse.map((quest, index) => {
                 return (
-                    <Grid item className='CardDoctors' key={index}>
-                        <CardQuestionDoctors imgDoctor={quest.avatar} nameDoctor={quest.name} descriptionDoctor={quest.description} cityDoctor={quest.city} categorySelected={quest.name} doctorSelected={doctorSelected}/>
+                    <Grid item className='CardNurse' key={index}>
+                        <CardQuestionDoctors imgDoctor={quest.avatar} nameDoctor={quest.name} descriptionDoctor={quest.experience} cityDoctor={quest.city} categorySelected={quest.name} doctorSelected={doctorSelected}/>
                     </Grid>
                 )
             })
@@ -36,4 +36,4 @@ const DoctorsQuestion = ({ question, presentQuestion, setPresentQuestion, setUse
   )
 }
 
-export default DoctorsQuestion
+export default NurseQuestion
