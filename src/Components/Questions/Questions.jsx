@@ -1,6 +1,7 @@
 import { FormControl, IconButton, TextField } from '@mui/material'
 import { ArrowLeft2, ArrowRight2 } from 'iconsax-react'
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import CityQuestion from '../CityQuestion/CityQuestion'
 
@@ -11,6 +12,7 @@ import RecoveryHouseQuestion from '../RecoveryHouseQuestion/RecoveryHouseQuestio
 import RecoveryHotelQuestion from '../RecoveryHotelQuestion/RecoveryHotelQuestion'
 import NurseQuestion from '../NurseQuestion/NurseQuestion'
 import ChoferQuestion from '../ChoferQuestion/ChoferQuestion'
+import ToursQuestion from '../ToursQuestion/ToursQuestion'
 
 const Questions = ({ question, clickQuestion }) => {
 
@@ -23,6 +25,7 @@ const Questions = ({ question, clickQuestion }) => {
   const [useDoctorComponent, setUseDoctorComponent] = useState(false)
   const [useNurseComponent, setUseNurseComponent] = useState(false)
   const [useChoferComponent, setUseChoferComponent] = useState(false)
+  const [useToursComponent, setUseToursComponent] = useState(false)
   
   const [useInteractive1, setUseInteractive1] = useState(false)
   const [useInteractive2, setUseInteractive2] = useState(false)
@@ -31,18 +34,23 @@ const Questions = ({ question, clickQuestion }) => {
 
   const [nextButtonComponent, setNextButtonComponent] = useState(true)
 
+  const navigate = useNavigate()
+
   const closeQuestions = () => {
     setCardQuestions(!cardQuestions)
     setBakground(!bakground)
   }
 
   const handleQuestion = () => {
-    if (presentQuestion === question.length - 1) {
-      setIsFinished(true)
-    } else {
-      setPresentQuestion(presentQuestion + 1)
-    }
+    setPresentQuestion(presentQuestion + 1)
   }
+
+  useEffect(() => {
+    if(presentQuestion === question.length - 1) {
+      console.log('Estamos aquí')
+      setIsFinished(true)
+    }
+  }, [presentQuestion,question])
   
   const handlePreviusQuestion = () => {
     setPresentQuestion(presentQuestion - 1)
@@ -57,6 +65,8 @@ const Questions = ({ question, clickQuestion }) => {
       setUseNurseComponent(!useNurseComponent)
     } else if (question[presentQuestion].component === 'ChoferQuestion') {
       setUseChoferComponent(!useChoferComponent)
+    } else if (question[presentQuestion].component === 'TourQuestion') {
+      setUseToursComponent(!useToursComponent)
     }
   }
 
@@ -169,6 +179,9 @@ const Questions = ({ question, clickQuestion }) => {
                 {useChoferComponent &&
                   <ChoferQuestion question={question} setPresentQuestion={setPresentQuestion} presentQuestion={presentQuestion} setUseChoferComponent={setUseChoferComponent} useChoferComponent={useChoferComponent}/>
                 }
+                {useToursComponent &&
+                  <ToursQuestion question={question} setPresentQuestion={setPresentQuestion} presentQuestion={presentQuestion} setUseToursComponent={setUseToursComponent} useToursComponent={useToursComponent} />
+                }
                 {useInteractive1 &&
                   <RecoveryHouseQuestion question={question} setPresentQuestion={setPresentQuestion} presentQuestion={presentQuestion} citySelected={citySelected} setUseInteractive1={setUseInteractive1} useInteractive1={useInteractive1} />
                 }
@@ -178,10 +191,17 @@ const Questions = ({ question, clickQuestion }) => {
               </div>
               {question[presentQuestion].useButton &&
                 <div className='questionsButtons'>
-                  {presentQuestion !== 0 &&
+                  {presentQuestion !== 0 && isFinished !== true &&
                       <button onClick={handlePreviusQuestion} className='previusButton' >{question[presentQuestion].response.button1}</button>
                   }
+                  {isFinished !== true &&
                     <button onClick={handleQuestion} className='nextButton' >{question[presentQuestion].response.button2}</button>
+                  }
+                  {isFinished === true &&
+                    <>
+                      <button onClick={() => navigate("/flights")} className='nextButton' >{question[presentQuestion].response.button3}</button>
+                    </>
+                  }
                 </div>
               }
               {question[presentQuestion].useYesOrNotButton &&

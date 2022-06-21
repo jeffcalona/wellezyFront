@@ -29,17 +29,25 @@ const ProcedureSearch = () => {
     const initCuestions = (e) => {
         setFilter([])
         const click = e.target.outerText
+        console.log('click', click)
         const categorySelected = e.target.attributes.category.value
+        console.log('Category Selected', categorySelected)
         setCategoryProcedure(categorySelected)
         setCuestionSelected(click)
+
+        setQuestion(newQuestions[categorySelected - 1].questions)
     }
 
     
-    useEffect(() => {
+    /*useEffect(() => {
         if(categoryProcedure === newQuestions[0].idProcedure) {
           setQuestion(newQuestions[0].questions)
         } 
       }, [categoryProcedure])
+
+    useEffect(() => {
+        
+    })*/
 
 
   return (

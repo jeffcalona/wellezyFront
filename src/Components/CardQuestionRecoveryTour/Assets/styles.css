@@ -1,4 +1,4 @@
-.cardRecoveryHouse {
+.cardRecoveryTour {
     width: 200px;
     font-family: 'Inter';
     text-align: center;
@@ -6,7 +6,7 @@
     box-shadow: none !important;
     background-color: #00427400 !important;
 }
-.button_cardRecoveryHouse {
+.button_cardRecoveryTour {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -16,30 +16,30 @@
     border: none;
     cursor: pointer;
 }
-.div_mediaRecoveryHouse img {
+.div_mediaRecoveryTour img {
     width: 200px;
     height: 200px;
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
-.actionHeart_recoveryHouse {
+.actionHeart_recoveryTour {
     position: absolute;
     top: 0;
     right: 0;
 }
-.cardContent_recoveryHouse {
+.cardContent_recoveryTour {
     color: white;
     padding: 10px !important;
 }
-.neighborhoodHouse {
+.title {
     font-family: 'Inter' !important;
     font-size: 18px !important;
     font-weight: 400 !important;
     margin-bottom: 0 !important;
 }
-.descriptionHouse {
+.description {
     font-family: 'Inter' !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-weight: 200 !important;
 }
 .cardAction_start {
@@ -49,10 +49,10 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .cardRecoveryHouse {
+    .cardRecoveryTour {
         width: 190px;
     }
-    .div_mediaRecoveryHouse img {
+    .div_mediaRecoveryTour img {
         width: 190px;
         height: 190px;
     }
