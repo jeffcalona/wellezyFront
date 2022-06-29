@@ -1,20 +1,30 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { TextField, FormControl } from '@mui/material'
 import Questions from '../Questions/Questions'
+//Redux
+import { initCuestions } from '../../store/slices/questions'
+import { useDispatch, useSelector } from 'react-redux'
 
 import './Assets/styles.css'
 
-import newQuestions from '../../Api/newQuestions'
+//import newQuestions from '../../Api/newQuestions'
 
 const URL = process.env.REACT_APP_URL_API_PROCEDURES
 
 const ProcedureSearch = () => {
 
-    const [filter, setFilter] = useState([])
-    const [categoryProcedure, setCategoryProcedure] = useState('')
-    const [questionSelected, setCuestionSelected] = useState('')
+    const dispatch = useDispatch()
 
-    const [question, setQuestion] = useState(false)
+    const [filter, setFilter] = useState([])
+    //const [categoryProcedure, setCategoryProcedure] = useState('')
+    //const [questionSelected, setCuestionSelected] = useState('')
+
+    //const { questionsList } = useSelector(state => state.questions)
+    const { questionsList } = useSelector(state => state.questions)
+    console.log('questionsList', questionsList)
+    
+
+    //const [question, setQuestion] = useState(false)
 
     const handleFilter = async (e) => {
         const searcher = e.target.value
@@ -26,7 +36,8 @@ const ProcedureSearch = () => {
         searcher === '' ? setFilter([]) : setFilter(newFilter)
     }
 
-    const initCuestions = (e) => {
+
+    /*const initCuestions = (e) => {
         setFilter([])
         const click = e.target.outerText
         console.log('click', click)
@@ -36,11 +47,10 @@ const ProcedureSearch = () => {
         setCuestionSelected(click)
 
         setQuestion(newQuestions[categorySelected - 1].questions)
-    }
-
+    }*/
     
     /*useEffect(() => {
-        if(categoryProcedure === newQuestions[0].idProcedure) {
+        if(categoryProcedure === newQuestions[0].idProcedure) { 
           setQuestion(newQuestions[0].questions)
         } 
       }, [categoryProcedure])
@@ -67,7 +77,10 @@ const ProcedureSearch = () => {
                     {
                         filter.map((pro, index) => {
                         return (
-                            <button key={index} category={pro.procedure.idProcedure} className='resoult' onClick={initCuestions} >
+                            <button key={index} category={pro.procedure.idProcedure} className='resoult' onClick={(e) => {
+                                dispatch(initCuestions(e))
+                                setFilter([])
+                                }} >
                                 <div className='resoult-div_img'><img src={pro.procedure.img} alt={pro.procedure.name} /></div>
                                 {pro.procedure.name}
                             </button>
@@ -78,8 +91,10 @@ const ProcedureSearch = () => {
             )}
         </div>
         <>
-            {question &&
-                <Questions question={question} clickQuestion={questionSelected} />
+            {
+                //questionsList.questions.length > 0 &&
+                questionsList.questions &&
+                <Questions question={questionsList} /*clickQuestion={questionSelected}*/ />
             }
         </>
     </>

@@ -1,10 +1,17 @@
 import React from 'react'
-import ProcedureSearch from '../../Components/ProcedureSearch/ProcedureSearch'
+import { useSelector } from 'react-redux'
+import Questions from '../../Components/Questions/Questions'
 
 const  Flights = () => {
+
+  const { questionsList } = useSelector(state => state.questions)
+
   return (
-    <div style={{backgroundColor: '#B8DEDF', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <ProcedureSearch />
+    <div style={{backgroundColor: '#00DEDF', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        {
+                questionsList.questions &&
+                <Questions question={questionsList} /*clickQuestion={questionSelected}*/ />
+        }
     </div>
   )
 }

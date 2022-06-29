@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import './Assets/styles.css'
 import Map2 from './Assets/Img/Map2.png'

@@ -1,6 +1,7 @@
 .services {
   width: 75px;
-  height: 520px;
+  height: 450px;
+  overflow-y: hidden;
   background-color: rgba(255, 255, 255, .2);
   text-align: center;
   padding: 10px 0;
@@ -9,7 +10,7 @@
   top: 12%;
   left: 10px;
 }
-.services ul li {
+.services ul li{
   list-style: none;
   color: white;
 }
@@ -29,17 +30,16 @@
     display: none;
   }
   .servicesPhone {
-    background-color: #004274;
+    background-color: rgba(255, 255, 255, .2);
     display: flex;
     position: absolute;
-    left: 0;
-    top: 530px;
-    width: 100%;
+    top: 520px;
     height: 70px;
     box-sizing: border-box;
     align-items: center;
+    border-radius: 20px;
   }
-  .servicesPhone ul {
+ .servicesPhone ul {
     width: 100%;
     display: flex;
     list-style: none;
@@ -48,9 +48,13 @@
   .servicesPhone ul li {
     margin: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    font-size: 8px;
+    text-align: center;
+    color: white
   }
-  .servicesPhone p {
-    display: none;
+  .slider_ {
+    display: flex;
   }
 }

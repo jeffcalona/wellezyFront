@@ -6,6 +6,17 @@
     border-radius: 20px !important;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
+.div_cardHomeDotors-img {
+    width: 92px;
+    height: 92px;
+    margin: -40px auto;
+}
+.cardHomeDotors_img {
+    border-radius: 50%;
+}
+.div_cardHomeDotors-img img {
+    pointer-events: none;
+}
 .cardHomeDotors:hover {
     cursor: pointer;
 }

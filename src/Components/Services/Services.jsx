@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import {ArrowUp2, Car, Simcard, Verify, Ship, ProfileTick, Profile2User, Hospital, ArrowDown2} from 'iconsax-react';
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
 
 import './Assets/styles.css'
 
@@ -31,6 +33,18 @@ const servicesElements = [
   {
     icon: <Hospital size="33" color="white"/>,
     description: 'Lugar de Recuperación'
+  },
+  {
+    icon: <Car size="33" color="white"/>,
+    description: 'Transporte'
+  },
+  {
+    icon: <Simcard size="33" color="white"/>,
+    description: 'Sim Card'
+  },
+  {
+    icon: <Verify size="33" color="white"/>,
+    description: 'Nutrición Saludable'
   }
 ]
 
@@ -62,46 +76,66 @@ const servicesElementsPhone = [
   {
     icon: <Hospital size="36" color="white"/>,
     description: 'Lugar de Recuperación'
+  },
+  {
+    icon: <Car size="33" color="white"/>,
+    description: 'Transporte'
+  },
+  {
+    icon: <Simcard size="33" color="white"/>,
+    description: 'Sim Card'
+  },
+  {
+    icon: <Verify size="33" color="white"/>,
+    description: 'Nutrición Saludable'
   }
 ]
 
+const MotionConstraints = styled(motion.div)`
+  width: 100vw;
+  overflow-x: hidden;
+`;
+
+const MotionBox = styled(motion.div)`
+  width: 160vw;
+`
+
 const Services = () => {
+  const constraintsRef = useRef(null)
   return (
     <>
       <div className='services'>
-        <ul>
-          <li><ArrowUp2 size="33" color="white"/></li>
-          {
-            servicesElements.map((service, index) => {
-              return (
-                <ul key={index}>
-                  <li>
-                    {service.icon}
-                    <p>{service.description}</p>
-                  </li>
-                </ul>
-              )
-            })
-          }
-          <li><ArrowDown2 size="33" color="white"/></li>
-        </ul>
+          <motion.div drag='y' dragConstraints={{top: -190, bottom: 0}}>
+            {
+              servicesElements.map((service, index) => {
+                return (
+                  <ul key={index}>
+                    <li>
+                      {service.icon}
+                      <p>{service.description}</p>
+                    </li>
+                  </ul>
+                )
+              })
+            }
+          </motion.div>
       </div>
-      <div className='servicesPhone'>
-        <ul>
-          {
-            servicesElementsPhone.map((service, index) => {
-              return (
-                <ul key={index}>
-                  <li>
-                    {service.icon}
-                    <p>{service.description}</p>
-                  </li>
-                </ul>
-              )
-            })
-          }
-        </ul>
-      </div>
+      <MotionConstraints ref={constraintsRef} className='servicesPhone'>
+          <MotionBox drag='x' dragConstraints={constraintsRef} className='slider_'>
+            {
+              servicesElementsPhone.map((service, index) => {
+                return (
+                  <ul key={index}>
+                    <li>
+                      {service.icon}
+                      <p>{service.description}</p>
+                    </li>
+                  </ul>
+                )
+              })
+            }
+          </MotionBox>
+      </MotionConstraints>
     </>
   )
 }

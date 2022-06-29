@@ -1,6 +1,6 @@
 
 .div_HomeDoctors {
-    width: 95%;
+    width: 70%;
 }
 .HomeDoctors {
     background-color: #004274;
@@ -10,6 +10,8 @@
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
     font-family: 'Inter';
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .HomeDoctors h1 {
     font-size: 30px;
@@ -18,38 +20,83 @@
     margin-top: 20px;
     position: absolute;
     top: 10px;
-    left: 45%;
 }
 .div_PrincipalImg {
-    width: 265px;
-    height: 345px;
+    width: 25%;
+    height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .HomeDoctors_PrincipalImg {
     width: 100%;
     height: 100%;
-    margin-left: 37px;
-    margin-top: 42px;
     border-radius: 20px;
+}
+.div_PrincipalImg img {
+    width: 90%;
+    height: 90%;
 }
 .principal_Action {
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: 30px;
+}
+.sliderContainer_doctors {
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+.slider_doctors {
+    text-align: center;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .grid_CardHomeDoctors {
-    text-align: center;
-    margin-top: 80px !important;
+    margin: 0 20px !important;
 }
-.div_cardHomeDotors-img {
-    width: 92px;
-    height: 92px;
-    margin: -40px auto;
+
+@media screen and (max-width: 1600px) {
+    .div_HomeDoctors {
+      width: 80%;
+    }
+    .div_PrincipalImg {
+        width: 30%;
+    }
+    .sliderContainer_doctors {
+        width: 70%;
+    }
 }
-.cardHomeDotors_img {
-    border-radius: 50%;
+@media screen and (max-width: 1250px) {
+    .div_HomeDoctors {
+      width: 90%;
+    }
 }
-@media screen and (max-width: 1443px) {
+@media screen and (max-width: 1100px) {
+    .div_HomeDoctors {
+      width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .div_PrincipalImg {
+        display: none;
+    }
+    .sliderContainer_doctors {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 720px) {
+   .slider_doctors {
+    width: 300vw !important;
+   }
+   .HomeDoctors {
+    margin-top: 0 !important;
+   }
+}
+/*@media screen and (max-width: 1443px) {
     .HomeDoctors {
         height: 620px;
         padding-top: 50px;
@@ -116,4 +163,4 @@
         display: flex;
         justify-content: center;
     }
-}
+}*/

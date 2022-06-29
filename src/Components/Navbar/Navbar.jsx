@@ -20,7 +20,6 @@ const Navbar = () => {
   const aaa = () => {
     $(window).resize(function(){
       if($(window).width() > 1101){
-        console.log($(window).width());
         setDropdMenu(false)
       }
     })
@@ -59,7 +58,7 @@ const Navbar = () => {
         </div>
         <div className={dropdMenu ? 'active_dropdMenu' : 'links'}>
           <ul>
-            <li><a href="/flights" className='navlinks'>Vuelos</a></li>
+            <li><NavLink to="/flights" className='navlinks'>Vuelos</NavLink></li>
             <li><NavLink to="/procedures" className='navlinks'>Procedimientos</NavLink></li>
             <li><NavLink to="/doctors" className='navlinks'>Doctores</NavLink></li>
             <li><NavLink to="/turismo" className='navlinks'>Turismo</NavLink></li>
