@@ -1,6 +1,6 @@
 .doctors_content {
     width: 95%;
-    height: 1050px;
+    height: 1230px;
     display: flex;
     margin-top: -140px;
 }
@@ -10,6 +10,7 @@
     border-radius: 20px;
     color: white;
     padding: 30px 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
 .doctorsFilter_input {
     width: 100%;
@@ -28,27 +29,59 @@
     font-size: 30px;
     margin-top: 30px;
 }
-.doctors_filter h3 {
-    font-family: 'Inter';
-    font-weight: 600;
-    font-size: 25px;
-    margin-top: 20px;
+.MuiListItemText-secondary {
+    color: white !important;
+    font-family: 'Inter' !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
 }
-.doctors_filter ul li {
-    list-style: none;
-    font-family: 'Inter';
-    font-size: 20px;
-    font-weight: 300;
-    margin: 5px 0;
-}
-.doctorsList_starts {
+.doctorsList_icon {
     width: 100%;
     display: flex;
-    margin: 10px 0;
+    margin-left: 20px;
 }
 .css-10r5to9-MuiCardActions-root {
     padding: 3px !important;
 }
 .doctorsList_heart {
-    padding: 20px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+@media screen and (max-width: 1300px) {
+    .doctorsList_icon {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .doctors_filter {
+        width: 30%;
+    }
+    .doctorsList_icon {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 863px) {
+    .doctors_content {
+        flex-direction: column;
+    }
+    .doctors_filter {
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    .doctorsList_icon {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .doctors_content {
+        width: 100%;
+        margin-top: -200px;
+    }
+    .doctors_filter {
+        width: 100%;
+        padding: 0;
+    }
+    .doctors-filter_content {
+        margin: 30px 20px;
+    }
 }

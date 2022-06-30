@@ -1,6 +1,6 @@
 import { Grid, IconButton } from '@mui/material'
 import { ArrowLeft2, ArrowRight2 } from 'iconsax-react'
-import React from 'react'
+import React, { useState } from 'react'
 import CardQuestionDoctors from '../CardQuestionDoctors/CardQuestionDoctors'
 
 import './Assets/styles.css'
@@ -13,10 +13,38 @@ const DoctorsQuestion = ({ question, presentQuestion, setPresentQuestion, setUse
         setPresentQuestion(presentQuestion + 1)
     }
 
+    const apiDoctors = question[presentQuestion].response.doctors
+
+    const listDoctorsPerPage = 9
+
+    const [listDoctorsPage, setListDoctorsPage] = useState([...apiDoctors].splice(0, listDoctorsPerPage))
+    const [currentPage, setCurrentPage] = useState(0)
+
+    const prevHandler = () => {
+        const prevPage = currentPage - 1
+
+        if(prevPage < 0) return;
+
+        const firstIndex = prevPage * listDoctorsPerPage
+        setListDoctorsPage([...apiDoctors].splice(firstIndex, listDoctorsPerPage))
+        setCurrentPage(prevPage)
+    }
+
+    const nextHandler = () => {
+        const totalList = apiDoctors.length
+        const nextPage = currentPage + 1
+        const firstIndex = nextPage * listDoctorsPerPage
+
+        if (firstIndex >= totalList) return;
+
+        setListDoctorsPage([...apiDoctors].splice(firstIndex, listDoctorsPerPage))
+        setCurrentPage(nextPage)
+    }
+
   return (
     <Grid className='grid_doctorsQuestion' container direction='row' alignItems='center' justifyContent='center' spacing={2}>
         {
-            question[presentQuestion].response.doctors.map((quest, index) => {
+            listDoctorsPage.map((quest, index) => {
                 return (
                     <Grid item className='CardDoctors' key={index}>
                         <CardQuestionDoctors imgDoctor={quest.avatar} nameDoctor={quest.name} descriptionDoctor={quest.description} cityDoctor={quest.city} categorySelected={quest.name} doctorSelected={doctorSelected}/>
@@ -25,10 +53,10 @@ const DoctorsQuestion = ({ question, presentQuestion, setPresentQuestion, setUse
             })
         }
         <div className='Arrows'>
-            <IconButton>
+            <IconButton onClick={prevHandler}>
                 <ArrowLeft2 size="35" color="white"/>
             </IconButton>
-            <IconButton>
+            <IconButton onClick={nextHandler}>
                 <ArrowRight2 size="35" color="white"/>
             </IconButton>
         </div>

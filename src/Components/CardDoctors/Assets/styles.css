@@ -45,3 +45,33 @@
     margin: 10px !important;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
+
+@media screen and (max-width: 863px) {
+    .cardDoctors {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .css-919fip-MuiGrid-root>.MuiGrid-item {
+        padding: 10px 2px !important;
+    }
+    .cardDoctors {
+        width: 240px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .div_cardDoctors-img {
+        width: 90px;
+        height: 90px;
+    }
+    .cardDoctors {
+        width: 200px;
+        height: 210px;
+    }
+    .actionArea_text .css-4exc95-MuiTypography-root {
+        font-size: 14px;
+    }
+    .actionArea_text .css-1y4mape-MuiTypography-root {
+        font-size: 12px;
+    }
+}

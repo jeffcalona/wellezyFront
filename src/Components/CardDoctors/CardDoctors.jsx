@@ -8,7 +8,7 @@ const CardDoctors = ({ imgDoctor, nameDoctor, descriptionDoctor, cityDoctor }) =
     <>
         <div className='cardDoctors-img'>
             <div className='div_cardDoctors-img'>
-                <CardMedia className='cardDoctors_img' component='img' height={102} image={imgDoctor} alt={nameDoctor}/>
+                <CardMedia className='cardDoctors_img' component='img' image={imgDoctor} alt={nameDoctor}/>
             </div>
         </div>
         <Card className='cardDoctors'>

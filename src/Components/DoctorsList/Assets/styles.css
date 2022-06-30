@@ -2,3 +2,14 @@
     width: 80%;
     margin: 0 !important;
 }
+
+@media screen and (max-width: 1000px) {
+    .doctors_list {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .doctors_list {
+        width: 100% !important;
+    }
+}
