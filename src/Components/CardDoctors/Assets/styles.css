@@ -52,11 +52,11 @@
     }
 }
 @media screen and (max-width: 580px) {
-    .css-919fip-MuiGrid-root>.MuiGrid-item {
-        padding: 10px 2px !important;
+    .css-mo547r-MuiGrid-root>.MuiGrid-item {
+        padding-left: 2px !important;
     }
     .cardDoctors {
-        width: 240px;
+        width: 235px;
     }
 }
 @media screen and (max-width: 450px) {

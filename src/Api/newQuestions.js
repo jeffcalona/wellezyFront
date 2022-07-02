@@ -370,14 +370,14 @@ const allQuestions = [
                                 name: "Dr. Nelson Zapata 2",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/391/500/500.jpg?hmac=uaovpLGqdyuUjUClr8i1iFKoJcqfudsFeJT9YMKgmjk",
-                                city: "Cali",
+                                city: "Barranquilla",
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Viviana Lacera 2",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/981/500/500.jpg?hmac=jI0JpUDEQuFcGv4b05zl90aEzbjiq62ejNmdxDFfurQ",
-                                city: "Medellín",
+                                city: "Barranquilla",
                                 assessment: 3
                             },
                             {
@@ -391,7 +391,7 @@ const allQuestions = [
                                 name: "Dra. Lorena Galeano 2",
                                 description: "Cirujana Plástica, Estética y Recostructiva",
                                 avatar: "https://i.picsum.photos/id/387/500/500.jpg?hmac=1QmctCe6JuOK66mhfGHPpkRC_hm5myYZaTU3TffRId4",
-                                city: "Medellín",
+                                city: "Barranquilla",
                                 assessment: 4
                             }
                         ],
