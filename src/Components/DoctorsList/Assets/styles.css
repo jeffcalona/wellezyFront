@@ -1,6 +1,6 @@
 .doctors_content {
     width: 95%;
-    height: 1230px;
+    height: 1370px;
     display: flex;
     margin-top: -140px;
 }
@@ -8,6 +8,9 @@
     width: 80%;
     height: 400px;
     margin: 0 !important;
+}
+.doctors_list a {
+    text-decoration: none;
 }
 .doctors_filter {
     width: 20%;
@@ -62,7 +65,15 @@
     text-align: start;
     background-color: rgba(255, 255, 255, 0);
 }
-
+.collapseList_ListItemButton {
+    padding-left: 0!important;
+    padding-right: 0 !important;
+}
+.MuiListItemText-primary {
+    font-family: 'Inter' !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
 @media screen and (max-width: 1300px) {
     .doctorsList_icon {
         margin-left: 0;

@@ -116,282 +116,482 @@ const allQuestions = [
                         doctors: [
                             {
                                 name: "Dr. Juan Mario Escobar",
+                                slug: "dr-juan-mario-escobar",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/168/300/300.jpg?hmac=4m069iOglhq_N0vxSdJrKHQi0406HThIKEJllrqOELE",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Nicole Echeverry Salja",
+                                slug: "dra-nicole-echeverry-salja",
                                 description: "Cirujana Plástica y Estética Reconstructiva",
                                 avatar: "https://i.picsum.photos/id/188/300/300.jpg?hmac=O1Fgsa5q091m_1eNHYtavDoVNb6yIklGq1A67yv5_vk",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Daniel Correa",
+                                slug: "dr-daniel-correa",
                                 description: "Cirujano Plástico y Estético",
                                 avatar: "https://i.picsum.photos/id/880/300/300.jpg?hmac=oXC1t0jViOdGm6k__5wE0t1X0riYREqUm9z2CZuIfEI",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Elizabeth Giraldo",
+                                slug: "dra-elizabeth-giraldo",
                                 description: "Cirujana Plástica y Estética Reconstructiva",
                                 avatar: "https://i.picsum.photos/id/573/300/300.jpg?hmac=eB8bNuMfnFGtyA4SdNvGHVw2bCJzRa2O8FabHr1sb40",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dr. Felipe Ruso",
+                                slug: "dr-felipe-ruso",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/492/300/300.jpg?hmac=wwoIgwZiIgird4Ys0Jac4brMJjAReIdSuqNu8gR0m7k",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dra. Karen Castro",
+                                slug: "dra-karen-castro",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/335/300/300.jpg?hmac=WLsVURtOcUdU-vMyASCLwpmjlhToIWHNzMNghKfzsJE",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 3
                             },
                             {
                                 name: "Dra. Carolina Gomez",
+                                slug: "dra-carolina-gomez",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/580/300/300.jpg?hmac=OBswUmJO205IOKj3lc--Nl2Y1WuPCB5iPcjco4BWb4o",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Rachid Gorron Maloof",
+                                slug: "dr-rachid-gorron-maloof",
                                 description: "Cirujano Plástico y Estética Reconstructiva",
                                 avatar: "https://i.picsum.photos/id/116/300/300.jpg?hmac=8JS9-IMlHf_mp6RrUTuEudQm8gd32We08MRO1UJ2cTY",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dr. Juan Carlos Herrera",
+                                slug: "dr-rachid-gorron-maloof",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/278/300/300.jpg?hmac=Bh4VWDzT60r3pjIARd3W_U8e8SR-2ApJ3X6WLwS8SKs",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dr. Alvaro Correa",
+                                slug: "dr-alvaro-correa",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/593/500/500.jpg?hmac=tTKq5xoCbA7u-XjimfpDlDBKVk28TkZfki-FLFKNSP0",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 3
                             },
                             {
                                 name: "Dr. Felipe Buendia",
+                                slug: "dr-felipe-buendia",
                                 description: "Cirujano Plástico y Estético",
                                 avatar: "https://i.picsum.photos/id/435/500/500.jpg?hmac=3a9tBEGcwt0oZdKXmaPnp9mBEpd1Qp5IkmDaXTQj5go",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Liliana Fernandez",
+                                slug: "dra-liliana-fernandez",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/6/500/500.jpg?hmac=BV78_cgdwZQNfQorKlCsS4-47_DG0MJ3GZqiDBfeHbI",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'estética'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Mauricio Linares",
+                                slug: "dr-mauricio-linares",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/740/500/500.jpg?hmac=jnq-I2KYtjUXT1UJMlMFx0HrjDAk3FCe3yPyYEnxl-k",
                                 city: "Bogotá",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Hugo Cortes",
+                                slug: "dr-hugo-cortes",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/283/500/500.jpg?hmac=k9A6l1oJ3N0hNB1V0xKPKxmB7Ar5Xdy-aqNdwqkNDUc",
                                 city: "Bogotá",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Jaime Roberto Arias",
+                                slug: "dr-jaime-roberto-arias",
                                 description: "Cirujano Plástico y Estético",
                                 avatar: "https://i.picsum.photos/id/376/500/500.jpg?hmac=T32nkxwsxIyVf_KzAw9mqHfcl36epPedy9QORnJGoTM",
                                 city: "Cali",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Juliana Aguirre",
+                                slug: "dra-juliana-aguirre",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/506/500/500.jpg?hmac=BYrIaxLp-KtrJuj8yi-NqJw-tWEyGrponrzphcgZnj8",
                                 city: "Cali",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Nelson Zapata",
+                                slug: "dr-nelson-zapata",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/391/500/500.jpg?hmac=uaovpLGqdyuUjUClr8i1iFKoJcqfudsFeJT9YMKgmjk",
                                 city: "Cali",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Viviana Lacera",
+                                slug: "dra-viviana-lacera",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/981/500/500.jpg?hmac=jI0JpUDEQuFcGv4b05zl90aEzbjiq62ejNmdxDFfurQ",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'estética'
+                                ],
                                 assessment: 3
                             },
                             {
                                 name: "Dr. Camilo Rafael Torres",
+                                slug: "dr-camilo-rafael-torres",
                                 description: "Cirujano Plástico y Estético",
                                 avatar: "https://i.picsum.photos/id/694/500/500.jpg?hmac=cEe2DO9tVxp0o0HjSI5RboKc75ofkq50NvKBIlB_0fQ",
                                 city: "Cali",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Lorena Galeano",
+                                slug: "dra-lorena-galeano",
                                 description: "Cirujana Plástica, Estética y Recostructiva",
                                 avatar: "https://i.picsum.photos/id/387/500/500.jpg?hmac=1QmctCe6JuOK66mhfGHPpkRC_hm5myYZaTU3TffRId4",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Juan Mario Escobar 2",
+                                slug: "dr-juan-mario-escobar-2",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/168/300/300.jpg?hmac=4m069iOglhq_N0vxSdJrKHQi0406HThIKEJllrqOELE",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Nicole Echeverry Salja 2",
+                                slug: "dra-nicole-echeverry-salja-2",
                                 description: "Cirujana Plástica y Estética Reconstructiva",
                                 avatar: "https://i.picsum.photos/id/188/300/300.jpg?hmac=O1Fgsa5q091m_1eNHYtavDoVNb6yIklGq1A67yv5_vk",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Daniel Correa 2",
+                                slug: "dr-daniel-correa2",
                                 description: "Cirujano Plástico y Estético",
                                 avatar: "https://i.picsum.photos/id/880/300/300.jpg?hmac=oXC1t0jViOdGm6k__5wE0t1X0riYREqUm9z2CZuIfEI",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Elizabeth Giraldo 2",
+                                slug: "dra-elizabeth-giraldo-2",
                                 description: "Cirujana Plástica y Estética Reconstructiva",
                                 avatar: "https://i.picsum.photos/id/573/300/300.jpg?hmac=eB8bNuMfnFGtyA4SdNvGHVw2bCJzRa2O8FabHr1sb40",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dr. Felipe Ruso 2",
+                                slug: "dr-felipe-ruso-2",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/492/300/300.jpg?hmac=wwoIgwZiIgird4Ys0Jac4brMJjAReIdSuqNu8gR0m7k",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dra. Karen Castro 2",
+                                slug: "dra-karen-castro-2",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/335/300/300.jpg?hmac=WLsVURtOcUdU-vMyASCLwpmjlhToIWHNzMNghKfzsJE",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 3
                             },
                             {
                                 name: "Dra. Carolina Gomez 2",
+                                slug: "dra-carolina-gomez-2",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/580/300/300.jpg?hmac=OBswUmJO205IOKj3lc--Nl2Y1WuPCB5iPcjco4BWb4o",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Rachid Gorron Maloof 2",
+                                slug: "dr-rachid-gorron-maloof-2",
                                 description: "Cirujano Plástico y Estética Reconstructiva",
                                 avatar: "https://i.picsum.photos/id/116/300/300.jpg?hmac=8JS9-IMlHf_mp6RrUTuEudQm8gd32We08MRO1UJ2cTY",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dr. Juan Carlos Herrera 2",
+                                slug: "dr-juan-carlos-herrera-2",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/278/300/300.jpg?hmac=Bh4VWDzT60r3pjIARd3W_U8e8SR-2ApJ3X6WLwS8SKs",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dr. Alvaro Correa 2",
+                                slug: "dr-alvaro-correa-2",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/593/500/500.jpg?hmac=tTKq5xoCbA7u-XjimfpDlDBKVk28TkZfki-FLFKNSP0",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 3
                             },
                             {
                                 name: "Dr. Felipe Buendia 2",
+                                slug: "dr-felipe-buendia-2",
                                 description: "Cirujano Plástico y Estético",
                                 avatar: "https://i.picsum.photos/id/435/500/500.jpg?hmac=3a9tBEGcwt0oZdKXmaPnp9mBEpd1Qp5IkmDaXTQj5go",
                                 city: "Medellín",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Liliana Fernandez 2",
+                                slug: "dra-liliana-fernandez-2",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/6/500/500.jpg?hmac=BV78_cgdwZQNfQorKlCsS4-47_DG0MJ3GZqiDBfeHbI",
                                 city: "Medellín",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Mauricio Linares 2",
+                                slug: "dr-mauricio-linares-2",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/740/500/500.jpg?hmac=jnq-I2KYtjUXT1UJMlMFx0HrjDAk3FCe3yPyYEnxl-k",
                                 city: "Bogotá",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Hugo Cortes 2",
+                                slug: "dr-hugo-cortes-2",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/283/500/500.jpg?hmac=k9A6l1oJ3N0hNB1V0xKPKxmB7Ar5Xdy-aqNdwqkNDUc",
                                 city: "Bogotá",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Jaime Roberto Arias 2",
+                                slug: "dr-jaime-roberto-arias-2",
                                 description: "Cirujano Plástico y Estético",
                                 avatar: "https://i.picsum.photos/id/376/500/500.jpg?hmac=T32nkxwsxIyVf_KzAw9mqHfcl36epPedy9QORnJGoTM",
                                 city: "Cali",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Juliana Aguirre 2",
+                                slug: "dra-juliana-aguirre-2",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/506/500/500.jpg?hmac=BYrIaxLp-KtrJuj8yi-NqJw-tWEyGrponrzphcgZnj8",
                                 city: "Cali",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 4
                             },
                             {
                                 name: "Dr. Nelson Zapata 2",
+                                slug: "dr-nelson-zapata-2",
                                 description: "Cirujano Plástico",
                                 avatar: "https://i.picsum.photos/id/391/500/500.jpg?hmac=uaovpLGqdyuUjUClr8i1iFKoJcqfudsFeJT9YMKgmjk",
                                 city: "Barranquilla",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética', 'general'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Viviana Lacera 2",
+                                slug: "dra-viviana-lacera-2",
                                 description: "Cirujana Plástica",
                                 avatar: "https://i.picsum.photos/id/981/500/500.jpg?hmac=jI0JpUDEQuFcGv4b05zl90aEzbjiq62ejNmdxDFfurQ",
                                 city: "Barranquilla",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'estética', 'general'
+                                ],
                                 assessment: 3
                             },
                             {
                                 name: "Dr. Camilo Rafael Torres 2",
+                                slug: "dr-camilo-rafael-torres-2",
                                 description: "Cirujano Plástico y Estético",
                                 avatar: "https://i.picsum.photos/id/694/500/500.jpg?hmac=cEe2DO9tVxp0o0HjSI5RboKc75ofkq50NvKBIlB_0fQ",
                                 city: "Cali",
+                                gender: "Caballero",
+                                Procedimiento: [
+                                    'plastica', 'estética'
+                                ],
                                 assessment: 5
                             },
                             {
                                 name: "Dra. Lorena Galeano 2",
+                                slug: "dr-camilo-rafael-torres-2",
                                 description: "Cirujana Plástica, Estética y Recostructiva",
                                 avatar: "https://i.picsum.photos/id/387/500/500.jpg?hmac=1QmctCe6JuOK66mhfGHPpkRC_hm5myYZaTU3TffRId4",
                                 city: "Barranquilla",
+                                gender: "Dama",
+                                Procedimiento: [
+                                    'estética', 'general'
+                                ],
                                 assessment: 4
                             }
                         ],

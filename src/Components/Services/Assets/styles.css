@@ -14,6 +14,9 @@
   list-style: none;
   color: white;
 }
+.services ul li a {
+  text-decoration: none;
+}
 .services p {
   font-size: 11px;
   color: white;
@@ -23,6 +26,11 @@
 
 .servicesPhone {
   display: none;
+}
+
+.servicesPhone ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-width: 730px) {

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 import './Assets/styles.css'
+import { Link } from 'react-router-dom';
 
 const servicesElements = [
   {
@@ -24,7 +25,8 @@ const servicesElements = [
   },
   {
     icon: <ProfileTick size="33" color="white"/>,
-    description: 'Enfermeras'
+    description: 'Enfermeras',
+    link: 'nurses'
   },
   {
     icon: <Profile2User size="33" color="white"/>,
@@ -67,7 +69,8 @@ const servicesElementsPhone = [
   },
   {
     icon: <ProfileTick size="36" color="white"/>,
-    description: 'Enfermeras'
+    description: 'Enfermeras',
+    link: "nurses"
   },
   {
     icon: <Profile2User size="36" color="white"/>,
@@ -111,8 +114,10 @@ const Services = () => {
                 return (
                   <ul key={index}>
                     <li>
-                      {service.icon}
-                      <p>{service.description}</p>
+                      <Link to={`/${service.link}`}>
+                        {service.icon}
+                        <p>{service.description}</p>
+                      </Link>
                     </li>
                   </ul>
                 )
@@ -127,8 +132,10 @@ const Services = () => {
                 return (
                   <ul key={index}>
                     <li>
-                      {service.icon}
-                      <p>{service.description}</p>
+                      <Link to={`/${service.link}`}>
+                        {service.icon}
+                        <p>{service.description}</p>
+                      </Link>
                     </li>
                   </ul>
                 )
