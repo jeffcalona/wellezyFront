@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import './Assets/styles.css'
 import DoctorsHeader from '../../Components/DoctorsHeader/DoctorsHeader'
@@ -9,7 +9,7 @@ const Doctors = () => {
 
   return (
     <Grid container justifyContent='center'>
-        <DoctorsHeader />
+        <DoctorsHeader title='doctores' description='los mejores cirujanos' />
         <DoctorsList />
     </Grid>
   )

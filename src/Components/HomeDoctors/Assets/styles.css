@@ -58,6 +58,9 @@
 .grid_CardHomeDoctors {
     margin: 0 20px !important;
 }
+.grid_CardHomeDoctors a {
+    text-decoration: none;
+}
 
 @media screen and (max-width: 1600px) {
     .div_HomeDoctors {

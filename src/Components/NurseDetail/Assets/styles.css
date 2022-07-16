@@ -1,0 +1,170 @@
+.nurseDetail {
+    display: flex;
+    margin-top: 40px;
+    width: 90%;
+    justify-content: center;
+    font-family: 'Inter'; 
+}
+.nurseDetailLeft{
+    width: 43%;
+    margin: 0 auto;
+}
+.nurseDetailLeft p {
+    font-size: 14px;
+    font-weight: 300;
+}
+.nurseDetailLeft_img {
+    width: 100%;
+    height: 700px;
+}
+.nurseDetailLeft_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nurseDetailLeft-text_results {
+    margin: 20px 0;
+}
+.nurseDetailLeft-results_imgs {
+    display: flex;
+    width: 100%;
+}
+.nurseDetailLeft-results_slider {
+    display: flex;
+    width: 100%;
+}
+.nurseDetailLeft-results_imgs_ {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+.nurseDetailLeft-results_imgs_ h3 {
+    font-family: 'Oswald';
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 30px;
+}
+.nurseDetailLeft-results_img {
+    width: 175px;
+    height: 190px;
+}
+.backgroundBlack {
+    background-color: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+.nurseDetailLeft-results_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.middleLine {
+    width: 3px;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, .1);
+    margin: 0 auto
+}
+.nurseDetailRight {
+    width: 43%;
+    margin: 80px auto;
+}
+.nurseDetailRight_description {
+    min-height: 150px;
+}
+.nurseDetailRight h1 {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.nurseDetailRight h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.nurseDetailRight p {
+    font-size: 16px;
+    font-weight: 300;
+}
+.nurseDetailRight_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nurseDetailRight_heart {
+    margin-right: 20px !important;
+    padding: 5px !important;
+}
+.nurseDetailRight_description {
+    margin: 40px 0;
+}
+.nurseDetailRight_experience {
+    margin-bottom: 20px;
+}
+.nurseDetailRight_appliedStudies {
+    margin-bottom: 20px;
+}
+.css-jue3ft-MuiRating-root {
+    font-size: 40px !important;
+}
+.nurseDetailRight_assessment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    text-decoration: underline;
+}
+.nurseDetailRight_assessment p {
+    margin-left: 50px;
+}
+.nurseDetailRight_button {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.nurseDetailRight_button button {
+    font-family: 'Oswald';
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: none;
+    background-color: #00AFE8;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+.nurseDetailRight_comments {
+    margin-top: 70px;
+}
+.nurseDetailRight_comments h3 {
+    margin-bottom: 15px;
+}
+.nurseDetailRight_comments h4 {
+    font-weight: 500;
+}
+.nurseDetailRight_comments p {
+    font-size: 14px;
+    font-weight: 200;
+}
+.nurseDetailRight_comments_ {
+    border-bottom: 3px solid rgba(0, 0, 0, .1);
+    margin-bottom: 15px;
+}
+.nurseDetailRight_comments_one {
+    position: relative;
+    margin-bottom: 20px;
+}
+.nurseDetailRight_comments_arrow {
+    background-color: #00AFE8;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}

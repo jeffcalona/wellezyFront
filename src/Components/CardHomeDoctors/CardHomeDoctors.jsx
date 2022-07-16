@@ -1,11 +1,11 @@
-import { CardActionArea, Typography, CardActions, IconButton, Card, CardMedia } from '@mui/material'
+import { CardActionArea, Typography, CardActions, IconButton, Card, CardMedia, Rating } from '@mui/material'
 import { Heart, Location, Star1 } from 'iconsax-react'
 import React from 'react'
 
 import './Assets/styles.css'
 
 
-const CardHomeDoctors = ({ imgDoctor, nameDoctor, descriptionDoctor, cityDoctor }) => {
+const CardHomeDoctors = ({ imgDoctor, nameDoctor, descriptionDoctor, cityDoctor, starsNumber}) => {
   return (
     <>
       <div className='div_cardHomeDotors-img'>
@@ -21,7 +21,7 @@ const CardHomeDoctors = ({ imgDoctor, nameDoctor, descriptionDoctor, cityDoctor 
           <Typography sx={{fontSize: '14px', fontWeight: 200}}><Location size="20" color="#004274" variant="Bold"/>{cityDoctor}</Typography>
           <CardActions className='cardHomeDotors_Action'>
             <IconButton>
-              <Star1 className='star_CardDoctors' size="26" color='#FFB82E'/>
+              <Rating name="size-large" value={starsNumber} size="large" />
             </IconButton>
           </CardActions>
         </CardActionArea>

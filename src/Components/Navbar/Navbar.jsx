@@ -61,9 +61,9 @@ const Navbar = () => {
             <li><NavLink to="/flights" className='navlinks'>Vuelos</NavLink></li>
             <li><NavLink to="/procedures" className='navlinks'>Procedimientos</NavLink></li>
             <li><NavLink to="/doctors" className='navlinks'>Doctores</NavLink></li>
-            <li><NavLink to="/turismo" className='navlinks'>Turismo</NavLink></li>
-            <li><NavLink to="/aliados" className='navlinks'>Aliados</NavLink></li>
-            <li><NavLink to="/nosotros" className='navlinks'>Nosotros</NavLink></li>
+            <li><NavLink to="/turism" className='navlinks'>Turismo</NavLink></li>
+            <li><NavLink to="/allies" className='navlinks'>Aliados</NavLink></li>
+            <li><NavLink to="/about" className='navlinks'>Nosotros</NavLink></li>
           </ul>
         </div>
         <div className='icons-links'>

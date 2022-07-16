@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import {ArrowUp2, Car, Simcard, Verify, Ship, ProfileTick, Profile2User, Hospital, ArrowDown2} from 'iconsax-react';
+import { Car, Simcard, Verify, Ship, ProfileTick, Profile2User, Hospital } from 'iconsax-react';
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
@@ -9,88 +9,106 @@ import { Link } from 'react-router-dom';
 const servicesElements = [
   {
     icon: <Car size="33" color="white"/>,
-    description: 'Transporte'
+    description: 'Transporte',
+    link: '/transport'
   },
   {
     icon: <Simcard size="33" color="white"/>,
-    description: 'Sim Card'
+    description: 'Sim Card',
+    link: '/simcard'
   },
   {
     icon: <Verify size="33" color="white"/>,
-    description: 'Nutrición Saludable'
+    description: 'Nutrición Saludable',
+    link: '/nutrition'
   },
   {
     icon: <Ship size="33" color="white"/>,
-    description: 'Turismo'
+    description: 'Turismo',
+    link: '/turism'
   },
   {
     icon: <ProfileTick size="33" color="white"/>,
     description: 'Enfermeras',
-    link: 'nurses'
+    link: '/nurses'
   },
   {
     icon: <Profile2User size="33" color="white"/>,
-    description: 'Doctores'
+    description: 'Doctores',
+    link: '/doctors'
   },
   {
     icon: <Hospital size="33" color="white"/>,
-    description: 'Lugar de Recuperación'
+    description: 'Lugar de Recuperación',
+    link: '/recovery'
   },
   {
     icon: <Car size="33" color="white"/>,
-    description: 'Transporte'
+    description: 'Transporte',
+    link: '/transport'
   },
   {
     icon: <Simcard size="33" color="white"/>,
-    description: 'Sim Card'
+    description: 'Sim Card',
+    link: '/simcard'
   },
   {
     icon: <Verify size="33" color="white"/>,
-    description: 'Nutrición Saludable'
+    description: 'Nutrición Saludable',
+    link: '/nutrition'
   }
 ]
 
 const servicesElementsPhone = [
   {
     icon: <Car size="36" color="white"/>,
-    description: 'Transporte'
+    description: 'Transporte',
+    link: '/transport'
   },
   {
     icon: <Simcard size="36" color="white"/>,
-    description: 'Sim Card'
+    description: 'Sim Card',
+    link: '/simcard'
   },
   {
     icon: <Verify size="36" color="white"/>,
-    description: 'Nutrición Saludable'
+    description: 'Nutrición Saludable',
+    link: '/nutrition'
   },
   {
     icon: <Ship size="36" color="white"/>,
-    description: 'Turismo'
+    description: 'Turismo',
+    link: '/turism'
   },
   {
     icon: <ProfileTick size="36" color="white"/>,
     description: 'Enfermeras',
-    link: "nurses"
+    link: '/nurses'
   },
   {
     icon: <Profile2User size="36" color="white"/>,
-    description: 'Doctores'
+    description: 'Doctores',
+    link: '/doctors'
   },
   {
     icon: <Hospital size="36" color="white"/>,
-    description: 'Lugar de Recuperación'
+    description: 'Lugar de Recuperación',
+    link: '/recovery'
   },
   {
     icon: <Car size="33" color="white"/>,
-    description: 'Transporte'
+    description: 'Transporte',
+    link: 'transport'
   },
   {
     icon: <Simcard size="33" color="white"/>,
-    description: 'Sim Card'
+    description: 'Sim Card',
+    link: '/simcard'
   },
   {
     icon: <Verify size="33" color="white"/>,
-    description: 'Nutrición Saludable'
+    description: 'Nutrición Saludable',
+    link: '/nutrition'
   }
 ]
 
@@ -114,7 +132,7 @@ const Services = () => {
                 return (
                   <ul key={index}>
                     <li>
-                      <Link to={`/${service.link}`}>
+                      <Link to={service.link}>
                         {service.icon}
                         <p>{service.description}</p>
                       </Link>
@@ -132,7 +150,7 @@ const Services = () => {
                 return (
                   <ul key={index}>
                     <li>
-                      <Link to={`/${service.link}`}>
+                      <Link to={service.link}>
                         {service.icon}
                         <p>{service.description}</p>
                       </Link>

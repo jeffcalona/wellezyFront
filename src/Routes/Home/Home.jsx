@@ -1,6 +1,8 @@
 import React from 'react'
 import Header from '../../Components/Header/Header';
 import HomeDoctors from '../../Components/HomeDoctors/HomeDoctors';
+import HomeProcedures from '../../Components/HomeProcedures/HomeProcedures';
+import HomeServices from '../../Components/HomeServices/HomeServices';
 import HomeTurism from '../../Components/HomeTurism/HomeTurism'
 
 
@@ -11,7 +13,9 @@ const Home = () => {
     <div className='home'>
       <Header />
       <HomeTurism />
-      <HomeDoctors /> 
+      <HomeDoctors />
+      <HomeServices />
+      <HomeProcedures />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { CardActions, CardMedia, Grid, IconButton } from '@mui/material'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import CardHomeDoctors from '../CardHomeDoctors/CardHomeDoctors'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
@@ -12,12 +12,14 @@ import PrincipalImg from './Assets/Img/Principal.png'
 
 import './Assets/styles.css'
 import { Star1 } from 'iconsax-react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const elementsDoctors = [
-  {img: DrJuanMarioImg, name: 'Dr. Juan Mario Escobar', description: 'Cirujano Plástico', city: 'Medellín'},
-  {img: DraNicoleImg, name: 'Dra. Nicole Echeverry Salja', description: 'Cirujana Plástica estética y reconstructiva', city: 'Medellín'},
-  {img: DrDanielCorreaImg, name: 'Dr. Daniel Correa', description: 'Cirujano Plástico y Estético', city: 'Medellín'},
-  {img: DrJuanMarioImg, name: 'Dr. Juan Mario Escobar', description: 'Cirujano Plástico', city: 'Medellín'}
+  {avatar: DrJuanMarioImg, name: 'Dr. Juan Mario Escobar', description: 'Cirujano Plástico', city: 'Medellín'},
+  {avatar: DraNicoleImg, name: 'Dra. Nicole Echeverry Salja', description: 'Cirujana Plástica estética y reconstructiva', city: 'Medellín'},
+  {avatar: DrDanielCorreaImg, name: 'Dr. Daniel Correa', description: 'Cirujano Plástico y Estético', city: 'Medellín'},
+  {avatar: DrJuanMarioImg, name: 'Dr. Juan Mario Escobar', description: 'Cirujano Plástico', city: 'Medellín'}
 
 ]
 
@@ -26,11 +28,26 @@ const MotionConstraints = styled(motion.div)`
 `;
 
 const MotionBox = styled(motion.div)`
-  width: 150vw;
+  width: 1000vw;
 `
 
 const HomeDoctors = () => {
   const constraintsRef = useRef(null)
+
+  const [doctors, setDoctors] = useState([])
+
+  useEffect(() => {
+    const getApiDoctors = async () => {
+      await axios.get(process.env.REACT_APP_URL_API_DOCTORS).then((response) => {
+        setDoctors(response.data.data)
+      }).catch((err) => {
+        console.log(err)
+      })
+    }
+    getApiDoctors()
+  }, [])
+  
+
   return (
     <Grid container justifyContent='center'>
       <div className='div_HomeDoctors'>
@@ -49,10 +66,12 @@ const HomeDoctors = () => {
           <MotionConstraints className='sliderContainer_doctors' ref={constraintsRef}>
             <MotionBox className='slider_doctors' drag='x' dragConstraints={constraintsRef}>
                 {
-                  elementsDoctors.map((doctor, index) => {
+                  doctors.map((doctor, index) => {
                     return (
                       <Grid item key={index} className='grid_CardHomeDoctors'>
-                        <CardHomeDoctors imgDoctor={doctor.img} nameDoctor={doctor.name} descriptionDoctor={doctor.description} cityDoctor={doctor.city} />
+                        <Link to={`/doctor/${doctor.id}`}>
+                          <CardHomeDoctors imgDoctor={`${process.env.REACT_APP_URL_API_IMGDOCTORS}${doctor.img}`} nameDoctor={doctor.name} descriptionDoctor={doctor.title} cityDoctor={doctor.city} starsNumber={doctor.stars} />
+                        </Link>
                       </Grid>
                     )
                   })

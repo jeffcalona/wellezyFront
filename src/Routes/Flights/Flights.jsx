@@ -12,6 +12,7 @@ const  Flights = () => {
                 questionsList.questions &&
                 <Questions question={questionsList} /*clickQuestion={questionSelected}*/ />
         }
+        <h1>Flights</h1>
     </div>
   )
 }

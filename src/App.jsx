@@ -6,12 +6,17 @@ import Flights from './Routes/Flights/Flights';
 import Procedures from './Routes/Procedures/Procedures';
 import Doctors from './Routes/Doctors/Doctors';
 import Doctor from './Routes/Doctor/Doctor';
+import "./app.css"
+import Nurses from './Routes/Nurses/Nurses';
+import Nurse from './Routes/Nurse/Nurse';
+
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
-
-import "./app.css"
-import Nurses from './Routes/Nurses/Nurses';
+import Turism from './Routes/Turism/Turism';
+import Allies from './Routes/Allies/Allies';
+import About from './Routes/About/About';
+import Recovery from './Routes/Recovery/Recovery';
 
 const App = () => {
   return (
@@ -19,13 +24,17 @@ const App = () => {
       <div className='app'>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route exact path='/' element={<Home />}/>
           <Route path='/flights' element={<Flights />}/>
           <Route path='/procedures' element={<Procedures/>}/>
           <Route path='/doctors' element={<Doctors/>}/>
-          <Route path='/doctor/1' element={<Doctor />} />
-          <Route path='/doctor/:slug' element={<Doctor />} />
+          <Route path='/doctor/:id' element={<Doctor />} />
+          <Route path='/nurse/:id' element={<Nurse />} />
           <Route path='/nurses' element={<Nurses />} />
+          <Route path='/turism' element={<Turism />} />
+          <Route path='/allies' element={<Allies />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/recovery' element={<Recovery />} />
         </Routes>
       </div>
     </Provider>
