@@ -3,7 +3,7 @@ import React from 'react'
 const FlightsDateGoing = () => {
   return (
     <div>
-        Hola
+        Hola que hace
     </div>
   )
 }
