@@ -23,7 +23,7 @@ const CardDoctors = ({ imgDoctor, nameDoctor, descriptionDoctor, cityDoctor, sta
                 </div>
                 <CardActions sx={{ justifyContent: 'center' }}>
                     <IconButton>
-                        <Rating name="size-large" value={starsNumber} size="large" />
+                        <Rating name="size-large" value={starsNumber} size="medium" />
                     </IconButton>
                 </CardActions>
             </CardActionArea>

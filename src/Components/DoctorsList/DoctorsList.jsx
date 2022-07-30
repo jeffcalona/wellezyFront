@@ -10,11 +10,12 @@ import axios from 'axios'
 
 const DoctorsList = () => {
      
+    const [infoDoctors, setInfoDoctors] = useState('')
     const [doctors, setDoctors] = useState([])
     const [doctorsImportant, setDoctorsImportant] = useState([])
-    /*const image = doctorsImportant[0].img
-    const aaa = process.env.REACT_APP_URL_API_IMGDOCTORS
-    console.log('doctor Imagen', `${process.env.REACT_APP_URL_API_IMGDOCTORS}${image}`)*/
+    
+    const [nextDoctor, setNextDoctor] = useState('')
+    const [prevDoctor, setPrevDoctor] = useState('')
 
     const [term, setTerm] = useState('')
     
@@ -24,16 +25,32 @@ const DoctorsList = () => {
     const [openListCity, setOpenListCity] = useState(false)
     const [openListGender, setOpenListGender] = useState(false)
     const [openListProcedure, setOpenListProcedure] = useState(false)
+    
+    const apiDoctors = process.env.REACT_APP_URL_API_DOCTORS
+
+    const getApiDoctors = async (url) => {
+        await axios.get(url).then((response) => {
+            setInfoDoctors(response.data)
+            setPrevDoctor(response.data.prev_page_url)
+            setNextDoctor(response.data.next_page_url)
+            setDoctors(response.data.data)
+            setDoctorsImportant(response.data.data)
+        }).catch((err) => console.log(err))
+    }
+
+    /*Pagination*/
+    const prevHandler = () => {
+        getApiDoctors(infoDoctors.prev_page_url)
+        window.scrollTo(0, 350)
+    }
+
+    const nextHandler = () => {
+        getApiDoctors(infoDoctors.next_page_url)
+        window.scrollTo(0, 350)
+    }
 
     useEffect(() => {
-        const getApiDoctors = async () => {
-            const apiDoctors = process.env.REACT_APP_URL_API_DOCTORS
-            await axios.get(apiDoctors).then((response) => {
-                setDoctors(response.data.data)
-                setDoctorsImportant(response.data.data)
-            }).catch((err) => console.log(err))
-        }
-        getApiDoctors()
+        getApiDoctors(apiDoctors)
     }, [])
 
     const searchDoctors = (term) => {
@@ -116,28 +133,6 @@ const DoctorsList = () => {
     const handleClickProcedure = () => {
         setOpenListProcedure(!openListProcedure)
     }
-
-    /*Pagination*/
-    // const prevHandler = () => {
-    //     const prevPage = currentPage - 1
-
-    //     if(prevPage < 0) return
-
-    //     const firstIndex = prevPage * listDoctorsPerPage
-    //     setListDoctorsPage([...listDoctors].splice(firstIndex, listDoctorsPerPage))
-    //     setCurrentPage(prevPage)
-    // }
-
-    // const nextHandler = () => {
-    //     const totalList = listDoctors.length
-    //     const nextPage = currentPage + 1
-    //     var firstIndex = nextPage * listDoctorsPerPage //20   
-
-    //     if (firstIndex === totalList || listDoctorsPage.length < 20) return
-
-    //     setListDoctorsPage([...listDoctors].splice(firstIndex, listDoctorsPerPage))
-    //     setCurrentPage(nextPage)
-    // }
 
   return (
     <div className='doctors_content'>
@@ -282,8 +277,12 @@ const DoctorsList = () => {
                 })
             }
             <CardActions className='doctorsList_arraws'>
-                <IconButton className='arraw' /*onClick={prevHandler}*/><ArrowLeft2 size="40" color="#004274"/></IconButton>
-                <IconButton className='arraw' /*onClick={nextHandler}*/><ArrowRight2 size="40" color="#004274"/></IconButton>
+                {prevDoctor && 
+                    <IconButton className='arraw' onClick={prevHandler}><ArrowLeft2 size="40" color="#004274"/></IconButton>
+                }
+                {nextDoctor &&
+                    <IconButton className='arraw' onClick={nextHandler}><ArrowRight2 size="40" color="#004274"/></IconButton>
+                }
             </CardActions>
         </Grid>
     </div>

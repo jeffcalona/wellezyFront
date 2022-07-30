@@ -1,26 +1,12 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Grid } from '@mui/material'
-import SantaMartaImg from './Assets/Img/SantaMarta.jpeg'
-import CartagenaImg from './Assets/Img/Cartagena.jpeg'
-import LaGuajiraImg from './Assets/Img/LaGuajira.jpeg'
-import LaMacarenaImg from './Assets/Img/LaMacarena.jpeg'
-import GuatapeImg from './Assets/Img/Guatape.jpeg'
 import { motion } from 'framer-motion'
 
 import './Assets/styles.css'
 import CardHomeTurism from '../CardHomeTurism/CardHomeTurism'
 import styled from 'styled-components'
-
-const cardInfo = [
-  { img: SantaMartaImg, title: 'Santa Marta', description: 'Parque Nacional Tairona' },
-  { img: CartagenaImg, title: 'Cartagena', description: 'Ciudad Amurallada' },
-  { img: LaGuajiraImg, title: 'La Guajira', description: 'Desiertos' },
-  { img: LaMacarenaImg, title: 'La Macarena - Meta', description: 'Caño Cristales' },
-  { img: GuatapeImg, title: 'Guatapé', description: 'Piedra del Peñol' },
-  { img: CartagenaImg, title: 'Cartagena', description: 'Ciudad Amurallada' }
-]
-
-
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const MotionConstraints = styled(motion.div)`
   overflow-x: hidden;
@@ -31,20 +17,33 @@ const MotionBox = styled(motion.div)`
 `
 
 const HomeTurism = () => {
-  
   const constraintsRef = useRef(null)
+
+  const [turism, setTurism] = useState([])
+
+  const getTurism = async () => {
+      await axios.get(process.env.REACT_APP_URL_API_ALL_TOURS).then((response) => {
+        setTurism(response.data)
+      }). catch ((err) => console.log(err))
+  }
+
+  useEffect(() => {
+    getTurism()
+  }, [])
 
   return (
     <div className='homeTurism'>
-      <h1>Turismo</h1>
+      <Link to='/turism'>
+        <h1>Turismo</h1>
+      </Link>
       <MotionConstraints className='slider_container' ref={constraintsRef}>
         <MotionBox className='slider' drag='x' dragConstraints={constraintsRef}>
           {
-            cardInfo.map((info, index) => {
+            turism.map((info) => {
               return (
-                <motion.div key={index} className='div_homeTurism'>
+                <motion.div className='div_homeTurism'>
                   <Grid item xs={6} sm={6} md={3} lg={2} className='grid_cardHomeTurism'>
-                    <CardHomeTurism cardImage={info.img} cardTitle={info.title} cardDescription={info.description}/>
+                    <CardHomeTurism cardImage={info.img} cardTitle={info.municipality} cardDescription={info.name_tour} star={info.stars} link={`/tour/${info.id}`}/>
                   </Grid>
                 </motion.div>
               )

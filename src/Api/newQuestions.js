@@ -115,10 +115,10 @@ const allQuestions = [
                     response: {
                         doctors: [
                             {
-                                name: "Dr. Juan Mario Escobar",
-                                slug: "dr-juan-mario-escobar",
+                                name: "Dr. William Jimenez",
+                                slug: "Dr_William_Jimenez",
                                 description: "Cirujano Plástico",
-                                avatar: "https://i.picsum.photos/id/168/300/300.jpg?hmac=4m069iOglhq_N0vxSdJrKHQi0406HThIKEJllrqOELE",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/WhatsApp-Image-2022-06-06-at-11.00.34-AM.jpeg",
                                 city: "Medellín",
                                 gender: "Caballero",
                                 Procedimiento: [
@@ -127,10 +127,10 @@ const allQuestions = [
                                 assessment: 5
                             },
                             {
-                                name: "Dra. Nicole Echeverry Salja",
-                                slug: "dra-nicole-echeverry-salja",
+                                name: "Dr. Julio Cesar Eusse",
+                                slug: "Dr_Julio_Cesar_Eusse",
                                 description: "Cirujana Plástica y Estética Reconstructiva",
-                                avatar: "https://i.picsum.photos/id/188/300/300.jpg?hmac=O1Fgsa5q091m_1eNHYtavDoVNb6yIklGq1A67yv5_vk",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/Julios-Cesar-eusse.jpeg",
                                 city: "Medellín",
                                 gender: "Dama",
                                 Procedimiento: [
@@ -139,10 +139,10 @@ const allQuestions = [
                                 assessment: 4
                             },
                             {
-                                name: "Dr. Daniel Correa",
-                                slug: "dr-daniel-correa",
+                                name: "Dr. Hugo Javier Mejia",
+                                slug: "Dr_Hugo_Javier_Mejia",
                                 description: "Cirujano Plástico y Estético",
-                                avatar: "https://i.picsum.photos/id/880/300/300.jpg?hmac=oXC1t0jViOdGm6k__5wE0t1X0riYREqUm9z2CZuIfEI",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/Hugo-Javier-Mejia.png",
                                 city: "Medellín",
                                 gender: "Caballero",
                                 Procedimiento: [
@@ -151,10 +151,10 @@ const allQuestions = [
                                 assessment: 5
                             },
                             {
-                                name: "Dra. Elizabeth Giraldo",
-                                slug: "dra-elizabeth-giraldo",
+                                name: "Dr José David Salazar",
+                                slug: "Dr_José_David_Salazar",
                                 description: "Cirujana Plástica y Estética Reconstructiva",
-                                avatar: "https://i.picsum.photos/id/573/300/300.jpg?hmac=eB8bNuMfnFGtyA4SdNvGHVw2bCJzRa2O8FabHr1sb40",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/Jose-david-salazar.png",
                                 city: "Medellín",
                                 gender: "Dama",
                                 Procedimiento: [
@@ -163,10 +163,10 @@ const allQuestions = [
                                 assessment: 5
                             },
                             {
-                                name: "Dr. Felipe Ruso",
-                                slug: "dr-felipe-ruso",
+                                name: "Dr. Fabio Alberto Arango",
+                                slug: "Dr_Fabio_Alberto_Arango",
                                 description: "Cirujano Plástico",
-                                avatar: "https://i.picsum.photos/id/492/300/300.jpg?hmac=wwoIgwZiIgird4Ys0Jac4brMJjAReIdSuqNu8gR0m7k",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/Fabio-Alberto-arango.png",
                                 city: "Medellín",
                                 gender: "Caballero",
                                 Procedimiento: [
@@ -175,10 +175,10 @@ const allQuestions = [
                                 assessment: 4
                             },
                             {
-                                name: "Dra. Karen Castro",
-                                slug: "dra-karen-castro",
+                                name: "Dr. Erick Almenarez",
+                                slug: "Dr_Erick_Almenarez",
                                 description: "Cirujana Plástica",
-                                avatar: "https://i.picsum.photos/id/335/300/300.jpg?hmac=WLsVURtOcUdU-vMyASCLwpmjlhToIWHNzMNghKfzsJE",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/Erik-Almenarez.jpeg",
                                 city: "Medellín",
                                 gender: "Dama",
                                 Procedimiento: [
@@ -187,10 +187,10 @@ const allQuestions = [
                                 assessment: 3
                             },
                             {
-                                name: "Dra. Carolina Gomez",
-                                slug: "dra-carolina-gomez",
+                                name: "Dr. Hernann Daza",
+                                slug: "Dr_Hernann_Daza",
                                 description: "Cirujana Plástica",
-                                avatar: "https://i.picsum.photos/id/580/300/300.jpg?hmac=OBswUmJO205IOKj3lc--Nl2Y1WuPCB5iPcjco4BWb4o",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/Hernan-Daza.jpeg",
                                 city: "Medellín",
                                 gender: "Dama",
                                 Procedimiento: [
@@ -199,10 +199,10 @@ const allQuestions = [
                                 assessment: 4
                             },
                             {
-                                name: "Dr. Rachid Gorron Maloof",
-                                slug: "dr-rachid-gorron-maloof",
+                                name: "Dr. Manuel Mercado",
+                                slug: "dr_Manuel_Mercado",
                                 description: "Cirujano Plástico y Estética Reconstructiva",
-                                avatar: "https://i.picsum.photos/id/116/300/300.jpg?hmac=8JS9-IMlHf_mp6RrUTuEudQm8gd32We08MRO1UJ2cTY",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/Manuel-Mercado.png",
                                 city: "Medellín",
                                 gender: "Caballero",
                                 Procedimiento: [
@@ -211,10 +211,10 @@ const allQuestions = [
                                 assessment: 5
                             },
                             {
-                                name: "Dr. Juan Carlos Herrera",
-                                slug: "dr-rachid-gorron-maloof",
+                                name: "Dra. Sandra Valentina",
+                                slug: "Dra_Sandra_Valentina",
                                 description: "Cirujano Plástico",
-                                avatar: "https://i.picsum.photos/id/278/300/300.jpg?hmac=Bh4VWDzT60r3pjIARd3W_U8e8SR-2ApJ3X6WLwS8SKs",
+                                avatar: "https://pdtclientsolutions.com/wellezy/img/wellezy/users/Sandra-valencia.png",
                                 city: "Medellín",
                                 gender: "Caballero",
                                 Procedimiento: [

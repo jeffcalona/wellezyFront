@@ -1,6 +1,6 @@
 .doctors_content {
     width: 95%;
-    height: 1370px;
+    height: 1800px;
     display: flex;
     margin-top: -140px;
 }
@@ -74,9 +74,19 @@
     font-size: 20px !important;
     font-weight: 500 !important;
 }
+@media screen and (max-width: 1470px) {
+    .doctors_content {
+        height: 2300px;
+    }
+}
 @media screen and (max-width: 1300px) {
     .doctorsList_icon {
         margin-left: 0;
+    }
+}
+@media screen and (max-width: 1115px) {
+    .doctors_content {
+        height: 3200px;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -93,6 +103,7 @@
 @media screen and (max-width: 863px) {
     .doctors_content {
         flex-direction: column;
+        height: 3800px;
     }
     .doctors_filter {
         width: 95%;

@@ -1,9 +1,19 @@
 import React from 'react'
+import TurismActivities from '../../Components/TurismActivities/TurismActivities'
+import TurismHeader from '../../Components/TurismHeader/TurismHeader'
+import TurismNational from '../../Components/TurismNational/TurismNational'
+import TurismTop from '../../Components/TurismTop/TurismTop'
 
 const Turism = () => {
   return (
-    <div style={{backgroundColor: '#00DEDF', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <h1>Turism</h1>
+    <div>
+        <TurismHeader />
+        <div style={{ height: '60px' }} />
+        {/* Con 4 o mas estrellas */}
+        <TurismActivities cardTitle='Actividades que te van a encantar' />
+        {/* Sólo nacionales */}
+        <TurismNational cardTitle='vacaciones en destinos nacionales' />
+        <TurismTop />
     </div>
   )
 }

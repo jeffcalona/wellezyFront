@@ -1,0 +1,110 @@
+.flightsMostWanted {
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: space-between;
+}
+.flightsMostWanted_cards {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.flightsMostWanted-cards_title {
+    width: 100%;
+    position: absolute;
+    top: -35px;
+    display: flex;
+    justify-content: center;
+}
+.flightsMostWanted-cards_title h2 {
+    font-family: 'Inter';
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.flightsMostWanted_data {
+    width: 270px;
+    height: 100%;
+    margin-right: 15px;
+    border-radius: 20px;
+    position: relative;
+}
+.flightsMostWanted_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.flightsMostWanted_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.35);
+}
+.flightsMostWanted_title {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.flightsMostWanted_title h2 {
+    font-family: 'Oswald';
+    color: white;
+    font-size: 35px;
+    text-transform: uppercase;
+    width: 70%;
+}
+.flightsMostWanted_principalImg {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+}
+.flightsMostWanted-principalImg_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.flightsMostWanted-principalImg_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.flightsMostWanted-principalImg_info {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+.principalImg-info_logo {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.principalImg-info_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.principalImg-info_text {
+    margin-left: 50px;
+}
+.principalImg-info_text h1 {
+    font-family: 'Oswald';
+    font-size: 55px;
+    color: white;
+    text-transform: uppercase;
+    width: 480px;
+    line-height: 65px;
+}
+.principalImg-info_text span {
+    display: block;
+    font-size: 90px;
+    line-height: 80px;
+}

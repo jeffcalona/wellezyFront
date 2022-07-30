@@ -17,6 +17,8 @@ import Turism from './Routes/Turism/Turism';
 import Allies from './Routes/Allies/Allies';
 import About from './Routes/About/About';
 import Recovery from './Routes/Recovery/Recovery';
+import Footer from './Components/Footer/Footer';
+import Tour from './Routes/Tour/Tour';
 
 const App = () => {
   return (
@@ -35,7 +37,9 @@ const App = () => {
           <Route path='/allies' element={<Allies />} />
           <Route path='/about' element={<About />} />
           <Route path='/recovery' element={<Recovery />} />
+          <Route path='/tour/:id' element={<Tour />}/>
         </Routes>
+        <Footer />
       </div>
     </Provider>
   )

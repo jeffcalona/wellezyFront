@@ -47,7 +47,7 @@ const DoctorsQuestion = ({ question, presentQuestion, setPresentQuestion, setUse
             listDoctorsPage.map((quest, index) => {
                 return (
                     <Grid item className='CardDoctors' key={index}>
-                        <CardQuestionDoctors imgDoctor={quest.avatar} nameDoctor={quest.name} descriptionDoctor={quest.description} cityDoctor={quest.city} categorySelected={quest.name} doctorSelected={doctorSelected}/>
+                        <CardQuestionDoctors imgDoctor={quest.avatar} nameDoctor={quest.name} descriptionDoctor={quest.description} cityDoctor={quest.city} categorySelected={quest.name} doctorSelected={doctorSelected} stars={quest.assessment}/>
                     </Grid>
                 )
             })

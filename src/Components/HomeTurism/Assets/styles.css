@@ -4,6 +4,9 @@
   margin: 32px auto;
   width: 70%;
 }
+.homeTurism a {
+  color: black;
+}
 .homeTurism h1 {
   font-size: 30px;
   font-weight: 400;
@@ -11,7 +14,6 @@
 
 .slider {
   display: flex;
-  align-items: center;
 }
 .Grid_homeTurism {
   justify-content: center;
@@ -20,7 +22,7 @@
   display: block !important;
 }
 .grid_cardHomeTurism {
-  margin: 20px !important;
+  margin: 10px 20px !important;
 }
 
 @media screen and (max-width: 1600px) {

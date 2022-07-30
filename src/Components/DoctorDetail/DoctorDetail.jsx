@@ -1,7 +1,6 @@
 import { IconButton, Rating } from '@mui/material'
 import { ArrowDown2, ArrowLeft2, ArrowRight2, Heart } from 'iconsax-react'
 import React, { useRef, useState, useEffect } from 'react'
-import DanielCorreaImgGrande from './Assets/img/DanielCorreaImgGrande.jpg'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { useLocation } from 'react-router-dom'
@@ -42,6 +41,7 @@ const DoctorDetail = () => {
         }).catch((err) => console.log(err))
       }
       getDoctor()
+      window.scrollTo(0, 0)
     }, [id])
     
 
@@ -141,7 +141,7 @@ const DoctorDetail = () => {
                 <h3>Experiencia</h3>
                 <p>{doctor.experience} años</p>
             </div>
-            {doctor.name === 'Daniel Correa' && 
+            {doctor.name === 'Daniel Andres Correa' && 
                 <div className='doctorDetailRight_exclusiveTechniques'>
                     <h3>Técnicas Exclusivas</h3>
                     <p>Con tiempos quirurgicos mas  cortos para mejores resultados y una recuperacion exitosa.</p>
