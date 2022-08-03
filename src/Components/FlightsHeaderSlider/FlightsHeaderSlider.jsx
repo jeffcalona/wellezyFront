@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import NewYorkImg from './Assets/Img/NewYorkImg.jpeg'
 import SanAndresImg from './Assets/Img/SanAndresImg.jpeg'
 import BaliImg from './Assets/Img/BaliImg.jpeg'
@@ -12,9 +12,19 @@ const sliderDate = [
 ]
 
 const FlightsHeaderSlider = () => {
+    const autoCarousel = useRef(null)
+
+    const backFunc = () => {
+
+    }
+
+    const nextFunc = () => {
+        console.log(autoCarousel.current)
+    }
+
   return (
     <div className='flightsHeaderSlider'>
-        <div className='flightsHeaderSlider_'>
+        <div className='flightsHeaderSlider_' ref={autoCarousel}>
             {sliderDate.map((date) => {
                 return(
                     <div key={date.id} className='flightsHeaderSlider_date'>
@@ -27,6 +37,10 @@ const FlightsHeaderSlider = () => {
                     </div>
                 )
             })}
+        </div>
+        <div style={{ position: 'absolute', top: '100px', right: 0 }}>
+            <button style={{ padding: '20px 40px', margin: '20px' }} onClick={backFunc}>atrás</button>
+            <button style={{ padding: '20px 40px', margin: '20px' }} onClick={nextFunc}>siguiente</button>
         </div>
     </div>
   )

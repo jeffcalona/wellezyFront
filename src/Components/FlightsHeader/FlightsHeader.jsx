@@ -12,6 +12,7 @@ import { useRef } from 'react'
 import FlightsDesinitySearcher from '../FlightsDesinitySearcher/FlightsDesinitySearcher'
 import FlightsPassengerDetails from '../FlightsPassengerDetails/FlightsPassengerDetails'
 import FlightsDateGoing from '../FlightsDateGoing/FlightsDateGoing'
+import { Link } from 'react-router-dom'
 
 const citiesData = [
     {id: 1, country: 'united states', city: 'boston', abr: 'bos', img: BostonImg},
@@ -159,7 +160,9 @@ const FlightsHeader = () => {
                                 </div>
                             }
                             <div className='flight_searcher'>
-                                <SearchNormal1 size="45" color="#004274"/>
+                                <Link to='/flight/selected'>
+                                    <SearchNormal1 size="45" color="#004274"/>
+                                </Link>
                             </div>
                         </div>
                     </div>

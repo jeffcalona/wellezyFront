@@ -19,6 +19,7 @@ import About from './Routes/About/About';
 import Recovery from './Routes/Recovery/Recovery';
 import Footer from './Components/Footer/Footer';
 import Tour from './Routes/Tour/Tour';
+import FlightSelected from './Routes/FlightSelected/FlightSelected';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Home />}/>
           <Route path='/flights' element={<Flights />}/>
+          <Route path='/flight/selected' element={<FlightSelected />}/>
           <Route path='/procedures' element={<Procedures/>}/>
           <Route path='/doctors' element={<Doctors/>}/>
           <Route path='/doctor/:id' element={<Doctor />} />
