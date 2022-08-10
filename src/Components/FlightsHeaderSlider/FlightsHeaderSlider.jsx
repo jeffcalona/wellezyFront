@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import NewYorkImg from './Assets/Img/NewYorkImg.jpeg'
 import SanAndresImg from './Assets/Img/SanAndresImg.jpeg'
 import BaliImg from './Assets/Img/BaliImg.jpeg'
@@ -8,39 +8,76 @@ const sliderDate = [
     {id: 1, img: NewYorkImg, title: 'new york'},
     {id: 2, img: SanAndresImg, title: 'san andres'},
     {id: 3, img: BaliImg, title: 'bali'},
-    {id: 4, img: NewYorkImg, title: 'new york'}
+    {id: 4, img: NewYorkImg, title: 'new york'},
+    {id: 5, img: SanAndresImg, title: 'san andres'},
+    {id: 6, img: BaliImg, title: 'bali'},
 ]
 
 const FlightsHeaderSlider = () => {
     const autoCarousel = useRef(null)
 
-    const backFunc = () => {
-
-    }
 
     const nextFunc = () => {
-        console.log(autoCarousel.current)
+        if(autoCarousel.current.children.length > 0) {
+           const firstCard = autoCarousel.current.children[0]
+
+           autoCarousel.current.style.transition = `400ms ease-out all`
+           const widthCard = autoCarousel.current.children[0].offsetWidth
+           autoCarousel.current.style.transform = `translateX(-${widthCard}px)`
+
+           const transition = () => {
+               autoCarousel.current.style.transition = 'none'
+               autoCarousel.current.style.transform = `translateX(0)`
+
+               autoCarousel.current.appendChild(firstCard)
+
+               /*Después que se ejecute lo elimino para que el boton de anterior funcione*/
+               autoCarousel.current.removeEventListener('transitionend', transition)
+           }
+
+           autoCarousel.current.addEventListener('transitionend', transition)
+        }
     }
+
+    // const backFunc = () => {
+    //     if(autoCarousel.current.children.length > 0) {
+    //        const lastCard = autoCarousel.current.children[autoCarousel.current.children.length - 1]
+    //        autoCarousel.current.insertBefore(lastCard, autoCarousel.current.firstChild)
+
+    //         autoCarousel.current.style.transition = 'none'
+    //         const widthCard = autoCarousel.current.children[0].offsetWidth
+    //         autoCarousel.current.style.transform = `translateX(-${widthCard}px)`
+
+    //         setTimeout(() => {
+    //             autoCarousel.current.style.transition = `300ms ease-out all`
+    //             autoCarousel.current.style.transform = `translateX(0)`
+    //         }, 50)
+    //     }
+    // }
+
+    useEffect(() => {
+        setInterval(() => {
+            nextFunc()
+        }, 5000)
+    }, [])
 
   return (
     <div className='flightsHeaderSlider'>
-        <div className='flightsHeaderSlider_' ref={autoCarousel}>
-            {sliderDate.map((date) => {
-                return(
-                    <div key={date.id} className='flightsHeaderSlider_date'>
-                        <div className='flightsHeaderSlider_img'>
-                            <img src={date.img} alt={date.title} />
+        <div className='flightsHeaderSlider_'>
+            <div className='flightsHeaderSlide_cards' ref={autoCarousel}>
+                {sliderDate.map((date) => {
+                    return(
+                        <div key={date.id} className='flightsHeaderSlider_date'>
+                            <div className='flightsHeaderSlider_img'>
+                                <img src={date.img} alt={date.title} />
+                            </div>
+                            <div className='flightsHeaderSlider_title'>
+                                <h2>{date.title}</h2>
+                            </div>
                         </div>
-                        <div className='flightsHeaderSlider_title'>
-                            <h2>{date.title}</h2>
-                        </div>
-                    </div>
-                )
-            })}
-        </div>
-        <div style={{ position: 'absolute', top: '100px', right: 0 }}>
-            <button style={{ padding: '20px 40px', margin: '20px' }} onClick={backFunc}>atrás</button>
-            <button style={{ padding: '20px 40px', margin: '20px' }} onClick={nextFunc}>siguiente</button>
+                    )
+                })}
+            </div>  
         </div>
     </div>
   )

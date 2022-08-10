@@ -58,8 +58,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 500px) {
   .homeTurism {
     margin-bottom: 0;
@@ -69,5 +67,16 @@
   }
   .slider {
     width: 360vw !important;
+  }
+  .cardHomeTurism_media {
+    width: 100%;
+    height: 200px;
+  }
+  .cardHomeTurism_media img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .grid_cardHomeTurism {
+    margin: 10px 10px !important;
   }
 }

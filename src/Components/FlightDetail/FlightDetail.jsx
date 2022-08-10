@@ -326,9 +326,11 @@ const FlightDetail = () => {
         </div>
         <div className='flight-results_price'>
           <div className='flight-results_price_'>
-            <p style={{ fontSize: '32px', fontWeight: '600' }}>$950</p>
-            <p>Precio final con impuestos</p>
-            <Link to='/app' style={{ color: '#004274', fontWeight: '600', fontFamily: 'inter', fontSize: '16px' }}>$10 de cashback descargando la app</Link>
+            <div className='flight-results-price_detail'>
+              <p style={{ fontSize: '32px', fontWeight: '600' }}>$950</p>
+              <p>Precio final con impuestos</p>
+              <Link to='/app' style={{ color: '#004274', fontWeight: '600', fontFamily: 'inter', fontSize: '16px' }}>$10 de cashback descargando la app</Link>
+            </div>
             <div className='flight-results-price_ButtonToBuy'>
               <button>comprar</button>
             </div>
@@ -505,9 +507,11 @@ const FlightDetail = () => {
         </div>
         <div className='flight-results_price'>
           <div className='flight-results_price_'>
-            <p style={{ fontSize: '32px', fontWeight: '600' }}>$950</p>
-            <p>Precio final con impuestos</p>
-            <Link to='/app' style={{ color: '#004274', fontWeight: '600', fontFamily: 'inter', fontSize: '16px' }}>$10 de cashback descargando la app</Link>
+            <div className='flight-results-price_detail'>
+              <p style={{ fontSize: '32px', fontWeight: '600' }}>$950</p>
+              <p>Precio final con impuestos</p>
+              <Link to='/app' style={{ color: '#004274', fontWeight: '600', fontFamily: 'inter', fontSize: '16px' }}>$10 de cashback descargando la app</Link>
+            </div>
             <div className='flight-results-price_ButtonToBuy'>
               <button>comprar</button>
             </div>

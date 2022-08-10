@@ -1,6 +1,7 @@
 .flight-searchCities_input {
     margin-top: 20px;
     margin-bottom: 10px;
+    z-index: 1;
 }
 .flight-searchCities_cities {
     max-height: 320px;
@@ -16,14 +17,18 @@
     font-family: 'Inter';
     font-size: 16px;
     padding: 10px 30px;
+    text-transform: capitalize;
 }
 textarea:focus, input:focus{
     outline: none;
 }
+.cityData_result {
+    position: relative;
+}
 .cityData {
     width: 300px;
     height: 50px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -58,7 +63,7 @@ textarea:focus, input:focus{
     color: rgba(0, 0, 0, 0.40);
 }
 
-.cityData:hover {
+.cityData_result:hover {
     background-color: rgba(0, 66, 116, .1);
     transition: all 0.3s ease-out;
     border-radius: 10px;

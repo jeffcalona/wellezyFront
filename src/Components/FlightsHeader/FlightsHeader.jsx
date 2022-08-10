@@ -36,6 +36,31 @@ const FlightsHeader = () => {
     const [roundTrip, setRoundTrip] = useState(true)
     const [oneWay, setOneWay] = useState(false)
 
+    const [dateGoingSelected, setDateGoingSelected] = useState('fecha ida')
+    const [dateSreturnSelected, setDateSreturnSelected] = useState('fecha vuelta')
+
+    const [placeholderOriginFlight, setPlaceholderOriginFlight] = useState('Origen')
+    const [buttonOriginFlight, setButtonOriginFlight] = useState('Desde donde viaja')
+
+    const [placeholderDestinityFlight, setPlaceholderDestinityFlight] = useState('destino')
+    const [buttonDestinityFlight, setButtonDestinityFlight] = useState('Hacia donde viaja')
+
+    const [passengersSelecteds, setPassengersSelecteds] = useState({
+        adult: 1,
+        boy: 0,
+        baby: 0
+    })
+
+    const [clasSelected, setClasSelected] = useState({
+        economic: true,
+        ejecutive: false,
+        business: false
+    })
+
+    const [clasSelectedText, setClasSelectedText] = useState('económico')
+
+    const [buttonPassengerSelected, setButtonPassengerSelected] = useState('desde donde viaja')
+
     const filterCity = (e) => {
         const searcher = e.target.value
         const newFilter = citiesData.filter((cityData) => {
@@ -56,9 +81,59 @@ const FlightsHeader = () => {
         setRoundTrip(false)
     }
 
+    const originSearcherSelected = (e) => {
+        const resultOrigin = e.target.attributes.category.value
+        setPlaceholderOriginFlight(resultOrigin)
+        setButtonOriginFlight(resultOrigin)
+    }
+
+    const desinitySearcherSelected = (e) => {
+        const resultDestinity = e.target.attributes.category.value
+        setPlaceholderDestinityFlight(resultDestinity)
+        setButtonDestinityFlight(resultDestinity)
+    }
+
+    const handleNumber = (tipe, operation) => {
+        setPassengersSelecteds((prev) => {
+            return {
+                ...prev, [tipe]: operation === 'increase' ? passengersSelecteds[tipe] + 1 : passengersSelecteds[tipe] - 1
+            }
+        })
+    }   
+
+    const economicClasFunction = () => {
+        setClasSelected({
+            economic: true,
+            ejecutive: false,
+            business: false
+        })
+        setClasSelectedText('ecónomico')
+    }
+    const ejecutiveClasFunction = () => {
+        setClasSelected({
+            economic: false,
+            ejecutive: true,
+            business: false
+        })
+        setClasSelectedText('ejecutiva')
+    }
+    const businessClasFunction = () => {
+        setClasSelected({
+            economic: false,
+            ejecutive: false,
+            business: true
+        })
+        setClasSelectedText('business')
+    }
+
+    const passengerContinue = () => {
+        const data = `${passengersSelecteds.adult} adulto${passengersSelecteds.boy ? ` ${passengersSelecteds.boy} · niño ·` : ``} ${passengersSelecteds.baby ? `${passengersSelecteds.baby} bebé ` : ``}· clase ${clasSelectedText}`
+        setButtonPassengerSelected(data)
+    }
+
     useEffect(() => {
         const handler = (e) => {
-            if(!cardRef.current.contains(e.target)){
+            if(!cardRef?.current?.contains(e.target)){
                 setOrigin(false)
                 setDestinity(false)
                 setPassagerDetails(false)
@@ -70,6 +145,7 @@ const FlightsHeader = () => {
             document.removeEventListener('mousedown', handler)
         }
     }, [])
+
 
   return (
     <div className='flightsHeader'>
@@ -84,32 +160,32 @@ const FlightsHeader = () => {
                         <h3>vuelos</h3>
                     </div>
                     <div className='flight_sites'>
-                        <div style={{ width: '94%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative' }}>
+                        <div className='flight_sites_'>
                             <div className='flight_site' onClick={() => setOrigin(!origin)}>
                                 <h2>origen</h2>
-                                <p>Desde donde viaja</p>
+                                <p>{buttonOriginFlight}</p>
                             </div>
                             {origin &&
-                                <FlightsDesinitySearcher placeholder='Origen' citiesData={citiesDataState} cardRef={cardRef} filterCity={filterCity} flightClass='flight_searchCitiesOrigin' />
+                                <FlightsDesinitySearcher placeholder={placeholderOriginFlight} citiesData={citiesDataState} cardRef={cardRef} filterCity={filterCity} flightClass='flight_searchCitiesOrigin' desinitySearcherSelected={originSearcherSelected} />
                             }
                             <Airplane className='flight-sites_airplane' size="32" color="white" variant="Bold"/>
                             <div className='flight_site' onClick={() => setDestinity(!destinity)}>
                                 <h2>destino</h2>
-                                <p>Hacia donde viaja</p>
+                                <p>{buttonDestinityFlight}</p>
                             </div>
                             {destinity && 
-                                <FlightsDesinitySearcher placeholder='Destino' citiesData={citiesDataState} cardRef={cardRef} filterCity={filterCity} flightClass='flight_searchCitiesDestinity' />
+                                <FlightsDesinitySearcher placeholder={placeholderDestinityFlight} citiesData={citiesDataState} cardRef={cardRef} filterCity={filterCity} flightClass='flight_searchCitiesDestinity' desinitySearcherSelected={desinitySearcherSelected}  />
                             }
                             <div className='flight_passengers' onClick={() => setPassagerDetails(!passagerDetails)}>
                                 <h2>Pasajeros <User size="30" color="#004274"/></h2>
-                                <p>Desde donde viaja</p>
+                                <p>{buttonPassengerSelected}</p>
                             </div>
                             {passagerDetails &&
-                                <FlightsPassengerDetails cardRef={cardRef} />
+                                <FlightsPassengerDetails cardRef={cardRef} passengerContinue={passengerContinue} handleNumber={handleNumber} adultNum={passengersSelecteds.adult} boyNum={passengersSelecteds.boy} babyNum={passengersSelecteds.baby} passengersSelecteds={passengersSelecteds} clasSelected={clasSelected} economicClasFunction={economicClasFunction} ejecutiveClasFunction={ejecutiveClasFunction} businessClasFunction={businessClasFunction}  />
                             }
                         </div>
                     </div>
-                    <div>
+                    <div className='flight_selectContainer'>
                         <div className='flight_select'>
                             <div className='flight_select_'>
                                 <div onClick={changeRoundTrip}>
@@ -134,19 +210,19 @@ const FlightsHeader = () => {
                         </div>
                     </div>
                     <div className='flight_dates'>
-                        <div style={{ width: '94%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <div className='flight_dates_'>
                             <div className='flight_date' onClick={() => setDateGoing(!dateGoing)}>
-                                <h2>fecha ida</h2>
+                                <h2>{dateGoingSelected}</h2>
                                 <div>
                                     <Calendar size="32" color="#004274" variant="Bold"/>
                                 </div>
                             </div>
                             {dateGoing &&
-                                <FlightsDateGoing />
+                                <FlightsDateGoing oneWay={oneWay} roundTrip={roundTrip} cardRef={cardRef} setDateGoingSelected={setDateGoingSelected} setDateSreturnSelected={setDateSreturnSelected} />
                             }
                             {roundTrip ?
                                 <div className='flight_date'>
-                                    <h2>fecha vuelta</h2>
+                                    <h2>{dateSreturnSelected}</h2>
                                     <div>
                                         <Calendar size="32" color="#004274" variant="Bold"/>
                                     </div>
@@ -159,11 +235,11 @@ const FlightsHeader = () => {
                                     </div>
                                 </div>
                             }
-                            <div className='flight_searcher'>
-                                <Link to='/flight/selected'>
+                            <Link to='/flight/selected' className='flight_searcher'>
+                                <div>
                                     <SearchNormal1 size="45" color="#004274"/>
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 }
 .flightDetailFilter_flight {
     background-color: #004274;
-    height: 800px;
+    max-height: 800px;
     border-radius: 20px;
     width: 100%;
     display: flex;
@@ -11,6 +11,18 @@
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
     margin-bottom: 25px;
+}
+.info_flightContainer {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*NONE*/
+.info_flightContainerNone {
+    display: none;
+
 }
 .logo_flight {
     width: 90%;
@@ -21,6 +33,35 @@
     justify-content: center;
     align-items: center;
     margin: 15px 0 20px 0;
+    cursor: pointer;
+}
+
+.flightButtonOn {
+    display: none;
+}
+.flightButtonOff {
+    display: none;
+}
+
+/*SELECTED*/
+.logo_flightSelected {
+    width: 90%;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 20px 0;
+    cursor: pointer;
+}
+.logo_flightSelected h2 {
+    font-family: 'Oswald';
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 5px;
 }
 .logo_flight h2 {
     font-family: 'Oswald';
@@ -52,6 +93,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.searcFlight_logo path {
+    color: #004274;
+}
+
 .info-flight_siteTitle {
     display: flex;
     width: 100%;
@@ -88,6 +134,9 @@
     align-items: center;
     margin: 10px 0;
 }
+.recordSelectLogo path {
+    color: white;
+}
 .info_selec div p {
     margin-left: 10px;
     font-family: 'Inter';
@@ -119,9 +168,14 @@
 
 /*Filter*/
 .flightDetailFilter_filter {
+    width: 100%;
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .flightDetailFilter_filter_ {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,4 +229,141 @@
 .filter-card-description_img img {
     height: 100%;
     object-fit: cover;
+}
+
+/*Filter Button*/
+.filterButtonOn {
+    width: 100%;
+    height: 70px;
+    background-color: #004274;
+    border-radius: 20px;
+    box-shadow: inset 2px 4px 3px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 20px 0;
+    cursor: pointer;
+    display: none;
+}
+.filterIcon path {
+    color: white;
+}
+.filterButtonOn h2 {
+    font-family: 'Oswald';
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 5px;
+}
+.filterButtonOff {
+    width: 100%;
+    height: 70px;
+    background-color: #004274;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 20px 0;
+    cursor: pointer;
+    display: none;
+}
+.filterButtonOff h2 {
+    font-family: 'Oswald';
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 5px;
+    color: white;
+
+}
+.filterOn {
+    width: 90%;
+}
+.filterOff {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .flightDetailFilter {
+        width: 27%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .flightDetailFilter_flight {
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0) !important;
+        margin-bottom: 0
+    }
+    .logo_flight {
+        width: 100%;
+        margin: 0px 0 20px 0;
+        display: none;
+    }
+    .flightButtonOff {
+        width: 100%;
+        height: 70px;
+        background-color: #004274;
+        border-radius: 20px;
+        box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.35) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0 5px 0;
+        cursor: pointer;
+    }
+    .flightButtonOff h2 {
+        font-family: 'Oswald';
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 5px;
+    }
+    .flightButtonOn {
+        width: 100%;
+        height: 70px;
+        background-color: #004274;
+        border-radius: 20px;
+        box-shadow: inset 2px 4px 3px 2px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0 20px 0;
+        cursor: pointer;
+    }
+    .flightButtonOn h2 {
+        font-family: 'Oswald';
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 5px;
+    }
+
+    .flightDetailFilter {
+        width: 100%;
+    }
+    .filterButtonOn {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    .filterButtonOff {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .recordSelectLogo path {
+        color: #004274;
+    }
+    .info_selec div p {
+        color: #004274;
+    } 
 }

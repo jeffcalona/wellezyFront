@@ -1,32 +1,8 @@
 import { Record, RecordCircle } from 'iconsax-react'
-import React, { useState } from 'react'
+import React from 'react'
 import './Assets/styles.css'
 
-const FlightsPassengerDetails = ({ cardRef }) => {
-
-    const [adult, setAdult] = useState(1)
-    const [boy, setBoy] = useState(0)
-    const [kid, setKid] = useState(0)
-
-    const [economicClass, setEconomicClass] = useState(true)
-    const [ejecutiveClass, setEjecutiveClass] = useState(false)
-    const [businessClass, setBusinessClass] = useState(false)
-
-    const changeEconomicClass = () => {
-        setEconomicClass(true)
-        setEjecutiveClass(false)
-        setBusinessClass(false)
-    }
-    const changeEjecutiveClasss = () => {
-        setEconomicClass(false)
-        setEjecutiveClass(true)
-        setBusinessClass(false)
-    }
-    const changeBusinessClass = () => {
-        setEconomicClass(false)
-        setEjecutiveClass(false)
-        setBusinessClass(true)
-    }
+const FlightsPassengerDetails = ({ cardRef, passengerContinue, handleNumber, adultNum, boyNum, babyNum, passengersSelecteds, clasSelected, economicClasFunction, ejecutiveClasFunction, businessClasFunction }) => {
 
   return (
     <div className='passengerDetails' ref={cardRef}>
@@ -37,9 +13,9 @@ const FlightsPassengerDetails = ({ cardRef }) => {
                     <p className='principalDetails_p'>Adultos</p>
                 </div>
                 <div className='passengerDetails_miniButtons'>
-                    <div className='principalDetails_miniButtons' onClick={() => setAdult(adult === 1 ? 1 : adult - 1)}><p>-</p></div>
-                    <div className='passagersDetails_numButton'><p>{adult}</p></div>
-                    <div className='principalDetails_miniButtons' onClick={() => setAdult(adult + 1)}><p>+</p></div>
+                    <button className='principalDetails_miniButtons' disabled={passengersSelecteds.adult <= 1} onClick={() => handleNumber("adult", "decrease")}><p>-</p></button>
+                    <div className='passagersDetails_numButton'><p>{adultNum}</p></div>
+                    <button className='principalDetails_miniButtons' onClick={() => handleNumber("adult", "increase")}><p>+</p></button>
                 </div>
             </div>
             <div className='passagersDetails_'>
@@ -48,9 +24,9 @@ const FlightsPassengerDetails = ({ cardRef }) => {
                     <p className='sencondaryDetails_p'>2 a 11 años</p>
                 </div>
                 <div className='passengerDetails_miniButtons'>
-                    <div className='principalDetails_miniButtons' onClick={() => setBoy(boy === 0 ? 0 : boy - 1)}><p>-</p></div>
-                    <div className='passagersDetails_numButton'><p>{boy}</p></div>
-                    <div className='principalDetails_miniButtons' onClick={() => setBoy(boy + 1)}><p>+</p></div>
+                    <button className='principalDetails_miniButtons' disabled={passengersSelecteds.boy <= 0} onClick={() => handleNumber("boy", "decrease")}><p>-</p></button>
+                    <div className='passagersDetails_numButton'><p>{boyNum}</p></div>
+                    <button className='principalDetails_miniButtons' onClick={() => handleNumber("boy", "increase")}><p>+</p></button>
                 </div>
             </div>
             <div className='passagersDetails_'>
@@ -59,16 +35,16 @@ const FlightsPassengerDetails = ({ cardRef }) => {
                     <p className='sencondaryDetails_p'>0 a 23 meses</p>
                 </div>
                 <div className='passengerDetails_miniButtons'>
-                    <div className='principalDetails_miniButtons' onClick={() => setKid(kid === 0 ? 0 : kid - 1)}><p>-</p></div>
-                    <div className='passagersDetails_numButton'><p>{kid}</p></div>
-                    <div className='principalDetails_miniButtons' onClick={() => setKid(kid + 1)}><p>+</p></div>
+                    <button className='principalDetails_miniButtons' disabled={passengersSelecteds.baby <= 0} onClick={() => handleNumber("baby", "decrease")}><p>-</p></button>
+                    <div className='passagersDetails_numButton'><p>{babyNum}</p></div>
+                    <button className='principalDetails_miniButtons' onClick={() => handleNumber("baby", "increase")}><p>+</p></button>
                 </div>
             </div>
             <div>
                 <h2>clases</h2>
                 <div className='passengerDetails_class'>
-                    <div onClick={changeEconomicClass}>
-                        {economicClass ? 
+                    <div onClick={economicClasFunction}>
+                        {clasSelected.economic ? 
                             <RecordCircle size="32" color="#004274" style={{ cursor: 'pointer' }}/>
                             :
                             <Record size="32" color="#004274" style={{ cursor: 'pointer' }}/>
@@ -77,8 +53,8 @@ const FlightsPassengerDetails = ({ cardRef }) => {
                     <p>económico</p>
                 </div>
                 <div className='passengerDetails_class'>
-                    <div onClick={changeEjecutiveClasss}>
-                        {ejecutiveClass ?
+                    <div onClick={ejecutiveClasFunction}>
+                        {clasSelected.ejecutive ?
                             <RecordCircle size="32" color="#004274" style={{ cursor: 'pointer' }}/>
                             :
                             <Record size="32" color="#004274" style={{ cursor: 'pointer' }}/>
@@ -87,8 +63,8 @@ const FlightsPassengerDetails = ({ cardRef }) => {
                     <p>ejecutiva</p>
                 </div>
                 <div className='passengerDetails_class'>
-                    <div onClick={changeBusinessClass}>
-                    {businessClass ?
+                    <div onClick={businessClasFunction}>
+                    {clasSelected.business ?
                             <RecordCircle size="32" color="#004274" style={{ cursor: 'pointer' }}/>
                             :
                             <Record size="32" color="#004274" style={{ cursor: 'pointer' }}/>
@@ -98,7 +74,7 @@ const FlightsPassengerDetails = ({ cardRef }) => {
                 </div>
             </div>
             <div className='passengerDetails_button'>
-                <button>continuar</button>
+                <button onClick={passengerContinue}>continuar</button>
             </div>
         </div>
     </div>

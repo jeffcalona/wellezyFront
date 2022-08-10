@@ -340,4 +340,147 @@
     text-transform: uppercase;
     font-size: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .flightDetail {
+      width: 70%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .flightDetail {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .alert {
+        height: 120px;
+    }
+    .alert_img {
+        width: 95px;
+    }
+    .alert_logo {
+        width: 100px;
+    }
+    .alert_logo_ {
+        height: 30px;
+    }
+    .alert_text h2 {
+        font-size: 20px;
+    }
+    .alert_text p {
+        font-size: 16px;
+    }
+    .pricesByScales_ p {
+        font-size: 14px;
+    }
+    .pricesByAirline_img {
+        height: 15px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .flight_results {
+        flex-direction: column;
+        height: 670px;
+    }
+    .flight_results_ {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+    }
+    .flight-results_price {
+        width: 100%;
+        align-items: center;
+    }
+    .flight-results_price_ {
+        margin-top: 0;
+        width: 90%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flight-results-price_detail {
+        width: 60%;
+        text-align: left;
+    }
+    .flight-results-price_detail p:first-child {
+        font-size: 40px !important;
+    }
+    .flight-results-price_ButtonToBuy {
+        width: 35%;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .css-gulbw7-MuiButtonBase-root-MuiTab-root {
+        font-size: 12px !important;
+    }
+    .pricesByAirline_img {
+        height: 12px;
+        display: flex;
+        align-items: center;
+    }
+    .pricesByScales_ {
+        text-align: center;
+    }
+    .pricesByAirline_title p {
+        font-size: 12px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .priceByAirline_price p {
+        font-size: 18px;
+    }
+    .recommendation_ p {
+        font-size: 13px;
+    }
+    /*Alert*/
+    .alert {
+        height: 120px;
+    }
+    .alert_ {
+        height: 70%;
+    }
+    .alert_img {
+        width: 75px;
+        margin-right: 10px;
+    }
+    .alert_logo {
+        display: flex;
+        align-items: center;
+        width: 80px;
+    }
+    .alert_logo_ {
+        height: 25px;
+    }
+    .alert_text h2 {
+        font-size: 16px;
+    }
+    .alert_text p {
+        font-size: 12px;
+    }
+    /*Add Luggage*/
+    .addLuggage_text h2 {
+        font-size: 18px;
+    }
+    /*Flights Details*/
+    .flight-results-going_date {
+        width: 90%
+    }
+    .flight-results-going_date p {
+        font-size: 12px;
+    }
+    .flight-going-airline {
+        width: 95%;
+    }
+    .flight-going-airline p {
+        font-size: 14px !important;
+    }
+    .flight-going-airline_img {
+        height: 8px;
+    }
 }

@@ -46,6 +46,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: none;
 }
 .principalDetails_miniButtons p {
     font-family: 'Inter';
@@ -105,4 +106,15 @@
     text-transform: uppercase;
     font-weight: 600;
     cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .passengerDetails {
+        right: 0px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .passengerDetails {
+        top: 110px;
+    }
 }

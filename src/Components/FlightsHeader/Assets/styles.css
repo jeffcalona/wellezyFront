@@ -63,6 +63,13 @@
     align-items: center;
     justify-content: center;
 }
+.flight_sites_ {
+    width: 94%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+}
 .flight_site {
     width: 160px;
     height: 90px;
@@ -90,6 +97,7 @@
     font-size: 16px;
     color: #004274;
     width: 90%;
+    text-transform: capitalize;
 }
 .flight-sites_airplane {
     transform: rotate(90deg);
@@ -113,6 +121,12 @@
     color: #004274;
     width: 90%;
     margin-bottom: -5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flight_selectContainer {
+    width: 90%;
 }
 .flight_select {
     display: flex;
@@ -127,6 +141,15 @@
     font-size: 16px;
     color: white;
     margin: 0 75px 0 10px;
+}
+.flight_dates {
+    width: 100%;
+}
+.flight_dates_ {
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .flight_date {
     width: 200px;
@@ -197,7 +220,141 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
 }
 .flight_searchCitiesDestinity {
     left: 220px;
+}
+
+@media screen and (max-width: 1200px) {
+    .flightsHeader-info_flight {
+        width: 60%;
+    }
+    .flightsHeader-info-text_content {
+        width: 90%;
+    }
+    .flightsHeader-info-text_content h1 {
+        font-size: 120px;
+    }
+    .flightsHeader-info-text_content p {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .flightsHeader-info_flight {
+        width: 100%;
+    }
+    .flightsHeader-info_text {
+        display: none;
+    }
+    .flightsHeader-info-flight_content {
+        width: 80%;
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flightsHeader_logo {
+        width: 90%;
+        margin: 20px 0 10px 0;
+    }
+    .flight_sites {
+        width: 90%;
+    }
+    .flight_sites_ {
+        width: 100%;
+    }
+    .flight_site {
+        width: 200px;
+    }
+    .flight_passengers {
+        width: 250px;
+    }
+    .flight_select {
+        width: 60%;
+        justify-content: space-between;
+    }
+    .flight_select_ {
+        margin-left: 0;
+    }
+    .flight_dates {
+        width: 90%;
+    }
+    .flight_dates_ {
+        width: 100%;
+    }
+    .flight_date {
+        width: 240px;
+    }
+    .flight_searcher {
+        width: 190px;
+    }
+    .flight_dateNone {
+        width: 240px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .flightsHeader-info-flight_content {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .flight_site {
+        width: 160px;
+    }
+    .flight_passengers {
+        width: 180px;
+    }
+    .flight_select {
+        width: 70%;
+    }
+    .flight_date {
+        width: 180px;
+    }
+    .flight_searcher {
+        width: 120px;
+    }
+    .flight_dateNone {
+        width: 180px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .flightsHeader {
+        height: 800px;
+    }
+    .flightsHeader-info_flight {
+        margin-top: -50px;
+    }
+    .flightsHeader-info-flight_content {
+        height: 560px;
+    }
+    .flight_sites_, .flight_dates_ {
+        flex-wrap: wrap;
+    }
+    .flight_site {
+        width: 160px;
+    }
+    .flight_passengers {
+        width: 100%;
+    }
+    .flight_select {
+        width: 100%;
+    }
+    .flight_select_ {
+        margin-top: 10px;
+    }
+    .flight_select_ p {
+        margin: 0 50px 0 10px;
+    }
+    .flight_searcher {
+        width: 100%;
+    }
+    .flight_searchCitiesDestinity {
+        left: 150px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .flight_searchCitiesDestinity {
+        left: 40px;
+    }
 }

@@ -12,12 +12,12 @@ import { motion } from 'framer-motion'
 import CardHomeTurism from '../CardHomeTurism/CardHomeTurism';
 
 const cardInfo = [
-    { img: SantaMartaImg, title: 'Santa Marta', description: 'Parque Nacional Tairona', stars: 4 },
-    { img: CartagenaImg, title: 'Cartagena', description: 'Ciudad Amurallada', stars: 4  },
-    { img: LaGuajiraImg, title: 'La Guajira', description: 'Desiertos', stars: 5 },
-    { img: LaMacarenaImg, title: 'La Macarena - Meta', description: 'Caño Cristales', stars: 5 },
-    { img: GuatapeImg, title: 'Guatapé', description: 'Piedra del Peñol', stars: 5 },
-    { img: CartagenaImg, title: 'Cartagena', description: 'Ciudad Amurallada', stars: 4 }
+    { id: 1, img: SantaMartaImg, title: 'Santa Marta', description: 'Parque Nacional Tairona', stars: 4 },
+    { id: 2, img: CartagenaImg, title: 'Cartagena', description: 'Ciudad Amurallada', stars: 4  },
+    { id: 3, img: LaGuajiraImg, title: 'La Guajira', description: 'Desiertos', stars: 5 },
+    { id: 4, img: LaMacarenaImg, title: 'La Macarena - Meta', description: 'Caño Cristales', stars: 5 },
+    { id: 5, img: GuatapeImg, title: 'Guatapé', description: 'Piedra del Peñol', stars: 5 },
+    { id: 6, img: CartagenaImg, title: 'Cartagena', description: 'Ciudad Amurallada', stars: 4 }
   ]
   
   const MotionConstraints = styled(motion.div)`
@@ -40,7 +40,7 @@ const FlightsVacationsNational = () => {
             {
                 cardInfo.map((info) => {
                 return (
-                    <motion.div className='div_homeTurism'>
+                    <motion.div className='div_homeTurism' key={info.id}>
                         <Grid item xs={6} sm={6} md={3} lg={2} className='grid_cardHomeTurism'>
                             <CardHomeTurism cardImage={info.img} cardTitle={info.title} cardDescription={info.description} star={info.stars} link={`/tour/${info.id}`}/>
                         </Grid>
