@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Assets/styles.css'
 import VivaLogo from '../FlightDetailFilter/Assets/Img/VivaLogo.png'
 import LatamLogo from '../FlightDetailFilter/Assets/Img/LatamLogo.png'
@@ -58,11 +58,11 @@ const alinesReturn = [
 
 const FlightDetail = () => {
 
-  const [value, setValue] = React.useState('1');
+  const [value, setValue] = useState('1')
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
-  };
+  }; 
 
   return (
     <div className='flightDetail'>

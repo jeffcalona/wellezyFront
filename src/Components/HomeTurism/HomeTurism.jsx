@@ -13,7 +13,7 @@ const MotionConstraints = styled(motion.div)`
 `;
 
 const MotionBox = styled(motion.div)`
-  width: 100vw;
+  width: 3000vw;
 `
 
 const HomeTurism = () => {
@@ -33,11 +33,13 @@ const HomeTurism = () => {
 
   return (
     <div className='homeTurism'>
-      <Link to='/turism'>
-        <h1>Turismo</h1>
-      </Link>
+      <div className='homeTurism_titleLink'>
+        <Link to='/turism'>
+          <h1>Turismo</h1>
+        </Link>
+      </div>
       <MotionConstraints className='slider_container' ref={constraintsRef}>
-        <MotionBox className='slider' drag='x' dragConstraints={constraintsRef}>
+        <MotionBox className='slider_' drag='x' dragConstraints={constraintsRef}>
           {
             turism.map((info) => {
               return (

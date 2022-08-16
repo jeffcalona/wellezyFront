@@ -15,14 +15,14 @@
 }
 .procedureHome_info h1 {
     font-family: 'Oswald';
-    font-size: 40px;
+    font-size: 35px;
     text-transform: uppercase;
     color: #004274;
-    line-height: 40px
+    line-height: 35px
 }
 .procedureHome_info p {
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 19px;
     color: black;
     font-weight: 200;
 }
@@ -116,12 +116,24 @@
 .margin_right {
     margin-right: 20px;
 }
+
+@media screen and (max-width: 1700px) {
+    .procedureHome_info p {
+        font-size: 18px;
+    }
+}
 @media screen and (max-width: 1600px) {
     .homeProcedures {
         width: 80%;
     }
     .procedureHome_info h1 {
         font-size: 36px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .procedureHome_info h1 {
+        font-size: 28px;
+        line-height: 30px
     }
 }
 @media screen and (max-width: 1250px) {
@@ -145,6 +157,10 @@
     .procedureHome_info p {
         margin-left: 10px;
     }
+    .procedureHome_info h1 {
+        font-size: 38px;
+        line-height: 35px
+    }
 }
 @media screen and (max-width: 750px) {
     .homeProcedures {
@@ -157,11 +173,12 @@
         height: 70%;
     }
     .procedureHome_info h1 {
-        font-size: 25px;
-        line-height: 30px
+        font-size: 22px;
+        line-height: 20px
     }
     .procedureHome_info p {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 16px
     }
     .margin_rightBottom {
         margin: 0 10px 10px 0;
@@ -205,6 +222,7 @@
     .procedureHome_info p {
         font-size: 25px;
         margin: 20px;
+        line-height: 25px;
         text-align: center;
     }
     .homeProcedures-row1_width30 {

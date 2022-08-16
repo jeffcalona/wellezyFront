@@ -16,7 +16,7 @@ const HomeProcedures = () => {
             <div className='homeProcedures-row1_width30 margin_rightBottom'>
                 <Link to='/procedures' className='procedureHome_info'>
                     <h1>elije el procedimiento adecuedo para ti</h1>
-                    <p>En esta sección encontraras información detallada de cada procedimiento con nuestras técnicas quirúrgicas más avanzadas.</p>
+                    <p>En esta sección encontrarás información detallada sobre cada procedimiento de medicina estética, cirugía plástica, reconstructiva y medicina general con técnicas exclusivas realizadas por especialistas certificados y con tecnología avanzada.</p>
                 </Link>
             </div>
             <div className='homeProcedures-row1_width35 margin_rightBottom cardMobile'>

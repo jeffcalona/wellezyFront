@@ -22,7 +22,7 @@ const MotionConstraints = styled(motion.div)`
 `;
 
 const MotionBox = styled(motion.div)`
-  width: 150vw;
+  width: 100vw;
 `
 
 const FlightsMostWanted = () => {

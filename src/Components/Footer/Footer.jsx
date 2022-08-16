@@ -1,6 +1,5 @@
-import { Facebook, Instagram, Youtube } from 'iconsax-react'
+import { Facebook, Instagram, Whatsapp, Youtube } from 'iconsax-react'
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './Assets/styles.css'
 import Mastercard from './Assets/Img/Mastercard.png'
 import Visa from './Assets/Img/Visa.png'
@@ -30,7 +29,7 @@ const Footer = () => {
             <div className='aboutUs'>
                 <h4>Sobre Nosotros</h4>
                 <div className='aboutUs_p'>
-                    <p>Wellezy se distingue por nuestros profesionales premiados en el campo de la Cirugia estética y reconstructiva.</p>
+                    <p>Vive la experiencia Wellezy con la única aplicación en el mundo en la que tienes todo a tu alcance.</p>
                 </div>
                 <a href='VerMas'>Ver Más</a>
             </div>
@@ -45,10 +44,13 @@ const Footer = () => {
                     <a href='https://www.youtube.com/channel/UCuOdVFus4lvrTVyapEiKm1A'>
                         <Youtube size="45" color="white"/>
                     </a>
+                    <a href="https://api.whatsapp.com/send/?phone=3188088170&text&type=phone_number&app_absent=0">
+                        <Whatsapp size="45" color="white"/>
+                    </a>
                 </div>
                 <div className='moreInfo_text'>
                     <p>Av. El Poblado #5A-113, Medellin, Colombia</p>
-                    <a href='WhatsApp' className='moreInfo_whatsapp'>WhatsApp</a>
+                    <a href='https://api.whatsapp.com/send/?phone=3188088170&text&type=phone_number&app_absent=0' className='moreInfo_whatsapp'>WhatsApp</a>
                     <a href='https://api.whatsapp.com/send/?phone=3188088170&text&type=phone_number&app_absent=0'>+57 318 8088170</a>
                     <p className='moreInfo_mail'>contact@wellezy.com</p>
                 </div>

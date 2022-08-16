@@ -7,8 +7,10 @@ import LatamLogo from './Assets/Img/LatamLogo.png'
 import AviancaLogo from './Assets/Img/AviancaLogo.png'
 import './Assets/styles.css'
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const FlightDetailFilter = () => {
+    const location = useLocation()
 
     //const [selectedRating, setSelectedRating] = useState(null)
     const [valueRange, setValueRange] = useState([100, 3000])
@@ -16,7 +18,13 @@ const FlightDetailFilter = () => {
     const [infoFlight, setInfoFlight] = useState(true)
     const [detailsFilterFlight, setDetailsFilterFlight] = useState(true)
     const [width, setWidth] = useState(window.innerWidth)
-    console.log('width', width)
+
+    const [originFlight, setOriginFlight] = useState(location.state.buttonOriginFlight)
+    const [destinityFlight, setDestinityFlight] = useState(location.state.buttonDestinityFlight)
+    const [clasflightSelected, setclasflightSelected] = useState(location.state.clasSelected)
+    const [passengerSelected, setPassengerSelected] = useState(location.state.passengersSelecteds)
+    const [dateGoingSelected, setDateGoingSelected] = useState(location.state.dateGoingSelected)
+    const [dateReturnSelected, setDateReturnSelected] = useState(location.state.dateSreturnSelected)
 
     const changePrice = (event, value) => {
         setValueRange(value)
@@ -55,7 +63,7 @@ const FlightDetailFilter = () => {
                                 <h3>origen</h3>
                                 <RecordCircle style={{ cursor: 'pointer' }} size="28" color="#004274"/>
                             </div>
-                            <p className=''>san juan, puerto rico - <span className='info_abr'>sju</span></p>
+                            <p className=''>{originFlight}</p>
                         </div>
                     </div>
                     <div className='info-flight_site'>
@@ -64,7 +72,7 @@ const FlightDetailFilter = () => {
                                 <h3>destino</h3>
                                 <Location style={{ cursor: 'pointer' }} size="28" color="#004274" variant='Bold' />
                             </div>
-                            <p className=''>medellín colombia - <span className='info_abr'>mde</span></p>
+                            <p className=''>{destinityFlight}</p>
                         </div>
                     </div>
                     <div className='info-flight_site'>
@@ -95,7 +103,7 @@ const FlightDetailFilter = () => {
                                 <Calendar style={{ cursor: 'pointer' }} size="32" color="#004274"/>
                             </div>
                             <div className='info-flight_site_dates'>
-                                <p>miercoles, 6 julio 2022</p>
+                                <p>{dateGoingSelected}</p>
                             </div>
                         </div>
                     </div>
@@ -106,7 +114,7 @@ const FlightDetailFilter = () => {
                                 <Calendar style={{ cursor: 'pointer' }} size="32" color="#004274"/>
                             </div>
                             <div className='info-flight_site_dates'>
-                                <p>domingo, 31 julio 2022</p>
+                                <p>{dateReturnSelected}</p>
                             </div>
                         </div>
                     </div>

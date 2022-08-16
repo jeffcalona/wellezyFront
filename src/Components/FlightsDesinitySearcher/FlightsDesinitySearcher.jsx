@@ -13,7 +13,7 @@ const FlightsDesinitySearcher = ({ placeholder, citiesData, cardRef, filterCity,
             {citiesData.map((cityData) => {
                 return (
                     <div className='cityData_result'>
-                        <button style={{ border: 'none', width: '100%', height: '50px', position: 'absolute', top: '0', display: 'flex', display: 'block', zIndex: 6, backgroundColor: 'rgba(0, 0, 0, 0)', cursor: 'pointer'}} category={`${cityData.city} - ${cityData.country}`} onClick={desinitySearcherSelected} key={cityData.id} />
+                        <button style={{ border: 'none', width: '100%', height: '50px', position: 'absolute', top: '0', display: 'flex', display: 'block', zIndex: 6, backgroundColor: 'rgba(0, 0, 0, 0)', cursor: 'pointer'}} category={`${cityData.city}, ${cityData.country} - ${cityData.abr}`} onClick={desinitySearcherSelected} key={cityData.id} />
                             <div className='cityData'>
                                 <div className='cityData_img'>
                                     <img src={cityData.img} alt={cityData.city} />

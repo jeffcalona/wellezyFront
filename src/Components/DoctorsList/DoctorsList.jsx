@@ -9,15 +9,12 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const DoctorsList = () => {
-     
-    const [infoDoctors, setInfoDoctors] = useState('')
+
     const [doctors, setDoctors] = useState([])
     const [doctorsImportant, setDoctorsImportant] = useState([])
     
-    const [nextDoctor, setNextDoctor] = useState('')
-    const [prevDoctor, setPrevDoctor] = useState('')
-
-    const [term, setTerm] = useState('')
+    const [currentPage, setCurrentPage] = useState(0)
+    const [search, setSearch] = useState('')
     
     const [filterCity, setFilterCity] = useState([])
     const [filterGender, setFilterGender] = useState([])
@@ -30,37 +27,45 @@ const DoctorsList = () => {
 
     const getApiDoctors = async (url) => {
         await axios.get(url).then((response) => {
-            setInfoDoctors(response.data)
-            setPrevDoctor(response.data.prev_page_url)
-            setNextDoctor(response.data.next_page_url)
             setDoctors(response.data.data)
             setDoctorsImportant(response.data.data)
         }).catch((err) => console.log(err))
     }
 
-    /*Pagination*/
-    const prevHandler = () => {
-        getApiDoctors(infoDoctors.prev_page_url)
-        window.scrollTo(0, 350)
-    }
-
-    const nextHandler = () => {
-        getApiDoctors(infoDoctors.next_page_url)
-        window.scrollTo(0, 350)
-    }
-
-    useEffect(() => {
-        getApiDoctors(apiDoctors)
-    }, [])
-
-    const searchDoctors = (term) => {
-        return function(data){
-            return data.name.toLowerCase().includes(term.toLocaleLowerCase())
+    /* Filtered Doctors */
+    const filteredDoctors = () => {
+        if(search.length === 0 ) {
+            return doctors.slice(currentPage, currentPage + 20)
+        } else {
+            const searchersDoctors = doctors.filter(doc => doc.name.toLowerCase().includes(search.toLocaleLowerCase()) )
+            return searchersDoctors.slice(currentPage, currentPage + 20)
         }
+    }
+
+    /* Pagination */
+    const nextPage = () => {
+        if(doctors.filter(doc => doc.name.toLowerCase().includes(search.toLocaleLowerCase()) ).length > currentPage + 20) {
+            setCurrentPage(currentPage + 20)
+            window.scrollTo(0, 100)
+        }
+    }
+
+    const prevPage = () => {
+        if(currentPage > 0) {
+            setCurrentPage(currentPage - 20)
+            window.scrollTo(0, 100)
+        }
+    }
+
+    /* search doctor*/
+    const searchDoctorFunc = (e) => {
+        setCurrentPage(0)
+        setSearch(e.target.value)
     }
 
     /*Filter City*/
     const selectedCityFunc = (catItem) => {
+        setCurrentPage(0)
         const resultCity = doctorsImportant.filter((data) => {
             return data.city.toLowerCase() === catItem
         })
@@ -74,6 +79,7 @@ const DoctorsList = () => {
 
     /*Filter gender*/
     const selectedGenderFunc = (catItem) => {
+        setCurrentPage(0)
         if(filterCity.length === 0) {
             const resultGen = doctorsImportant.filter((data) => {
                 return data.surname === catItem
@@ -89,6 +95,7 @@ const DoctorsList = () => {
         }
     }
     const selectedAllGenderFunc = () => {
+        setCurrentPage(0)
         if(filterCity.length !== 0) {
             return setDoctors(filterCity)
         }
@@ -97,24 +104,26 @@ const DoctorsList = () => {
 
     /*Filter Procedure*/
     const selectedProcedureFunc = (catItem) => {
+        setCurrentPage(0)
         if (filterCity.length === 0 || filterGender.length === 0) {
             const resultGen = doctorsImportant.filter((data) => {
-                return data.gender === catItem
+                return data.title === catItem
             })
             setDoctors(resultGen)
         } else if (filterCity.length !== 0) {
             const resultGen = filterCity.filter((data) => {
-                return data.gender === catItem
+                return data.title === catItem
             })
             setDoctors(resultGen)
         } else if (filterGender.length !== 0) {
             const resultGen = filterGender.filter((data) => {
-                return data.gender === catItem
+                return data.title === catItem
             })
             setDoctors(resultGen)
         }
     }
     const selectedAllProcedureFunc = () => {
+        setCurrentPage(0)
         if (filterCity.length !== 0) {
             return setDoctors(filterCity)
         } else if (filterGender.length !== 0) {
@@ -134,12 +143,16 @@ const DoctorsList = () => {
         setOpenListProcedure(!openListProcedure)
     }
 
+    useEffect(() => {
+        getApiDoctors(apiDoctors)
+    }, [])
+
   return (
     <div className='doctors_content'>
             <div className='doctors_filter'>
                 <div className='doctors-filter_content'>
                     <div className='doctorsFilter_input'>
-                        <input type="text" placeholder='Buscar Doctor' onChange={e => setTerm(e.target.value)}/>
+                        <input type="text" placeholder='Buscar Doctor' value={search} onChange={searchDoctorFunc}/>
                     </div>
                     <h2>Filtrar Por</h2>
                     <ListItemButton onClick={handleClickCity} className='collapseList_ListItemButton' >
@@ -266,7 +279,7 @@ const DoctorsList = () => {
             </div>
         <Grid className='doctors_list' container direction='row' alignItems='start' justifyContent='center' spacing={2}>
             {
-                doctors.filter(searchDoctors(term)).map((doctor, index) => {
+                filteredDoctors().map((doctor, index) => {
                     return (
                         <Grid key={index} item>
                             <Link to={`/doctor/${doctor.id}`}>
@@ -277,12 +290,17 @@ const DoctorsList = () => {
                 })
             }
             <CardActions className='doctorsList_arraws'>
-                {prevDoctor && 
-                    <IconButton className='arraw' onClick={prevHandler}><ArrowLeft2 size="40" color="#004274"/></IconButton>
+                {currentPage > 0 ?
+                    <IconButton className='arraw' onClick={prevPage}><ArrowLeft2 size="40" color="#004274"/></IconButton>
+                    :
+                    ''
                 }
-                {nextDoctor &&
-                    <IconButton className='arraw' onClick={nextHandler}><ArrowRight2 size="40" color="#004274"/></IconButton>
+                {doctors.filter(doc => doc.name.toLowerCase().includes(search.toLocaleLowerCase()) ).length > currentPage + 20 ?
+                    <IconButton className='arraw' onClick={nextPage}><ArrowRight2 size="40" color="#004274"/></IconButton>
+                    :
+                    ''
                 }
+                
             </CardActions>
         </Grid>
     </div>

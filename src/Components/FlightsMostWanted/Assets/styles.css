@@ -129,10 +129,19 @@
     font-size: 90px;
     line-height: 80px;
 }
-
+@media screen and (max-width: 1800px) {
+    .flightsMostWanted_cards_ {
+        width: 120vw !important;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .flightsMostWanted_cards_ {
+        width: 150vw !important;
+    }
+}
 @media screen and (max-width: 1200px) {
     .flightsMostWanted_cards_ {
-        width: 200vw !important;
+        width: 170vw !important;
     }
 }
 @media screen and (max-width: 1100px) {
@@ -149,9 +158,9 @@
         line-height: 60px;
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 890px) {
     .flightsMostWanted_cards_ {
-        width: 300vw !important;
+        width: 240vw !important;
     }
 }
 @media screen and (max-width: 700px) {
@@ -177,6 +186,9 @@
     }
     .flightsMostWanted-principalImg_info {
         width: 90%;
+    }
+    .flightsMostWanted_cards_ {
+        width: 300vw !important;
     }
 }
 @media screen and (max-width: 500px) {

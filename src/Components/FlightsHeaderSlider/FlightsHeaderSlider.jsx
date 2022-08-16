@@ -21,7 +21,7 @@ const FlightsHeaderSlider = () => {
         if(autoCarousel.current.children.length > 0) {
            const firstCard = autoCarousel.current.children[0]
 
-           autoCarousel.current.style.transition = `400ms ease-out all`
+           autoCarousel.current.style.transition = `300ms ease-out all`
            const widthCard = autoCarousel.current.children[0].offsetWidth
            autoCarousel.current.style.transform = `translateX(-${widthCard}px)`
 
@@ -38,22 +38,6 @@ const FlightsHeaderSlider = () => {
            autoCarousel.current.addEventListener('transitionend', transition)
         }
     }
-
-    // const backFunc = () => {
-    //     if(autoCarousel.current.children.length > 0) {
-    //        const lastCard = autoCarousel.current.children[autoCarousel.current.children.length - 1]
-    //        autoCarousel.current.insertBefore(lastCard, autoCarousel.current.firstChild)
-
-    //         autoCarousel.current.style.transition = 'none'
-    //         const widthCard = autoCarousel.current.children[0].offsetWidth
-    //         autoCarousel.current.style.transform = `translateX(-${widthCard}px)`
-
-    //         setTimeout(() => {
-    //             autoCarousel.current.style.transition = `300ms ease-out all`
-    //             autoCarousel.current.style.transform = `translateX(0)`
-    //         }, 50)
-    //     }
-    // }
 
     useEffect(() => {
         setInterval(() => {

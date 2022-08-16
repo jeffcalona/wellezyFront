@@ -12,13 +12,17 @@
     display: flex;
     justify-content: center;
 }
+.homeDoctors_link {
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    top: 0px;
+    margin-top: 30px;
+}
 .HomeDoctors h1 {
     font-size: 30px;
     font-weight: 400;
     color: white;
-    margin-top: 20px;
-    position: absolute;
-    top: 10px;
 }
 .div_PrincipalImg {
     width: 25%;
@@ -27,15 +31,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
-.HomeDoctors_PrincipalImg {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-.div_PrincipalImg img {
+.div_PrincipalImg_ {
     width: 90%;
     height: 90%;
+    border-radius: 20px;
+    display: flex;
+}
+.div_PrincipalImg_ img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 20px;
 }
 .principal_Action {
     position: absolute;
@@ -61,6 +70,11 @@
     text-decoration: none;
 }
 
+/*Hovers*/
+.homeDoctors_link h1:hover {
+    text-decoration-line: underline;
+}
+
 @media screen and (max-width: 1600px) {
     .div_HomeDoctors {
       width: 80%;
@@ -72,6 +86,11 @@
         width: 70%;
     }
 }
+@media screen and (max-width: 1400px) {
+    .EUyiZ {
+        width: 4000vw !important;
+    }
+}
 @media screen and (max-width: 1250px) {
     .div_HomeDoctors {
       width: 90%;
@@ -81,6 +100,14 @@
     .div_HomeDoctors {
       width: 100%;
     }
+    .EUyiZ {
+        width: 5000vw !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    .EUyiZ {
+        width: 6000vw !important;
+    }
 }
 @media screen and (max-width: 750px) {
     .div_PrincipalImg {
@@ -88,6 +115,9 @@
     }
     .sliderContainer_doctors {
         width: 100%;
+    }
+    .EUyiZ {
+        width: 7000vw !important;
     }
 }
 @media screen and (max-width: 720px) {
@@ -97,4 +127,17 @@
    .HomeDoctors {
     margin-top: 0 !important;
    }
+   .EUyiZ {
+    width: 8000vw !important;
+    }
+}
+@media screen and (max-width: 525px) {
+    .EUyiZ {
+        width: 9000vw !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .EUyiZ {
+        width: 12000vw !important;
+    }
 }

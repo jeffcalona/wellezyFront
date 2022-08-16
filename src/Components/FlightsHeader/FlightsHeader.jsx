@@ -12,7 +12,7 @@ import { useRef } from 'react'
 import FlightsDesinitySearcher from '../FlightsDesinitySearcher/FlightsDesinitySearcher'
 import FlightsPassengerDetails from '../FlightsPassengerDetails/FlightsPassengerDetails'
 import FlightsDateGoing from '../FlightsDateGoing/FlightsDateGoing'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const citiesData = [
     {id: 1, country: 'united states', city: 'boston', abr: 'bos', img: BostonImg},
@@ -27,6 +27,7 @@ const citiesData = [
 
 const FlightsHeader = () => {
     const cardRef = useRef()
+    const navigate = useNavigate()
 
     const [citiesDataState, setCitiesDataState] = useState(citiesData)
     const [origin, setOrigin] = useState(false)
@@ -66,7 +67,8 @@ const FlightsHeader = () => {
         const newFilter = citiesData.filter((cityData) => {
             return (
                 cityData.country.toLowerCase().includes(searcher.toLocaleLowerCase()) ||
-                cityData.city.toLowerCase().includes(searcher.toLocaleLowerCase())
+                cityData.city.toLowerCase().includes(searcher.toLocaleLowerCase()) || 
+                cityData.abr.toLowerCase().includes(searcher.toLocaleLowerCase())
             )
         })
         searcher === '' ? setCitiesDataState(citiesData) : setCitiesDataState(newFilter)
@@ -85,12 +87,15 @@ const FlightsHeader = () => {
         const resultOrigin = e.target.attributes.category.value
         setPlaceholderOriginFlight(resultOrigin)
         setButtonOriginFlight(resultOrigin)
+        setOrigin(false)
+        console.log(e.target.attributes.category.value)
     }
 
     const desinitySearcherSelected = (e) => {
         const resultDestinity = e.target.attributes.category.value
         setPlaceholderDestinityFlight(resultDestinity)
         setButtonDestinityFlight(resultDestinity)
+        setDestinity(false)
     }
 
     const handleNumber = (tipe, operation) => {
@@ -129,6 +134,7 @@ const FlightsHeader = () => {
     const passengerContinue = () => {
         const data = `${passengersSelecteds.adult} adulto${passengersSelecteds.boy ? ` ${passengersSelecteds.boy} · niño ·` : ``} ${passengersSelecteds.baby ? `${passengersSelecteds.baby} bebé ` : ``}· clase ${clasSelectedText}`
         setButtonPassengerSelected(data)
+        setPassagerDetails(false)
     }
 
     useEffect(() => {
@@ -146,6 +152,9 @@ const FlightsHeader = () => {
         }
     }, [])
 
+    const searcherFlight = () => {
+        navigate('/flight/selected', {state: {buttonOriginFlight, buttonDestinityFlight, passengersSelecteds, clasSelected, dateGoingSelected, dateSreturnSelected}})
+    }
 
   return (
     <div className='flightsHeader'>
@@ -218,7 +227,7 @@ const FlightsHeader = () => {
                                 </div>
                             </div>
                             {dateGoing &&
-                                <FlightsDateGoing oneWay={oneWay} roundTrip={roundTrip} cardRef={cardRef} setDateGoingSelected={setDateGoingSelected} setDateSreturnSelected={setDateSreturnSelected} />
+                                <FlightsDateGoing oneWay={oneWay} roundTrip={roundTrip} cardRef={cardRef} setDateGoingSelected={setDateGoingSelected} setDateSreturnSelected={setDateSreturnSelected} searcherFlight={searcherFlight}/>
                             }
                             {roundTrip ?
                                 <div className='flight_date'>
@@ -235,11 +244,11 @@ const FlightsHeader = () => {
                                     </div>
                                 </div>
                             }
-                            <Link to='/flight/selected' className='flight_searcher'>
+                            <button className='flight_searcher' onClick={searcherFlight}>
                                 <div>
                                     <SearchNormal1 size="45" color="#004274"/>
                                 </div>
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -26,7 +26,7 @@ const hotelsInfo = [
   `;
   
   const MotionBox = styled(motion.div)`
-    width: 120vw;
+    width: 400vw;
   `
 
 const FlightsTopHoteles = () => {
@@ -37,7 +37,7 @@ const FlightsTopHoteles = () => {
             <h1 style={{ color: 'black', textTransform: 'capitalize', fontWeight: 400 }}>Los hoteles mejores calificados</h1>
         </Link>
         <MotionConstraints className='slider_container' ref={constraintsRef}>
-            <MotionBox className='slider' drag='x' dragConstraints={constraintsRef}>
+            <MotionBox className='slider_' drag='x' dragConstraints={constraintsRef}>
             {
                 hotelsInfo.map((info) => {
                 return (

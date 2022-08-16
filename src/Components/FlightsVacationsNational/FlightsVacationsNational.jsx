@@ -25,7 +25,7 @@ const cardInfo = [
   `;
   
   const MotionBox = styled(motion.div)`
-    width: 100vw;
+    width: 200vw;
   `
 
 const FlightsVacationsNational = () => {
@@ -36,7 +36,7 @@ const FlightsVacationsNational = () => {
             <h1 style={{ color: 'black', textTransform: 'capitalize', fontWeight: 400 }}>vacaciones a destinos nacionales</h1>
         </Link>
         <MotionConstraints className='slider_container' ref={constraintsRef}>
-            <MotionBox className='slider' drag='x' dragConstraints={constraintsRef}>
+            <MotionBox className='slider_' drag='x' dragConstraints={constraintsRef}>
             {
                 cardInfo.map((info) => {
                 return (

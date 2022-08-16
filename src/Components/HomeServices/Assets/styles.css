@@ -137,6 +137,7 @@
     }
     .homeServices_left a {
         top: 50px;
+        z-index: 1;
     }
     .homeServices_right {
         width: 100%;

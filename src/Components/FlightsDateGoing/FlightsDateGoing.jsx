@@ -7,7 +7,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import './Assets/styles.css'
 import { Link } from 'react-router-dom';
 
-const FlightsDateGoing = ({ oneWay, roundTrip, cardRef, setDateGoingSelected, setDateSreturnSelected }) => {
+const FlightsDateGoing = ({ oneWay, roundTrip, cardRef, setDateGoingSelected, setDateSreturnSelected, searcherFlight }) => {
   
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
@@ -49,11 +49,11 @@ const FlightsDateGoing = ({ oneWay, roundTrip, cardRef, setDateGoingSelected, se
                 </div>
               </div>
             </div>
-            <Link to='/flight/selected' className='flightDate_searcher'>
+            <button className='flightDate_searcher' onClick={searcherFlight}>
               <div>
                 <SearchNormal1 size="45" color="#004274"/>
               </div>
-            </Link>
+            </button>
           </div>
           <div className='dateRangeOnly'>
             <CalendarNew editableDateInputs={true} months={2} direction="horizontal" onChange={onChangeOnlyDate} date={dateOneWay} />
@@ -112,11 +112,11 @@ const FlightsDateGoing = ({ oneWay, roundTrip, cardRef, setDateGoingSelected, se
                 </div>
               </div>
             }
-            <Link to='/flight/selected' className='flightDate_searcher'>
+            <button className='flightDate_searcher' onClick={searcherFlight}>
               <div>
                   <SearchNormal1 size="45" color="#004274"/>
               </div>
-            </Link>
+            </button>
           </div>
           <div className='dateRange'>
             <DateRange editableDateInputs={true} onChange={handleSelect} moveRangeOnFirstSelection={false} ranges={[selectionRange]} months={2} direction="horizontal" />

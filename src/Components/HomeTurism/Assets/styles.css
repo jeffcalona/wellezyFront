@@ -3,6 +3,9 @@
   text-align: center;
   margin: 32px auto;
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .homeTurism a {
   color: black;
@@ -11,9 +14,21 @@
   font-size: 30px;
   font-weight: 400;
 }
+.homeTurism .homeTurism_titleLink {
+  width: 120px;
+  height: 40px;
+}
 
-.slider {
+.slider_container {
   display: flex;
+  align-items: center;
+  width: 100%;
+}
+.slider_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .Grid_homeTurism {
   justify-content: center;
@@ -25,15 +40,14 @@
   margin: 10px 20px !important;
 }
 
+/*Hovers*/
+.homeTurism_titleLink h1:hover {
+  text-decoration-line: underline;
+}
+
 @media screen and (max-width: 1600px) {
   .homeTurism {
     width: 80%;
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  .slider {
-    width: 120vw !important;
   }
 }
 
@@ -41,8 +55,8 @@
   .homeTurism {
     width: 90%;
   }
-  .slider {
-    width: 140vw !important;
+  .slider_ {
+    width: 4000vw !important;
   }
 }
 
@@ -53,8 +67,8 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .slider {
-    width: 220vw !important;
+  .slider_ {
+    width: 5000vw !important;
   }
 }
 
@@ -64,9 +78,6 @@
   }
   .div_homeTurism {
     margin: 20px 8px !important;
-  }
-  .slider {
-    width: 360vw !important;
   }
   .cardHomeTurism_media {
     width: 100%;

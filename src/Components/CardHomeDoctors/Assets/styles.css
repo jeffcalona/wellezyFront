@@ -17,14 +17,21 @@
 .div_cardHomeDotors-img img {
     pointer-events: none;
 }
-.cardHomeDotors:hover {
-    cursor: pointer;
-}
 .cardHomeDotors_ActionArea {
     margin-top: 50px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .cardHomeDotors_Action {
     justify-content: center;
+}
+.cardHomeDotors_ActionArea a {
+    color: black;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: aquamarine !important;
 }
 .cardHomeDotors_Heart {
     position: absolute;
@@ -34,6 +41,5 @@
 @media screen and (max-width: 500px) {
     .cardHomeDotors {
         width: 250px;
-
     }
 }
