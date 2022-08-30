@@ -1,0 +1,199 @@
+.tourDetail {
+    width: 70%;
+    margin-top: 30px;
+}
+.tourDetail_stateDescription {
+    display: flex;
+    align-items: center;
+}
+.tourDetail_stateDescription p {
+    font-family: 'Inter';
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+}
+.tourDetail_headerText h1 {
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.tourDetail-headerText_stars {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.tourDetail-headerText_stars p {
+    margin: 0 20px;
+    font-family: 'Inter';
+    color: #004274;
+}
+.tourDetails-header_imgs {
+    margin-top: 20px;
+}
+
+/*Main Description*/
+.tourDetail_main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.tourDetail-main_description {
+    width: 69%;
+    display: flex;
+    justify-content: center;
+}
+.tourDetail-main_description_ {
+    width: 95%;
+}
+.tourDetail-main_description_ p {
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 300;
+}
+.tourDetail-main-description_generalInformation {
+    margin-top: 30px;
+}
+.tourDetail-main-description_generalInformation h2, .tourDetail-main-description_info h2 {
+    font-family: 'Inter';
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.tourDetail-main-description_generalInformation_ {
+    margin-top: 20px;
+}
+.tourDetail-main-description-generalInformation_items {
+    margin: 20px 0;
+}
+.tourDetail-main-description-generalInformation_items_ {
+    display: flex;
+    align-items: center;
+}
+.tourDetail-main-description-generalInformation_items_ p {
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.tourDetail-main-description-generalInformation_itemInfo {
+    font-family: 'Inter';
+    font-size: 14px;
+    margin-left: 40px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.tourDetail-main-description_info {
+    margin-top: 30px;
+}
+.tourDetail-main-description_info p {
+    font-family: 'Inter';
+    margin-top: 10px;
+}
+.tourDetail-main-description_info ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.tourDetail-main-description_info li {
+    font-family: 'Inter';
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+
+/*Main Prices*/
+.tourDetail-main_prices {
+    width: 31%;
+}
+.tourDetail-main-prices_buttons {
+    width: 100%;
+    height: 380px;
+    background-color: #004274;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.tourDetail-main-prices_button {
+    width: 80%;
+    height: 70px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.tourDetail-main-prices_button h2 {
+    font-family: 'Oswald';
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #004274;
+    margin-right: 10px;
+}
+.tourDetail-main-prices-button_search {
+    width: 80%;
+    height: 70px;
+    background-color: 004274;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.tourDetail-main-prices-button_search h2 {
+    font-family: 'Oswald';
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+    margin-right: 20px;
+}
+.tourDetail-main-prices-button_calendar {
+    position: absolute;
+    border-radius: 20px;
+    top: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+}
+.tourDetail-main-prices-button_calendar div {
+    border-radius: 20px !important;
+}
+
+@media screen and (max-width: 1600px) {
+    .tourDetail {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .tourDetail {
+      width: 90%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .tourDetail {
+      width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .tourDetail_main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tourDetail-main_description {
+        width: 100%;
+    }
+    .tourDetail-main_prices {
+        width: 95%;
+    }
+    .tourDetail-main-prices-button_calendar {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0) !important;
+    }
+}

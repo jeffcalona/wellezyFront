@@ -1,34 +1,29 @@
 import React, { useEffect, useState } from 'react'
+import LogoWhite from "./Assets/Img/LogoWhite.png"
+import { ArrowDown2, ArrowUp2, Global, HambergerMenu, Heart, ShoppingCart } from "iconsax-react";
+import { IconButton } from '@mui/material';
+import ProceduresDropdown from '../ProceduresDropdown/ProceduresDropdown';
 import { NavLink } from "react-router-dom";
-
 import $ from 'jquery'
 
 import "./Assets/styles.css"
-
-import LogoWhite from "./Assets/Img/LogoWhite.png"
-import { Global, HambergerMenu, Heart, ShoppingCart } from "iconsax-react";
-import { IconButton } from '@mui/material';
 
 
 const Navbar = () => {
 
   const [ dropdMenu, setDropdMenu] = useState(false)
-  const activeDropMenu = () => setDropdMenu(!dropdMenu)
 
   const [ scrolls, setScrolls ] = useState(false)
 
-  const aaa = () => {
+  const [proceduresDropdown, setProceduresDropdown] = useState(false)
+
+  const burgerMenu = () => {
     $(window).resize(function(){
       if($(window).width() > 1101){
         setDropdMenu(false)
-      }
+      } 
     })
   }
-  useEffect(() => {
-    aaa(false)
-  }, [])
-
-
 
   /* Scroll function */
     var previousScroll = 0;
@@ -41,29 +36,45 @@ const Navbar = () => {
     }
   });
 
- 
+  useEffect(() => {
+    burgerMenu(false)
+  }, [])
  
   return (
     <div className='navbar'>
       <div className={scrolls ? 'bgcolor' : 'navbar_div'}>
         <div className='HambergerMenu'>
-          <IconButton onClick={activeDropMenu}>
+          <IconButton onClick={() => setDropdMenu(!dropdMenu)}>
             <HambergerMenu size="32" color="white"/>
           </IconButton>
         </div>
         <div className='nav_logo'>
-          <NavLink to="/">
+          <NavLink to="/" onClick={() => setDropdMenu(false)}>
             <img src={LogoWhite} alt="logo" className='logo' />
           </NavLink>
         </div>
         <div className={dropdMenu ? 'active_dropdMenu' : 'links'}>
           <ul>
-            <li><NavLink to="/flights" className='navlinks'>Vuelos</NavLink></li>
-            <li><NavLink to="/procedures" className='navlinks'>Procedimientos</NavLink></li>
-            <li><NavLink to="/doctors" className='navlinks'>Doctores</NavLink></li>
-            <li><NavLink to="/turism" className='navlinks'>Turismo</NavLink></li>
-            <li><NavLink to="/allies" className='navlinks'>Aliados</NavLink></li>
-            <li><NavLink to="/about" className='navlinks'>Nosotros</NavLink></li>
+            <li><NavLink to="/flights" className='navlinks' onClick={() => setDropdMenu(false)} >Vuelos</NavLink></li>
+            <li>
+              <div className={proceduresDropdown ? 'proceduresDropdown_open' : 'proceduresDropdown'} onClick={() => setProceduresDropdown(!proceduresDropdown)}>
+                <p>
+                  Procedimientos
+                </p>
+                  {
+                    proceduresDropdown ? <ArrowUp2 size="25" className='proceduresDropdown_arrowDownOn'/>
+                    :
+                    <ArrowDown2 size="25" color='white' style={{ marginLeft: '20px' }}/>
+                  }
+              </div>
+            </li>
+            {proceduresDropdown &&
+              <ProceduresDropdown dropdMenu={dropdMenu} lickCategoryClicked={() => setProceduresDropdown(false)} ClickedCategory={() => setProceduresDropdown(false)} />
+            }
+            <li><NavLink to="/doctors" className='navlinks' onClick={() => setDropdMenu(false)} >Doctores</NavLink></li>
+            <li><NavLink to="/turism" className='navlinks' onClick={() => setDropdMenu(false)} >Turismo</NavLink></li>
+            <li><NavLink to="/allies" className='navlinks' onClick={() => setDropdMenu(false)} >Aliados</NavLink></li>
+            <li><NavLink to="/about" className='navlinks' onClick={() => setDropdMenu(false)} >Nosotros</NavLink></li>
           </ul>
         </div>
         <div className='icons-links'>

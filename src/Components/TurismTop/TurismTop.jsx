@@ -10,7 +10,6 @@ import styled from 'styled-components'
 import './Assets/styles.css'
 //import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { CardActionArea } from '@mui/material'
 
 const activities = [
     {
@@ -122,18 +121,18 @@ const TurismTop = () => {
                 activities.map((activity) => {
                     if (activity.country !== 'Colombia') {
                         return (
-                            <Link to={`/tour/${activity.id}`} key={activity.id} style={{ margin: '0 10px' }}>
-                                <CardActionArea>
-                                    <div className='international_activity'>
-                                        <div className='international-activity_img'>
-                                            <img src={activity.img} alt={activity.title} />
-                                        </div>
-                                        <div className='international-activity_title'>
-                                            <h2>{activity.title}</h2>
-                                        </div>
+                            <div key={activity.id}>
+                                <div className='international_activity'>
+                                    <div className='international-activity_img'>
+                                        <img src={activity.img} alt={activity.title} />
                                     </div>
-                                </CardActionArea>
-                            </Link>
+                                    <div className='international-activity_title'>
+                                        <Link to={`/tour/${activity.id}`} key={activity.id}>
+                                            <h2>{activity.title}</h2>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
                         )
                     }
                 })

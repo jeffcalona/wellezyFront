@@ -1,6 +1,6 @@
 import { Slider } from '@mui/material'
 import { Airplane, ArrowDown2, ArrowUp2, Calendar, Filter, Location, Record, RecordCircle, SearchNormal1, TickCircle, User } from 'iconsax-react'
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState } from 'react'
 import VivaLogo from './Assets/Img/VivaLogo.png'
 import LatamLogo from './Assets/Img/LatamLogo.png'
@@ -8,8 +8,27 @@ import AviancaLogo from './Assets/Img/AviancaLogo.png'
 import './Assets/styles.css'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import FlightsDesinitySearcher from '../FlightsDesinitySearcher/FlightsDesinitySearcher'
+import BostonImg from './Assets/Img/BostonImg.jpeg'
+import CalgaryImg from './Assets/Img/CalgaryImg.jpeg'
+import LondonImg from './Assets/Img/LondonImg.jpeg'
+import MiamiImg from './Assets/Img/MiamiImg.jpeg'
+import MadridImg from './Assets/Img/MadridImg.jpeg'
+import SanJuanImg from './Assets/Img/SanJuanImg.jpeg'
+
+const citiesData = [
+    {id: 1, country: 'united states', city: 'boston', abr: 'bos', img: BostonImg},
+    {id: 2, country: 'canada', city: 'calgary', abr: 'yyc', img: CalgaryImg},
+    {id: 3, country: 'reino unido', city: 'londres', abr: 'lon', img: LondonImg},
+    {id: 4, country: 'united states', city: 'miami', abr: 'mia', img: MiamiImg},
+    {id: 5, country: 'españa', city: 'madrid', abr: 'mad', img: MadridImg},
+    {id: 6, country: 'puerto rico', city: 'san juan', abr: 'sju', img: SanJuanImg},
+    {id: 7, country: 'united states', city: 'boston', abr: 'bos', img: BostonImg},
+    {id: 8, country: 'canada', city: 'calgary', abr: 'yyc', img: CalgaryImg}
+]
 
 const FlightDetailFilter = () => {
+    const cardRef = useRef()
     const location = useLocation()
 
     //const [selectedRating, setSelectedRating] = useState(null)
@@ -25,6 +44,11 @@ const FlightDetailFilter = () => {
     const [passengerSelected, setPassengerSelected] = useState(location.state.passengersSelecteds)
     const [dateGoingSelected, setDateGoingSelected] = useState(location.state.dateGoingSelected)
     const [dateReturnSelected, setDateReturnSelected] = useState(location.state.dateSreturnSelected)
+
+    const [classSelect, setClassSelect] = useState('')
+
+    const [citiesDataSelect, setCitiesDataSelect] = useState(citiesData)
+    const [openOrigin, setOpenOrigin] = useState(false)
 
     const changePrice = (event, value) => {
         setValueRange(value)
@@ -45,6 +69,45 @@ const FlightDetailFilter = () => {
         }
     }, [])
 
+    const passengerSelect = `${passengerSelected.adult} adulto ${passengerSelected.boy ? `· ${passengerSelected.boy} niño` : ``} ${passengerSelected.baby ? `· ${passengerSelected.baby} bebé ` : ``}`
+
+    const filterCity = (e) => {
+        const searcher = e.target.value
+        const newFilter = citiesData.filter((cityData) => {
+            return (
+                cityData.country.toLowerCase().includes(searcher.toLocaleLowerCase()) ||
+                cityData.city.toLowerCase().includes(searcher.toLocaleLowerCase()) || 
+                cityData.abr.toLowerCase().includes(searcher.toLocaleLowerCase())
+            )
+        })
+        searcher === '' ? setCitiesDataSelect(citiesData) : setCitiesDataSelect(newFilter)
+    }
+
+    const originSearcherSelected = (e) => {
+        const resultOrigin = e.target.attributes.category.value
+        setOriginFlight(resultOrigin)
+        setOpenOrigin(false)
+    }
+
+    useEffect(() => {
+        if(clasflightSelected.economic){
+            setClassSelect('Económico')
+        } else if(clasflightSelected.ejecutive){
+            setClassSelect('Ejecutiva')
+        } else setClassSelect('Business')
+
+        const handler = (e) => {
+            if(!cardRef?.current?.contains(e.target)){
+                setOpenOrigin(false)
+            }
+        }
+        document.addEventListener('mousedown', handler)
+        return () => {
+            document.removeEventListener('mousedown', handler)
+        }
+
+    }, [clasflightSelected])
+
   return (
     <div className='flightDetailFilter'>
         <div className='flightDetailFilter_flight'>
@@ -57,7 +120,7 @@ const FlightDetailFilter = () => {
             </div>
             <div className={infoFlight ? 'info_flightContainer' : 'info_flightContainerNone'}>
                 <div className='info_flight'>
-                    <div className='info-flight_site'>
+                    <div className='info-flight_site' onClick={() => setOpenOrigin(!openOrigin)}>
                         <div className='info-flight_site_'>
                             <div className='info-flight_siteTitle'>
                                 <h3>origen</h3>
@@ -66,6 +129,9 @@ const FlightDetailFilter = () => {
                             <p className=''>{originFlight}</p>
                         </div>
                     </div>
+                    {openOrigin &&
+                        <FlightsDesinitySearcher placeholder={originFlight} citiesData={citiesDataSelect} cardRef={cardRef} filterCity={filterCity} desinitySearcherSelected={originSearcherSelected} flightClass='flight_originSelect'/>
+                    }
                     <div className='info-flight_site'>
                         <div className='info-flight_site_'>
                             <div className='info-flight_siteTitle'>
@@ -81,7 +147,7 @@ const FlightDetailFilter = () => {
                                 <h3>pasajetos</h3>
                                 <User style={{ cursor: 'pointer' }} size="28" color="#004274" />
                             </div>
-                            <p className=''>1 adulto - <span className='info_class'>Económico</span></p>
+                            <p className=''>{passengerSelect}<span className='info_class'>{classSelect}</span></p>
                         </div>
                     </div>
                 </div>

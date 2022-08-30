@@ -28,7 +28,7 @@ const HomeProcedures = () => {
                     <h3>cirugías mamarias</h3>
                     <p>3 procedimientos</p>
                     <div className='homeProcedure_button'>
-                        <Link to='/procedure/breastsurgery'>más detalles</Link>
+                        <Link to='/procedure/3'>más detalles</Link>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@ const HomeProcedures = () => {
                     <h3>cirugías faciales</h3>
                     <p>5 procedimientos</p>
                     <div className='homeProcedure_button'>
-                        <Link to='/procedure/facialsurgery'>más detalles</Link>
+                        <Link to='/procedure/2'>más detalles</Link>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ const HomeProcedures = () => {
                     <h3>cirugía corporal</h3>
                     <p>6 procedimientos</p>
                     <div className='homeProcedure_button'>
-                        <Link to='/procedure/bodysurgery'>más detalles</Link>
+                        <Link to='/procedure/1'>más detalles</Link>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ const HomeProcedures = () => {
                         <h3>estética vaginal</h3>
                         <p>2 procedimientos</p>
                         <div className='homeProcedure_button'>
-                            <Link to='/procedure/vaginalesthetic'>más detalles</Link>
+                            <Link to='/procedure/7'>más detalles</Link>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ const HomeProcedures = () => {
                         <h3>tratamientos capilares</h3>
                         <p>2 procedimientos</p>
                         <div className='homeProcedure_button'>
-                            <Link to='/procedure/capillarytreatment'>más detalles</Link>
+                            <Link to='/procedure/4'>más detalles</Link>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ const HomeProcedures = () => {
                         <h3>tratamientos corporales</h3>
                         <p>9 procedimientos</p>
                         <div className='homeProcedure_button'>
-                            <Link to='/procedure/bodytreatment'>más detalles</Link>
+                            <Link to='/procedure/6'>más detalles</Link>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@ const HomeProcedures = () => {
                         <h3>tratamientos facieales</h3>
                         <p>6 procedimientos</p>
                         <div className='homeProcedure_button'>
-                            <Link to='/procedure/facialtreatment'>más detalles</Link>
+                            <Link to='/procedure/5'>más detalles</Link>
                         </div>
                     </div>
                 </div>

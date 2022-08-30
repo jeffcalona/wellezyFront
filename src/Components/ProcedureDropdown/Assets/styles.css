@@ -1,0 +1,33 @@
+.cardProcedureDropdown a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.cardProcedureDropdown-procedure_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.cardProcedureDropdown-procedure_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.cardProcedureDropdown-procedure_title {
+    margin-left: 10px;
+}
+.cardProcedureDropdown-procedure_title p {
+    color: black;
+    font-family: 'Inter';
+    text-transform: capitalize;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.cardProcedureDropdown:hover {
+    background-color: rgba(0, 66, 116, .1);
+    transition: all 0.3s ease-out;
+    border-radius: 20px;
+}

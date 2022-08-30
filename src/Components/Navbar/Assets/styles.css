@@ -51,11 +51,13 @@
   margin: 0 50px;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 .links ul {
   display: flex;
   color: white;
   list-style: none;
+  align-items: center;
 }
 .icons-links {
   width: 10%;
@@ -83,6 +85,35 @@
 }
 .active_dropdMenu ul li {
   margin: 20px;
+}
+
+.proceduresDropdown {
+  text-decoration: none;
+  color: white;
+  margin-right: 50px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+/*Dropdown is open*/
+.proceduresDropdown_open {
+  width: 180px;
+  height: 50px;
+  text-decoration: none;
+  color: #004274;
+  margin-right: 50px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  border-radius: 10px;
+}
+.proceduresDropdown_arrowDownOn {
+  margin-left: 20px;
+  color: #004274;
 }
 
 /*Media Query*/

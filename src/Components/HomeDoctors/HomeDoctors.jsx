@@ -12,7 +12,7 @@ const MotionConstraints = styled(motion.div)`
 `;
 
 const MotionBox = styled(motion.div)`
-  width: 3000vw;
+  width: 100000vw;
 `
 
 const HomeDoctors = () => {
