@@ -19,7 +19,7 @@ const ChoferQuestion = ({ question, setPresentQuestion, presentQuestion, setUseC
             question[presentQuestion].response.transport.map((quest, index) => {
                 return (
                     <Grid key={index} className='cardChofer'>
-                        <CardQuestionChofer choferAvatar={quest.choferAvatar} choferName={quest.choferName} carChoferImg={quest.carChoferImg} carChoferModel={quest.carChoferModel} choferCity={quest.choferCity} categorySelected={quest.choferName} choferSelected={choferSelected}/>
+                        <CardQuestionChofer choferAvatar={quest.choferAvatar} choferName={quest.choferName} carChoferImg={quest.carChoferImg} carChoferModel={quest.carChoferModel} choferCity={quest.choferCity} categorySelected={quest.choferName} choferSelected={choferSelected} starsNumber={quest.assessment}/>
                     </Grid>
                 )
             })

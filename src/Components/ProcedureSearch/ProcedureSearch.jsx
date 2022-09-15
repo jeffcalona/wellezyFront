@@ -7,8 +7,6 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import './Assets/styles.css'
 
-//import newQuestions from '../../Api/newQuestions'
-
 const URL = process.env.REACT_APP_URL_API_PROCEDURES
 
 const ProcedureSearch = () => {
@@ -16,15 +14,10 @@ const ProcedureSearch = () => {
     const dispatch = useDispatch()
 
     const [filter, setFilter] = useState([])
-    //const [categoryProcedure, setCategoryProcedure] = useState('')
-    //const [questionSelected, setCuestionSelected] = useState('')
 
-    //const { questionsList } = useSelector(state => state.questions)
     const { questionsList } = useSelector(state => state.questions)
     console.log('questionsList', questionsList)
     
-
-    //const [question, setQuestion] = useState(false)
 
     const handleFilter = async (e) => {
         const searcher = e.target.value
@@ -35,30 +28,6 @@ const ProcedureSearch = () => {
         })
         searcher === '' ? setFilter([]) : setFilter(newFilter)
     }
-
-
-    /*const initCuestions = (e) => {
-        setFilter([])
-        const click = e.target.outerText
-        console.log('click', click)
-        const categorySelected = e.target.attributes.category.value
-        console.log('Category Selected', categorySelected)
-        setCategoryProcedure(categorySelected)
-        setCuestionSelected(click)
-
-        setQuestion(newQuestions[categorySelected - 1].questions)
-    }*/
-    
-    /*useEffect(() => {
-        if(categoryProcedure === newQuestions[0].idProcedure) { 
-          setQuestion(newQuestions[0].questions)
-        } 
-      }, [categoryProcedure])
-
-    useEffect(() => {
-        
-    })*/
-
 
   return (
     <>
@@ -92,9 +61,8 @@ const ProcedureSearch = () => {
         </div>
         <>
             {
-                //questionsList.questions.length > 0 &&
                 questionsList.questions &&
-                <Questions question={questionsList} /*clickQuestion={questionSelected}*/ />
+                <Questions question={questionsList} />
             }
         </>
     </>

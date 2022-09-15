@@ -74,7 +74,7 @@ const Navbar = () => {
             <li><NavLink to="/doctors" className='navlinks' onClick={() => setDropdMenu(false)} >Doctores</NavLink></li>
             <li><NavLink to="/turism" className='navlinks' onClick={() => setDropdMenu(false)} >Turismo</NavLink></li>
             <li><NavLink to="/allies" className='navlinks' onClick={() => setDropdMenu(false)} >Aliados</NavLink></li>
-            <li><NavLink to="/about" className='navlinks' onClick={() => setDropdMenu(false)} >Nosotros</NavLink></li>
+            <li><NavLink to="/aboutus" className='navlinks' onClick={() => setDropdMenu(false)} >Nosotros</NavLink></li>
           </ul>
         </div>
         <div className='icons-links'>

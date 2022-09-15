@@ -10,7 +10,7 @@ const servicesElements = [
   {
     icon: <Car size="33" color="white"/>,
     description: 'Transporte',
-    link: '/transport'
+    link: '/transports'
   },
   {
     icon: <Simcard size="33" color="white"/>,
@@ -45,7 +45,7 @@ const servicesElements = [
   {
     icon: <Car size="33" color="white"/>,
     description: 'Transporte',
-    link: '/transport'
+    link: '/transports'
   },
   {
     icon: <Simcard size="33" color="white"/>,
@@ -63,7 +63,7 @@ const servicesElementsPhone = [
   {
     icon: <Car size="36" color="white"/>,
     description: 'Transporte',
-    link: '/transport'
+    link: '/transports'
   },
   {
     icon: <Simcard size="36" color="white"/>,
@@ -98,7 +98,7 @@ const servicesElementsPhone = [
   {
     icon: <Car size="33" color="white"/>,
     description: 'Transporte',
-    link: 'transport'
+    link: 'transports'
   },
   {
     icon: <Simcard size="33" color="white"/>,

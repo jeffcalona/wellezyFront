@@ -18,11 +18,15 @@ import FlightSelected from './Routes/FlightSelected/FlightSelected';
 import ProcedureCategoryDetails from './Routes/ProcedureCategoryDetails/ProcedureCategoryDetails';
 import ProcedureCategory from './Routes/ProcedureCategory/ProcedureCategory';
 import Form from './Routes/Form/Form';
+import AboutUs from './Routes/AboutUs/AboutUs';
+
 import "./app.css"
 
 //Redux
 import { Provider } from 'react-redux';
 import store from './store';
+import Transports from './Routes/Transports/Transports';
+import FlightsCheckout from './Routes/FlightsCheckout/FlightsCheckout';
 
 const App = () => {
   return (
@@ -46,6 +50,9 @@ const App = () => {
           <Route path='/procedure/:id' element={<ProcedureCategory />}/>
           <Route path='/procedure/:id/:id' element={<ProcedureCategoryDetails />}/>
           <Route path='/form' element={<Form />} />
+          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/transports' element={<Transports />} />
+          <Route path='/flightsCheckout' element={<FlightsCheckout />} />
         </Routes>
         <Footer />
       </div>

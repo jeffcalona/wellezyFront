@@ -88,7 +88,6 @@ const FlightsHeader = () => {
         setPlaceholderOriginFlight(resultOrigin)
         setButtonOriginFlight(resultOrigin)
         setOrigin(false)
-        console.log(e.target.attributes.category.value)
     }
 
     const desinitySearcherSelected = (e) => {

@@ -332,7 +332,7 @@ const FlightDetail = () => {
               <Link to='/app' style={{ color: '#004274', fontWeight: '600', fontFamily: 'inter', fontSize: '16px' }}>$10 de cashback descargando la app</Link>
             </div>
             <div className='flight-results-price_ButtonToBuy'>
-              <button>comprar</button>
+              <Link to='/flightsCheckout'>comprar</Link>
             </div>
           </div>
         </div>

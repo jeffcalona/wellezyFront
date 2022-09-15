@@ -1,12 +1,11 @@
 import React from 'react'
 
 import './Assets/styles.css'
-import portadaDoctors from './Assets/img/portadaDoctors.jpg'
 
-const DoctorsHeader = ({ title, description }) => {
+const DoctorsHeader = ({ title, description, headerImg }) => {
   return (
     <div className='doctors_header'>
-        <img src={portadaDoctors} alt="" />
+        <img src={headerImg} alt="" />
         <div className='doctors-header_text'>
             <h1>{title}</h1>
             <p>{`Aquí encontrarás ${description} del País, selecciona el tuyo`}</p>

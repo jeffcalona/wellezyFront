@@ -6,6 +6,7 @@ import Visa from './Assets/Img/Visa.png'
 import Appstore from './Assets/Img/Appstore.png'
 import Googleplay from './Assets/Img/Googleplay.png'
 import Paypal from './Assets/Img/Paypal.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -31,7 +32,7 @@ const Footer = () => {
                 <div className='aboutUs_p'>
                     <p>Vive la experiencia Wellezy con la única aplicación en el mundo en la que tienes todo a tu alcance.</p>
                 </div>
-                <a href='VerMas'>Ver Más</a>
+                <Link to='/aboutus'>Ver Más</Link>
             </div>
             <div className='moreInfo'>
                 <div className='moreInfo_social'>
