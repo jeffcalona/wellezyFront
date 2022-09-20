@@ -1,14 +1,17 @@
 .cardHomeTurism {
     width: 214px;
+    height: 360px;
     font-family: 'Inter';
     text-align: center;
     border-radius: 20px !important;
     box-shadow: none !important;
 }
 .cardHomeTurismImg {
+    width: 214px !important;
     height: 214px;
     border-radius: 20px !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    pointer-events: none;
 }
 .cardHomeTurism_media {
     position: relative;
@@ -20,16 +23,43 @@
 }
 .cardHomeTurism_title {
     font-size: 18px;
-    font-weight: 400
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.cardHomeTurism_ActionArea {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .cardHomeTurism_CardAction {
     justify-content: center;
 }
+.cardHomeTurism_ActionArea .css-46bh2p-MuiCardContent-root {
+    padding: 0 !important;
+} 
 .cardHomeTurism_description {
-    font-size: 18;
+    font-size: 16px !important;
     font-weight: 200 !important;
+    text-transform: capitalize;
 }
 .cardHomeTurism_IconButton {
     padding: 0 4px !important;
     margin: 0 !important;
+}
+
+@media screen and (max-width: 500px) {
+    .cardHomeTurism {
+        width: 190px !important;
+    }
+    .cardHomeTurismImg {
+        height: 190px;
+    }
+    .cardHomeTurism_title {
+        font-size: 16px;
+    }
+    .cardHomeTurism_description {
+        font-size: 14px !important;
+    }
 }

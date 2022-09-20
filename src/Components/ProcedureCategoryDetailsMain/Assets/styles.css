@@ -1,0 +1,311 @@
+.procedureCategoryDetailsMain {
+    width: 70%;
+    margin-top: 80px;
+}
+/*Main one*/
+.procedureCategoryDetailsMain_one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 480px;
+}
+.procedureCategoryDetailsMain-one_text {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.procedureCategoryDetailsMain-one_text h2 {
+    font-family: 'Inter';
+    font-size: 50px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+.procedureCategoryDetailsMain-one-text_procedure {
+    margin-bottom: 20px;
+}
+.procedureCategoryDetailsMain-one-text-procedure_description {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+.procedureCategoryDetailsMain-one-text-procedure_description p {
+    width: 90%;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 200;
+}
+.procedureCategoryDetailsMain-one-text-procedure_description p::first-letter {
+    text-transform: uppercase;
+}
+.procedureCategoryDetailsMain-one_time {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.procedureCategoryDetailsMain-one-time_description {
+    margin-right: 120px;
+}
+.procedureCategoryDetailsMain-one-time_description p {
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.procedureCategoryDetailsMain-one_img {
+    width: 44%;
+    height: 100%;
+}
+.procedureCategoryDetailsMain-one_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Main Two*/
+.procedureCategoryDetailsMain_two {
+    margin-top: 30px;
+    min-height: 212px;
+    display: flex;
+    justify-content: space-between;
+}
+.procedureCategoryDetailsMain-two_anesthesia {
+    width: 50%;
+    height: 212px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.procedureCategoryDetailsMain-two-anesthesia_img {
+    width: 100%;
+    height: 212px;
+}
+.procedureCategoryDetailsMain-two-anesthesia_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.procedureCategoryDetailsMain-two-anesthesia_text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.procedureCategoryDetailsMain-two-anesthesia_text_ {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.procedureCategoryDetailsMain-two-anesthesia-text_title {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.procedureCategoryDetailsMain-two-anesthesia-text_title h2 {
+    font-family: 'Inter';
+    font-size: 50px;
+    font-weight: 200;
+    text-transform: capitalize;
+    color: white;
+}
+.procedureCategoryDetailsMain-two-anesthesia-text_description {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.procedureCategoryDetailsMain-two-anesthesia-text_description p {
+    width: 90%;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+}
+.procedureCategoryDetailsMain-two_effects {
+    width: 44%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.procedureCategoryDetailsMain-two-effects_title h2 {
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 200;
+    text-transform: capitalize;
+    text-align: end;
+    line-height: 40px;
+}
+.procedureCategoryDetailsMain-two-effects_title h2 span {
+    font-size: 50px;
+    display: block;
+}
+.procedureCategoryDetailsMain-two-effects_description {
+    margin-top: 30px;
+}
+.procedureCategoryDetailsMain-two-effects_description p {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 200;
+}
+.procedureCategoryDetailsMain-two-effects_description p::first-letter {
+    text-transform: uppercase;
+}
+/*Main three*/
+.procedureCategoryDetailsMain_three {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.procedureCategoryDetailsMain-three_results {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.procedureCategoryDetailsMain-three-results_text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+.procedureCategoryDetailsMain-three-results-text_title {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.procedureCategoryDetailsMain-three-results-text_title h2 {
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+.procedureCategoryDetailsMain-three-results-text_description {
+    width: 90%;
+}
+.procedureCategoryDetailsMain-three-results-text_description p {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 200;
+}
+.procedureCategoryDetailsMain-three-results-text_description p::first-letter {
+    text-transform: uppercase;
+}
+.procedureCategoryDetailsMain-three-results_imgs {
+    width: 100%;
+    height: 212px;
+    display: flex;
+    justify-content: space-between;
+}
+.procedureCategoryDetailsMain-three-results_img {
+    width: 31%;
+    height: 100%;
+}
+.procedureCategoryDetailsMain-three-results_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.procedureCategoryDetailsMain-three_recuperation {
+    width: 44%;
+}
+.procedureCategoryDetailsMain-three-recuperation_title h2 {
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+.procedureCategoryDetailsMain-three-recuperation_description {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.procedureCategoryDetailsMain-three-recuperation_description ul {
+    width: 90%;
+}
+.procedureCategoryDetailsMain-three-recuperation_description ul li {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 200;
+    margin: 10px 0;
+}
+.procedureCategoryDetailsMain-three-recuperation_description ul li::first-letter {
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1600px) {
+    .procedureCategoryDetailsMain {
+      width: 80%;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .procedureCategoryDetailsMain {
+      width: 90%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .procedureCategoryDetailsMain {
+      width: 100%;
+    }
+}
+@media screen and (max-width: 700px) {
+    /*Main One*/
+    .procedureCategoryDetailsMain {
+        margin-top: 30px;
+    }
+    .procedureCategoryDetailsMain_one {
+        width: 100%;
+        min-height: 380px;
+        flex-direction: column;
+    }
+    .procedureCategoryDetailsMain-one_text {
+        display: block;
+        width: 90%;
+        height: 50%;
+    }
+    .procedureCategoryDetailsMain-one_img {
+        display: none;
+    }
+    /*Main Two*/
+    .procedureCategoryDetailsMain_two {
+        min-height: 410px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .procedureCategoryDetailsMain-two_anesthesia {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .procedureCategoryDetailsMain-two_effects {
+        width: 90%;
+    }
+    /*Main three*/
+    .procedureCategoryDetailsMain_three {
+        flex-direction: column;
+        align-items: center;
+    }
+    .procedureCategoryDetailsMain-three_results {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .procedureCategoryDetailsMain-three_recuperation {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .procedureCategoryDetailsMain_one {
+        min-height: 400px;
+    }
+    .procedureCategoryDetailsMain-two-effects_title h2 {
+        font-size: 35px;
+    }
+}

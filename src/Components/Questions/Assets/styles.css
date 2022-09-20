@@ -1,0 +1,305 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    transition: transform 1s;
+}
+.container {
+    width: 1000px;
+    height: 550px;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 160px;
+    background-color: #004274;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 1s;
+}
+.questionsLogo {
+    width: 150px;
+    position: absolute;
+    right: 40px;
+    top: 15px;
+}
+.questionsLogo img {
+    width: 100%;
+}
+.ArrowHide {
+    position: absolute;
+    top: 42%;
+}
+.ArrowHide button {
+    all: unset;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+.questions {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.elements {
+    width: 70%;
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.procedure {
+    text-align: start;
+}
+.titleProcedure {
+    font-size: 18px;
+    opacity: .6;
+}
+.youProcedure {
+    font-size: 25px;
+    opacity: .8;
+}
+.line {
+    width: 90%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 8px;
+}
+.question {
+    margin-top: 40px;
+}
+.question h2 {
+    margin-bottom: 15px;
+    font-size: 35px;
+    font-weight: 400;
+}
+.searchQuestion {
+    width: 90% !important;
+}
+.questionsButtons {
+    margin-top: 20px;
+}
+.previusButton {
+    width: 115px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 20px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+}
+.previusButtonNone {
+    display: none;
+}
+.nextButton {
+    width: 115px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 20px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+}
+.finishButton {
+    width: 190px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 20px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+}
+.questionsButtons button:disabled {
+    pointer-events: none;
+}
+  
+.questionsButtons button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+  
+.questionsButtons button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+.buttonUseComponent {
+    width: 40%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+}
+.div_buttonUseComponent button:disabled {
+    pointer-events: none;
+  }
+  
+.div_buttonUseComponent button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+  
+.div_buttonUseComponent button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+.interactive1_div, .interactive2_div {
+    width: 180px;
+    height: 150px;
+}
+.interactive1, .interactive2 {
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 30px;
+    position: relative;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    will-change: transform;
+}
+.interactive1 img, .interactive2 img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.interactive1 h1, .interactive2 h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 12px;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-size: 22px;
+    line-height: 20px;
+}
+.div_interactive button:disabled {
+    pointer-events: none;
+}  
+.div_interactive button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+.div_interactive button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+.div_interactive {
+    margin-bottom: -50px;
+}
+.div_datePiker {
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+}
+
+/* minimizeQuestions*/
+.minimizeQuestions {
+    width: 1000px;
+    height: 550px;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 160px;
+    background-color: #004274;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 1s;
+    transform: translateX(930px);
+}
+.minimizeQuestions > .ArrowHide {
+    display: none;
+}
+
+.arrowShow {
+    position: absolute;
+    top: 42%;
+    display: none;
+}
+.arrowShow button {
+    all: unset;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.minimizeQuestions > .arrowShow {
+    display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 700px;
+        top: 110px;
+    }
+    .elements {
+        width: 90%;
+        margin-bottom: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .question h2 {
+        font-size: 30px;
+    }
+    .minimizeQuestions {
+        width: 700px;
+        top: 120px;
+        transform: translateX(640px);
+    }
+}
+@media screen and (max-width: 700px) {
+    .container {
+        width: 500px;
+        top: 110px;
+    }
+    .elements {
+        width: 85%;
+    }
+    .question h2 {
+        font-size: 28px;
+    }
+    .titleProcedure {
+        font-size: 14px;
+    }
+    .youProcedure {
+        font-size: 20px;
+    }
+    .minimizeQuestions {
+        width: 500px;
+        top: 110px;
+        transform: translateX(445px);
+    }
+    .interactive1_div, .interactive2_div {
+        width: 160px;
+        height: 130px;
+    }
+    .interactive1, .interactive2 {
+        margin: 0 10px;
+    }
+    .interactive1 h1, .interactive2 h1 {
+        left: 8px;
+    }
+}

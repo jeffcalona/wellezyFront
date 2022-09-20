@@ -1,0 +1,110 @@
+.searchFormControl {
+    width: 40%;
+}
+.searchTextField {
+    width: 100%;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root {
+    background-color: white !important;
+    border: 1px solid white !important;
+    border-radius: 10px;
+}
+.css-17spqnz {
+    background-color: white !important;
+    border: 1px solid white !important;
+}
+
+.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:before {
+    border-bottom: 0px !important;
+}
+.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:after {
+    border-bottom: 0px !important;
+}
+.css-1lfthva-MuiInputBase-input-MuiFilledInput-input {
+    font-family: 'Inter' !important;
+}
+.css-e4w4as-MuiFormLabel-root-MuiInputLabel-root {
+    font-family: 'Inter' !important;
+    font-size: 18px !important;
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.div_resoults {
+    display: flex;
+    justify-content: center;
+}
+.resoults {
+    background-color: white;
+    width: 35%;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: auto;
+    border: 1px solid white;
+    border-radius: 0 0 10px 10px;
+}
+
+.resoult {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    display: flex !important;
+    font-family: 'Inter';
+    font-weight: 300;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-align: left;
+    color: black;
+    display: block;
+    border-bottom: 1px solid rgba(0, 66, 116, .2);
+    align-items: center;
+}
+.resoult-div_img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.resoult-div_img img {
+    width: 100%;
+    border-radius: 50%;
+}
+.resoult:hover {
+    background-color: rgba(0, 66, 116, .1);
+    transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 1200px) {
+    .searchFormControl {
+        width: 50%;
+    }
+    .resoults {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .searchFormControl {
+        width: 90%;
+    }
+    .resoults {
+        width: 85%;
+    }
+    .searchTextField {
+      box-sizing: border-box;
+      font-size: 14px;
+      padding: 27px 0;
+    }
+    .css-e4w4as-MuiFormLabel-root-MuiInputLabel-root {
+        font-size: 14px !important;
+    }
+    .resoults {
+        font-size: 13px;
+        z-index: 3 !important;
+    }
+  }

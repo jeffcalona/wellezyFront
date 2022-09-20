@@ -1,0 +1,21 @@
+.flights_main {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 1600px) {
+  .flights_main {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .flights_main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .flights_main {
+    width: 100%;
+  }
+}

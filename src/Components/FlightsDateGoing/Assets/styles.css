@@ -1,0 +1,93 @@
+.flightsDateGoing_container {
+    width: 100%;
+    z-index: 3;
+    position: relative;
+    position: absolute;
+}
+.flightsDateGoing {
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+}
+.flightsDateGoing_ {
+    display: flex;
+    align-items: center;
+}
+.flightsDateGoing_date {
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px;
+}
+.flightsDateGoing_date_ {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flightsDateGoing_date h2 {
+    font-family: 'Oswald';
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #004274;
+    width: 55%;
+    line-height: 28px;
+}
+.dateRange div {
+    border-radius: 20px !important;
+}
+.rdrDateDisplayWrapper {
+    display: none;
+}
+.flightDate_searcher {
+    width: 300px;
+    height: 90px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 20px;
+    border: none;
+}
+.dateRangeOnly div {
+    border-radius: 20px !important;
+}
+
+@media screen and (max-width: 750px) {
+    .flightsDateGoing {
+        width: 90%;
+    }
+    .rdrMonths {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rdrCalendarWrapper, .rdrDateRangeWrapper {
+        width: 100%;
+    }
+    .rdrMonth {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .flightsDateGoing {
+        top: -90px
+    }
+}
+@media screen and (max-width: 500px) {
+    .flightsDateGoing_date {
+        margin: 10px 5px;
+    }
+    .flightDate_searcher {
+        margin: 0 5px;
+    }
+}

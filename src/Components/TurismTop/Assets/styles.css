@@ -1,0 +1,157 @@
+.turismTop {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 70px;
+    height: 380px;
+    justify-content: space-between;
+}
+.turismTop_principal {
+    width: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.turismTop-principal_img {
+    width: 100%;
+    height: 100%;
+}
+.turismTop-principal_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.turismTop-logo_img {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.turismTop-logo_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.turismTop-principal_text {
+    width: 80%;
+    position: absolute;
+    color: white;
+}
+.turismTop-principal_text h1 {
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 70px;
+}
+.turismTop-principal_text span {
+    display: block;
+    font-size: 90px;
+
+}
+.turismTop_cards {
+    width: 58%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.turismTop-cards_slider {
+    height: 100%;
+    display: flex;
+}
+.international_activity {
+    width: 250px;
+    height: 380px;
+    margin: 0 10px;
+    position: relative;
+    border-radius: 20px;
+}
+.international-activity_img {
+    width: 250px;
+    height: 376px;
+    border-radius: 20px;
+    pointer-events: none;
+}
+.international-activity_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.international-activity_title {
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    margin-left: 10px
+}
+.international-activity_title h2 {
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+@media screen and (max-width: 1600px) {
+    .turismTop {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .turismTop {
+      width: 90%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .turismTop {
+      width: 100%;
+    }
+    .turismTop-principal_text h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .turismTop-principal_text span {
+        font-size: 64px;
+        line-height: 60px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .turismTop {
+      flex-direction: column;
+      height: 600px;
+    }
+    .turismTop_principal {
+        width: 100%;
+        height: 35%;
+    }
+    .turismTop-logo_img {
+        width: 100px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+    }
+    .turismTop-principal_background {
+        border-radius: 0 !important;
+    }
+    .turismTop-principal_img img {
+        border-radius: 0;
+    }
+    .turismTop_cards {
+        width: 100%;
+        height: 62%;
+    }
+    .international_activity {
+        width: 250px;
+        height: 365px;
+    }
+    .international-activity_img {
+        width: 250px;
+        height: 365px;
+    }
+    .div_right {
+        display: none;
+    }
+}

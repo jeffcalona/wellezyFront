@@ -1,0 +1,45 @@
+.cardHomeDotors {
+    width: 241px;
+    height: 207px;
+    display: flex;
+    align-items: center !important;
+    border-radius: 20px !important;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.div_cardHomeDotors-img {
+    width: 92px;
+    height: 92px;
+    margin: -40px auto;
+}
+.cardHomeDotors_img {
+    border-radius: 50%;
+}
+.div_cardHomeDotors-img img {
+    pointer-events: none;
+}
+.cardHomeDotors_ActionArea {
+    margin-top: 50px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardHomeDotors_Action {
+    justify-content: center;
+}
+.cardHomeDotors_ActionArea a {
+    color: black;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: aquamarine !important;
+}
+.cardHomeDotors_Heart {
+    position: absolute;
+    top: -35px;
+    right: -90px;
+}
+@media screen and (max-width: 500px) {
+    .cardHomeDotors {
+        width: 250px;
+    }
+}

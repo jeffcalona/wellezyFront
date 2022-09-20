@@ -1,0 +1,41 @@
+.doctors_header {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doctors_header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.doctors-header_text {
+    position: absolute;
+    text-align: center;
+    color: white;
+}
+.doctors-header_text h1 {
+    font-family: 'Oswald';
+    font-size: 132px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: -30px 0;
+}
+.doctors-header_text p {
+    font-family: 'Inter';
+    font-size: 18px;
+}
+
+@media screen and (max-width: 580px) {
+    .doctors-header_text {
+        margin-top: -140px;
+    }
+    .doctors-header_text h1 {
+        font-size: 90px;
+        margin: -20px 0;
+    }
+    .doctors-header_text p {
+        font-size: 12px;
+    }
+}

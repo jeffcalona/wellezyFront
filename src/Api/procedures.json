@@ -1,0 +1,202 @@
+{
+    "procedures": [
+        {
+            "id": 1,
+            "procedure": {
+                    "name": "Cirugia de senos - mamaria, Mastopexia",
+                    "idProcedure": 1,
+                    "img": "https://wellezy.com/wp-content/uploads/2022/04/mastopexia-300x300.png"
+                },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellín"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "procedure": {
+                "name": "Cirugia de senos - mamaria, Mamoplastia",
+                "idProcedure": 2,
+                "img": "https://wellezy.com/wp-content/uploads/2022/04/mamoplastia-de-aumento-300x300.png"
+            },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "procedure": {
+                "name": "Cirugia de senos - mamaria, Reducción Mamaria",
+                "idProcedure": 3,
+                "img": "https://wellezy.com/wp-content/uploads/2022/04/reduccion-mamaria-300x300.png"
+            },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "procedure": {
+                "name": "Estetica vaginal - Tensado Vaginal con Laser",
+                "idProcedure": 4,
+                "img": "https://wellezy.com/wp-content/uploads/2022/04/tensado-vaginal-e1638290970836.png"
+            },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "procedure": {
+                "name": "cirugia corporal - gluteoplastia",
+                "idProcedure": 5,
+                "img": "https://wellezy.com/wp-content/uploads/2022/04/gluteoplastia-600x600.png"
+            },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "procedure": {
+                "name": "cirugia corporal - Lipoabdominoplastia",
+                "idProcedure": 6,
+                "img": "https://wellezy.com/wp-content/uploads/2022/04/RESURLASER-SCAR-REPAIR-Cicatrices-post-abdominoplastia.png"
+            },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "procedure": {
+                "name": "cirugia corporal - lipomarcacion",
+                "idProcedure":7,
+                "img": "https://wellezy.com/wp-content/uploads/2022/04/lipomarcacion-600x600.png"
+            },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "procedure": {
+                "name": "cirugia corporal - lipotransferencia",
+                "idProcedure": 8,
+                "img": "https://wellezy.com/wp-content/uploads/2022/04/lipotransferencia-300x300.png"
+            },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "procedure": {
+                "name": "cirugia corporal - liposuccion",
+                "idProcedure": 9,
+                "img": "https://wellezy.com/wp-content/uploads/2022/04/lipoabdominoplastia-300x300.png"
+            },
+            "doctors": [
+                {
+                    "name": "Luis Marin",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Felipe Escalante",
+                    "city": "medellin"
+                },
+                {
+                    "name": "Maria Lina",
+                    "city": "medellin"
+                }
+            ]
+        }
+    ]
+}

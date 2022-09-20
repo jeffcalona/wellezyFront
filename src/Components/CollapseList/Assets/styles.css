@@ -1,0 +1,9 @@
+.collapseList_ListItemButton {
+    padding-left: 0!important;
+    padding-right: 0 !important;
+}
+.MuiListItemText-primary {
+    font-family: 'Inter' !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}

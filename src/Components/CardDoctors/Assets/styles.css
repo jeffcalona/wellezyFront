@@ -1,0 +1,90 @@
+.cardDoctors-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -35px;
+}
+.div_cardDoctors-img {
+    width: 102px;
+    height: 102px;
+}
+.cardDoctors_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.cardDoctors {
+    width: 267px;
+    height: 230px;
+    display: flex;
+    align-items: center !important;
+    text-align: center !important;
+    border-radius: 20px !important;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.cardDoctors_actionArea {
+    position: relative;
+}
+.cardDoctor_heart {
+    position: absolute !important;
+    top: 10px;
+    right: 20px;
+}
+.actionArea_text {
+    margin-top: 40px;
+}
+.doctorsList_arraws {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+}
+.arraw {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 5px !important;
+    margin: 10px !important;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+@media screen and (max-width: 863px) {
+    .cardDoctors {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .css-mo547r-MuiGrid-root>.MuiGrid-item {
+        padding-left: 3px !important;
+    }
+    .css-1vz7ijq > .MuiGrid-item {
+        padding-left: 3px !important;
+    }
+    .cardDoctors {
+        width: 215px !important;
+        height: 195px !important;
+    }
+    .doctors_content .css-mo547r-MuiGrid-root {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 450px) {
+    .div_cardDoctors-img {
+        width: 80px;
+        height: 80px;
+    }
+    .cardDoctors {
+        width: 200px !important;
+        height: 210px;
+    }
+    .actionArea_text .css-4exc95-MuiTypography-root {
+        font-size: 14px !important;
+    }
+    .actionArea_text .css-1y4mape-MuiTypography-root {
+        font-size: 12px !important;
+    }
+    .actionArea_text p:first-child {
+        font-size: 14px !important;
+    }
+}

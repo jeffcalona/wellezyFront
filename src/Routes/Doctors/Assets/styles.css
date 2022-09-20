@@ -1,0 +1,87 @@
+/* .doctors_content {
+    width: 95%;
+    height: 1230px;
+    display: flex;
+    margin-top: -140px;
+}
+.doctors_filter {
+    width: 20%;
+    background-color: #004274;
+    border-radius: 20px;
+    color: white;
+    padding: 30px 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.doctorsFilter_input {
+    width: 100%;
+    text-align: center;
+}
+.doctorsFilter_input input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+.doctors_filter h2 {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.MuiListItemText-secondary {
+    color: white !important;
+    font-family: 'Inter' !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+}
+.doctorsList_icon {
+    width: 100%;
+    display: flex;
+    margin-left: 20px;
+}
+.css-10r5to9-MuiCardActions-root {
+    padding: 3px !important;
+}
+.doctorsList_heart {
+    padding: 0 !important;
+}
+
+@media screen and (max-width: 1300px) {
+    .doctorsList_icon {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .doctors_filter {
+        width: 30%;
+    }
+    .doctorsList_icon {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 863px) {
+    .doctors_content {
+        flex-direction: column;
+    }
+    .doctors_filter {
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    .doctorsList_icon {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .doctors_content {
+        width: 100%;
+        margin-top: -200px;
+    }
+    .doctors_filter {
+        width: 100%;
+        padding: 0;
+    }
+    .doctors-filter_content {
+        margin: 30px 20px;
+    }
+} */

@@ -1,0 +1,128 @@
+.transportsList {
+    width: 95%;
+    height: 1800px;
+    display: flex;
+    margin-top: -140px;
+}
+.transportsFilter_ {
+    width: 20%;
+    background-color: #004274;
+    border-radius: 20px;
+    color: white;
+    padding: 30px 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.transportsFilter_input {
+    width: 100%;
+    text-align: center;
+}
+.transportsFilter_input input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+.transportsFilter_ h2 {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.MuiListItemText-secondary {
+    color: white !important;
+    font-family: 'Inter' !important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
+}
+.transportsList_icon {
+    width: 100%;
+    display: flex;
+    margin-left: 20px;
+}
+.css-10r5to9-MuiCardActions-root {
+    padding: 3px !important;
+}
+.transportsList_heart {
+    padding: 0 !important;
+}
+.collapseList_ListItemButton {
+    padding-left: 0!important;
+    padding-right: 0 !important;
+}
+.MuiListItemText-primary {
+    font-family: 'Inter' !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+.transports_list {
+    width: 80%;
+    height: 400px;
+    margin: 0 !important;
+}
+.transports_list a {
+    text-decoration: none;
+}
+.transports_list .div_carChoferImg {
+    width: 270px;
+}
+.transports_list .css-1uvm7j5-MuiTypography-root {
+    margin-top: 20px;
+}
+.transports_list .css-1t6e9jv-MuiCardActions-root {
+    padding: 15px 0;
+}
+
+@media screen and (max-width: 1470px) {
+    .transportsList {
+        height: 2300px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .transportsList_icon {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1115px) {
+    .transportsList {
+        height: 3200px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .transportsFilter_ {
+        width: 30%;
+    }
+    .transportsList_icon {
+        margin-left: 0;
+    }
+    .transports_list {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 863px) {
+    .transportsList {
+        flex-direction: column;
+        height: 3800px;
+    }
+    .transportsFilter_ {
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    .transportsList_icon {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .transportsList {
+        width: 100%;
+        margin-top: -200px;
+        height: 3350px;
+    }
+    .transportsList_ {
+        width: 100%;
+        padding: 0;
+    }
+    .transportsFilter_content {
+        margin: 30px 20px;
+    }
+}

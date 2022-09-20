@@ -1,0 +1,98 @@
+.procedureCatergoryDetailsHeader {
+    width: 100%;
+    height: 840px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.procedureCatergoryDetailsHeader-img_background {
+    width: 100%;
+    height: 840px;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+}
+.procedureCatergoryDetailsHeader_img {
+    width: 100%;
+    height: 100%;
+}
+.procedureCatergoryDetailsHeader_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.procedureCatergoryDetailsHeader_text {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.procedureCatergoryDetailsHeader-text_title h1 {
+    font-size: 100px;
+    font-family: 'Inter';
+    color: white;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: -10px;
+}
+.procedureCatergoryDetailsHeader-text_title p {
+    font-size: 30px;
+    font-family: 'Inter';
+    color: white;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.procedureCatergoryDetailsHeader-text_description {
+    width: 70%;
+    font-size: 30px;
+    font-family: 'Inter';
+    color: white;
+    font-weight: 200;
+    margin: 60px 0;
+}
+.procedureCatergoryDetailsHeader-text_description p::first-letter {
+    text-transform: uppercase;
+}
+.procedureCatergoryDetailsHeader-text_button {
+    cursor: pointer;
+}
+.procedureCatergoryDetailsHeader-text_button a {
+    width: 180px;
+    height: 70px;
+    background-color: white;
+    color: #004274;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.procedureCatergoryDetailsHeader-text_button a span {
+    margin: -8px 0 -10px 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .procedureCatergoryDetailsHeader-text_description {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .procedureCatergoryDetailsHeader, .procedureCatergoryDetailsHeader-img_background {
+        height: 700px;
+    }
+    .procedureCatergoryDetailsHeader-text_title h1 {
+        font-size: 70px;
+    }
+    .procedureCatergoryDetailsHeader-text_description {
+        font-size: 20px;
+    }
+    .procedureCatergoryDetailsHeader-text_title p{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,384 @@
+.flightDetailFilter {
+    width: 20%;
+}
+.flightDetailFilter_flight {
+    background-color: #004274;
+    max-height: 800px;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    margin-bottom: 25px;
+}
+.info_flightContainer {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*NONE*/
+.info_flightContainerNone {
+    display: none;
+
+}
+.logo_flight {
+    width: 90%;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: inset 2px 4px 3px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 20px 0;
+    cursor: pointer;
+}
+
+.flightButtonOn {
+    display: none;
+}
+.flightButtonOff {
+    display: none;
+}
+
+/*SELECTED*/
+.logo_flightSelected {
+    width: 90%;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 20px 0;
+    cursor: pointer;
+}
+.logo_flightSelected h2 {
+    font-family: 'Oswald';
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 5px;
+}
+.logo_flight h2 {
+    font-family: 'Oswald';
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 5px;
+}
+.info_flight {
+    width: 90%;
+    position: relative;
+}
+.info-flight_site {
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.info-flight_site_ {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searcFlight_logo path {
+    color: #004274;
+}
+
+.info-flight_siteTitle {
+    display: flex;
+    width: 100%;
+}
+.info-flight_siteTitle h3 {
+    font-family: 'Oswald';
+    font-size: 20px;
+    color: #004274;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.info-flight_site_ p {
+    width: 100%;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: capitalize;
+    color: #004274;
+}
+
+.flight_originSelect {
+    width: 340px;
+    max-height: 390px;
+    border-radius: 20px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+}
+
+.info_abr {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.info_class {
+    font-weight: 400;
+}
+.info_selec {
+    width: 90%;
+    margin-top: -15px;
+}
+.info_selec div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.recordSelectLogo path {
+    color: white;
+}
+.info_selec div p {
+    margin-left: 10px;
+    font-family: 'Inter';
+    font-size: 20px;
+    color: white;
+}
+.info-flight_site_dates {
+    width: 100%;
+}
+.info-flight_button {
+    width: 90%;
+    height: 70px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-flight_button h2 {
+    font-family: 'Oswald';
+    color: #004274;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 5px;
+    margin: 20px;
+}
+
+/*Filter*/
+.flightDetailFilter_filter {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flightDetailFilter_filter_ {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flightDetailFilter-filter_card {
+    width: 90%;
+    margin-top: 15px;
+}
+.flightDetailFilter-filter_cardTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.flightDetailFilter-filter_cardTitle h3 {
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #004274;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.flightDetailFilter-filter-card_item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.flightDetailFilter-filter-card-item_description {
+    display: flex;
+    align-items: center;
+}
+.flightDetailFilter-filter-card-item_description p {
+    font-family: 'Inter';
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 200;
+    margin-left: 5px;
+}
+.flightDetailFilter-filter-card-item_value {
+    font-family: 'Inter';
+    font-size: 15px;
+}
+.filter_priceSlider {
+    width: 100%;
+    margin-top: 20px;
+}
+.filter-card-description_img {
+    height: 18px;
+    margin-left: 5px;
+}
+.filter-card-description_img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Filter Button*/
+.filterButtonOn {
+    width: 100%;
+    height: 70px;
+    background-color: #004274;
+    border-radius: 20px;
+    box-shadow: inset 2px 4px 3px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 20px 0;
+    cursor: pointer;
+    display: none;
+}
+.filterIcon path {
+    color: white;
+}
+.filterButtonOn h2 {
+    font-family: 'Oswald';
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 5px;
+}
+.filterButtonOff {
+    width: 100%;
+    height: 70px;
+    background-color: #004274;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 20px 0;
+    cursor: pointer;
+    display: none;
+}
+.filterButtonOff h2 {
+    font-family: 'Oswald';
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 5px;
+    color: white;
+
+}
+.filterOn {
+    width: 90%;
+}
+.filterOff {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .flightDetailFilter {
+        width: 27%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .flightDetailFilter_flight {
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0) !important;
+        margin-bottom: 0
+    }
+    .logo_flight {
+        width: 100%;
+        margin: 0px 0 20px 0;
+        display: none;
+    }
+    .flightButtonOff {
+        width: 100%;
+        height: 70px;
+        background-color: #004274;
+        border-radius: 20px;
+        box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.35) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0 5px 0;
+        cursor: pointer;
+    }
+    .flightButtonOff h2 {
+        font-family: 'Oswald';
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 5px;
+    }
+    .flightButtonOn {
+        width: 100%;
+        height: 70px;
+        background-color: #004274;
+        border-radius: 20px;
+        box-shadow: inset 2px 4px 3px 2px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0 20px 0;
+        cursor: pointer;
+    }
+    .flightButtonOn h2 {
+        font-family: 'Oswald';
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 5px;
+    }
+
+    .flightDetailFilter {
+        width: 100%;
+    }
+    .filterButtonOn {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    .filterButtonOff {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .recordSelectLogo path {
+        color: #004274;
+    }
+    .info_selec div p {
+        color: #004274;
+    } 
+}

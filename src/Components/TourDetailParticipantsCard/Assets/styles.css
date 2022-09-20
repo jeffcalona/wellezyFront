@@ -1,0 +1,90 @@
+.participants {
+    position: absolute;
+    width: 320px;
+    height: 260px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.participants_ {
+    width: 80%;
+    margin-top: 18px;
+}
+.participants_detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.participants-detail_principarlP {
+    font-family: 'Inter';
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.participants-detail_secundaryP {
+    font-family: 'Inter';
+    font-size: 9px;
+    text-transform: capitalize;
+    font-weight: 600;
+    opacity: .5;
+}
+.participants-detail_buttons {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    justify-content: space-between;
+}
+.participants-detail_button {
+    width: 35px;
+    height: 32px;
+    background-color: #004274;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.participants-detail_button p {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-top: -2px;
+}
+.participants-detail_numButton p {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+.participants_continue {
+    width: 100%;
+    height: 60px;
+    background-color: #004274;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.participants_continue h2 {
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .participants {
+        width: 80%;
+    }
+}

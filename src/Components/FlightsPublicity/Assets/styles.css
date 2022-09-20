@@ -1,0 +1,188 @@
+.flightsPublicity {
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: space-between;
+}
+.flightsPublicity_left {
+    width: 55%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+}
+.flightsPublicity-left_img {
+    width: 100%;
+    height: 100%;
+}
+.flightsPublicity-left_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px !important;
+}
+.flightsPublicity_right {
+    width: 43%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.flightsPublicity-right_img {
+    width: 100%;
+    height: 100%;
+}
+.flightsPublicity-right_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px !important;
+}
+.flightsPublicity_text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.flightsPublicity_text_ {
+    width: 100%;
+    height: 60%;
+}
+.flightsPublicity-left_infoBlue {
+    background-color: #004274;
+    width: 71%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 20px 20px 0;
+}
+.flightsPublicity-left_info {
+    width: 50%;
+}
+.flightsPublicity-left_infoBlue h1, .flightsPublicity-left_info h1 {
+    font-family: 'Oswald';
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-left: 20px;
+    width: 100%;
+}
+.flightsPublicity-left_logo {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 200px;
+    height: 60px;
+}
+.flightsPublicity-left_logo img, .flightsPublicity-right_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flightsPublicity-right_text h1 {
+    font-family: 'Oswald';
+    font-size: 50px;
+    line-height: 50px;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+.flightsPublicity-right_text h1 span {
+    display: block;
+    text-align: end;
+}
+.flightsPublicity-right_logo {
+    width: 200px;
+    height: 70px;
+    margin-right: 20px;
+}
+.flightsPublicity_text_right {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.flightsPublicity-text-right_icons {
+    display: flex;
+    margin-right: 50px;
+    margin-top: 10px;
+    align-items: center;
+}
+.flightsPublicity-text-right_icons p {
+    font-family: 'Oswald';
+    font-size: 40px;
+    color: white;
+    margin: 0 10px;
+}
+.blueCircle {
+    width: 300px;
+    height: 310px;
+    background-color: #004274;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -80px;
+    right: -60px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1500px) {
+    .flightsPublicity-left_infoBlue {
+        width: 80%;
+    }
+    .flightsPublicity-left_infoBlue h1, .flightsPublicity-left_info h1 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 930px) {
+    .flightsPublicity-left_infoBlue {
+        width: 90%;
+        height: 90px;
+    }
+    .flightsPublicity-left_infoBlue h1, .flightsPublicity-left_info h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .flightsPublicity-right_text h1 {
+        font-size: 40px;
+    }
+    .flightsPublicity-right_logo {
+        width: 150px;
+        height: 50px;
+    }
+    .flightsPublicity-left_logo {
+        width: 150px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .flightsPublicity-left_infoBlue h1, .flightsPublicity-left_info h1 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .flightsPublicity-right_text h1 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .flightsPublicity {
+        width: 100%;
+        height: 700px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flightsPublicity_left {
+        width: 100%;
+        height: 48%;
+    }
+    .flightsPublicity_right {
+        width: 100%;
+        height: 48%;
+    }
+}
